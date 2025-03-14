@@ -825,7 +825,7 @@
           <p2:Contrast>1</p2:Contrast>
           <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
           <p2:TemporalFrequency>2</p2:TemporalFrequency>
-          <p2:Orientation>22.5</p2:Orientation>
+          <p2:Orientation>257.5</p2:Orientation>
         </Combinator>
       </Expression>
       <Expression xsi:type="GroupWorkflow">
@@ -901,7 +901,7 @@
                     <SpatialFrequency>0.04</SpatialFrequency>
                     <TemporalFrequency>2</TemporalFrequency>
                     <Phase>0</Phase>
-                    <Angle>0</Angle>
+                    <Angle>45</Angle>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <DutyCycle xsi:nil="true" />
