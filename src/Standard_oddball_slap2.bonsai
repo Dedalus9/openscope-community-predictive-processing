@@ -893,7 +893,7 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="GroupWorkflow">
-        <Name>HARPDO2DOWN</Name>
+        <Name>HARPDO2PULSE</Name>
         <Workflow>
           <Nodes>
             <Expression xsi:type="WorkflowInput">
@@ -911,7 +911,7 @@
             <Expression xsi:type="beh:CreateMessage">
               <harp:MessageType>Write</harp:MessageType>
               <harp:Payload xsi:type="beh:CreatePulseDO2Payload">
-                <beh:PulseDO2>0</beh:PulseDO2>
+                <beh:PulseDO2>100</beh:PulseDO2>
               </harp:Payload>
             </Expression>
             <Expression xsi:type="MulticastSubject">
