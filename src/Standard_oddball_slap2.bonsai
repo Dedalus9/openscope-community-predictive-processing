@@ -107,9 +107,9 @@
         <LocationY>-16.66</LocationY>
         <Layer>2</Layer>
         <Angle>0</Angle>
-        <ColorR>0</ColorR>
-        <ColorG>0</ColorG>
-        <ColorB>0</ColorB>
+        <ColorR>1</ColorR>
+        <ColorG>1</ColorG>
+        <ColorB>1</ColorB>
         <ColorA>1</ColorA>
       </Expression>
       <Expression xsi:type="SubscribeSubject">
@@ -260,7 +260,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="harp:MessageWriter">
-          <harp:FileName>C:/BonsaiDataPredictiveProcessing/769904/20250317065126/BonsaiData/20241009_366122_Behavior.harp/Behavior.bin</harp:FileName>
+          <harp:FileName>C:/BonsaiDataPredictiveProcessing/769904/20250320011331/BonsaiData/20241009_366122_Behavior.harp/Behavior.bin</harp:FileName>
           <harp:Suffix>None</harp:Suffix>
           <harp:Buffered>true</harp:Buffered>
           <harp:Overwrite>false</harp:Overwrite>
@@ -291,7 +291,7 @@
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="BonVision:Environment.ViewWindow.bonsai">
         <Width>20.4</Width>
-        <Height>15.1</Height>
+        <Height>15.4</Height>
         <Rotation>
           <X>0</X>
           <Y>0</Y>
@@ -357,102 +357,74 @@
         <Combinator xsi:type="p2:GratingsSpecification">
           <p2:Trials>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>0</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>22.5</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>45</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>67.5</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>90</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>112.5</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>135</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>157.5</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>180</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>202.5</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>225</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>257.5</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>270</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>292.5</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>315</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>337.5</p2:Orientation>
             </p2:GratingParameters>
           </p2:Trials>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="InputMapping">
+        <PropertyMappings>
+          <Property Name="Orientation" Selector="Orientation" />
+        </PropertyMappings>
+        <Selector />
+        <TypeMapping xsi:type="TypeMapping" TypeArguments="p2:GratingParameters" />
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="p2:CreateGratingTrial">
+          <p2:Delay>1</p2:Delay>
+          <p2:Duration>0.25</p2:Duration>
+          <p2:Diameter>360</p2:Diameter>
+          <p2:X>0</p2:X>
+          <p2:Y>0</p2:Y>
+          <p2:Contrast>1</p2:Contrast>
+          <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
+          <p2:TemporalFrequency>2</p2:TemporalFrequency>
+          <p2:Orientation>337.5</p2:Orientation>
         </Combinator>
       </Expression>
       <Expression xsi:type="ExternalizedMapping">
@@ -471,7 +443,6 @@
           <p2:Trials>
             <p2:GratingParameters>
               <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
               <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>0</p2:Orientation>
             </p2:GratingParameters>
@@ -491,25 +462,21 @@
           <p2:Trials>
             <p2:GratingParameters>
               <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
               <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>45</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
               <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
               <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>90</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
               <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
               <p2:TemporalFrequency>0</p2:TemporalFrequency>
               <p2:Orientation>0</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
               <p2:Contrast>0</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
               <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>0</p2:Orientation>
             </p2:GratingParameters>
@@ -524,6 +491,28 @@
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Merge" />
       </Expression>
+      <Expression xsi:type="InputMapping">
+        <PropertyMappings>
+          <Property Name="Orientation" Selector="Orientation" />
+          <Property Name="Contrast" Selector="Contrast" />
+          <Property Name="TemporalFrequency" Selector="TemporalFrequency" />
+        </PropertyMappings>
+        <Selector />
+        <TypeMapping xsi:type="TypeMapping" TypeArguments="p2:GratingParameters" />
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="p2:CreateGratingTrial">
+          <p2:Delay>1</p2:Delay>
+          <p2:Duration>0.25</p2:Duration>
+          <p2:Diameter>360</p2:Diameter>
+          <p2:X>0</p2:X>
+          <p2:Y>0</p2:Y>
+          <p2:Contrast>1</p2:Contrast>
+          <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
+          <p2:TemporalFrequency>2</p2:TemporalFrequency>
+          <p2:Orientation>0</p2:Orientation>
+        </Combinator>
+      </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="num:Permutation" />
       </Expression>
@@ -531,122 +520,62 @@
         <Combinator xsi:type="p2:GratingsSpecification">
           <p2:Trials>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>0</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>22.5</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>45</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>67.5</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>90</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>112.5</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>135</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>157.5</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>180</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>202.5</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>225</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>257.5</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>270</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>292.5</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>315</p2:Orientation>
             </p2:GratingParameters>
             <p2:GratingParameters>
-              <p2:Contrast>1</p2:Contrast>
-              <p2:SpatialFrequency>0.04</p2:SpatialFrequency>
-              <p2:TemporalFrequency>2</p2:TemporalFrequency>
               <p2:Orientation>337.5</p2:Orientation>
             </p2:GratingParameters>
           </p2:Trials>
         </Combinator>
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="rx:RepeatCount">
-          <rx:Count>1</rx:Count>
-        </Combinator>
-      </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="num:Permutation" />
-      </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="rx:Concat" />
-      </Expression>
       <Expression xsi:type="InputMapping">
         <PropertyMappings>
           <Property Name="Orientation" Selector="Orientation" />
-          <Property Name="Contrast" Selector="Contrast" />
-          <Property Name="SpatialFrequency" Selector="SpatialFrequency" />
-          <Property Name="TemporalFrequency" Selector="TemporalFrequency" />
         </PropertyMappings>
+        <Selector />
+        <TypeMapping xsi:type="TypeMapping" TypeArguments="p2:GratingParameters" />
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p2:CreateGratingTrial">
@@ -660,6 +589,131 @@
           <p2:TemporalFrequency>2</p2:TemporalFrequency>
           <p2:Orientation>337.5</p2:Orientation>
         </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:RepeatCount">
+          <rx:Count>1</rx:Count>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="num:Permutation" />
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="p2:GratingsSpecification">
+          <p2:Trials>
+            <p2:GratingParameters>
+              <p2:X>0</p2:X>
+              <p2:Y>-30</p2:Y>
+              <p2:Orientation>0</p2:Orientation>
+            </p2:GratingParameters>
+            <p2:GratingParameters>
+              <p2:X>0</p2:X>
+              <p2:Y>-20</p2:Y>
+              <p2:Orientation>0</p2:Orientation>
+            </p2:GratingParameters>
+            <p2:GratingParameters>
+              <p2:X>0</p2:X>
+              <p2:Y>-10</p2:Y>
+              <p2:Orientation>0</p2:Orientation>
+            </p2:GratingParameters>
+            <p2:GratingParameters>
+              <p2:X>0</p2:X>
+              <p2:Y>0</p2:Y>
+              <p2:Orientation>0</p2:Orientation>
+            </p2:GratingParameters>
+            <p2:GratingParameters>
+              <p2:X>0</p2:X>
+              <p2:Y>10</p2:Y>
+              <p2:Orientation>0</p2:Orientation>
+            </p2:GratingParameters>
+            <p2:GratingParameters>
+              <p2:X>0</p2:X>
+              <p2:Y>20</p2:Y>
+              <p2:Orientation>0</p2:Orientation>
+            </p2:GratingParameters>
+            <p2:GratingParameters>
+              <p2:X>0</p2:X>
+              <p2:Y>30</p2:Y>
+              <p2:Orientation>0</p2:Orientation>
+            </p2:GratingParameters>
+            <p2:GratingParameters>
+              <p2:X>30</p2:X>
+              <p2:Y>0</p2:Y>
+              <p2:Orientation>0</p2:Orientation>
+            </p2:GratingParameters>
+            <p2:GratingParameters>
+              <p2:X>-30</p2:X>
+              <p2:Y>0</p2:Y>
+              <p2:Orientation>0</p2:Orientation>
+            </p2:GratingParameters>
+            <p2:GratingParameters>
+              <p2:X>-20</p2:X>
+              <p2:Y>0</p2:Y>
+              <p2:Orientation>0</p2:Orientation>
+            </p2:GratingParameters>
+            <p2:GratingParameters>
+              <p2:X>-10</p2:X>
+              <p2:Y>0</p2:Y>
+              <p2:Orientation>0</p2:Orientation>
+            </p2:GratingParameters>
+            <p2:GratingParameters>
+              <p2:X>10</p2:X>
+              <p2:Y>0</p2:Y>
+              <p2:Orientation>0</p2:Orientation>
+            </p2:GratingParameters>
+            <p2:GratingParameters>
+              <p2:X>20</p2:X>
+              <p2:Y>0</p2:Y>
+              <p2:Orientation>0</p2:Orientation>
+            </p2:GratingParameters>
+            <p2:GratingParameters>
+              <p2:X>30</p2:X>
+              <p2:Y>0</p2:Y>
+              <p2:Orientation>0</p2:Orientation>
+            </p2:GratingParameters>
+          </p2:Trials>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="InputMapping">
+        <PropertyMappings>
+          <Property Name="Orientation" Selector="Orientation" />
+          <Property Name="X" Selector="X" />
+          <Property Name="Y" Selector="Y" />
+        </PropertyMappings>
+        <Selector />
+        <TypeMapping xsi:type="TypeMapping" TypeArguments="p2:GratingParameters" />
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="p2:CreateGratingTrial">
+          <p2:Delay>1</p2:Delay>
+          <p2:Duration>0.25</p2:Duration>
+          <p2:Diameter>20</p2:Diameter>
+          <p2:X>30</p2:X>
+          <p2:Y>0</p2:Y>
+          <p2:Contrast>0.8</p2:Contrast>
+          <p2:SpatialFrequency>0.08</p2:SpatialFrequency>
+          <p2:TemporalFrequency>4</p2:TemporalFrequency>
+          <p2:Orientation>0</p2:Orientation>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="Count" DisplayName="NbReceptiveFieldRepeats" />
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:RepeatCount">
+          <rx:Count>1</rx:Count>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="num:Permutation" />
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Concat" />
+      </Expression>
+      <Expression xsi:type="IncludeWorkflow" Path="BonVision:Logging.LogEvent.bonsai">
+        <Format>StartGrating</Format>
+        <Selector xsi:nil="true" />
+        <Name>Allen.Log</Name>
       </Expression>
       <Expression xsi:type="GroupWorkflow">
         <Name>ColoredGratingSequence</Name>
@@ -734,7 +788,7 @@
                     <SpatialFrequency>0.04</SpatialFrequency>
                     <TemporalFrequency>2</TemporalFrequency>
                     <Phase>0</Phase>
-                    <Angle>337.5</Angle>
+                    <Angle>22.5</Angle>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <DutyCycle xsi:nil="true" />
@@ -840,16 +894,73 @@
           </Edges>
         </Workflow>
       </Expression>
+      <Expression xsi:type="GroupWorkflow">
+        <Name>HARPDO2DOWN</Name>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="WorkflowInput">
+              <Name>Source1</Name>
+            </Expression>
+            <Expression xsi:type="beh:CreateMessage">
+              <harp:MessageType>Write</harp:MessageType>
+              <harp:Payload xsi:type="beh:CreateOutputPulseEnablePayload">
+                <beh:OutputPulseEnable>DO2</beh:OutputPulseEnable>
+              </harp:Payload>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>BehaviorCommands</Name>
+            </Expression>
+            <Expression xsi:type="beh:CreateMessage">
+              <harp:MessageType>Write</harp:MessageType>
+              <harp:Payload xsi:type="beh:CreatePulseDO2Payload">
+                <beh:PulseDO2>0</beh:PulseDO2>
+              </harp:Payload>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>BehaviorCommands</Name>
+            </Expression>
+            <Expression xsi:type="beh:CreateMessage">
+              <harp:MessageType>Write</harp:MessageType>
+              <harp:Payload xsi:type="beh:CreateOutputSetPayload">
+                <beh:OutputSet>DO2</beh:OutputSet>
+              </harp:Payload>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>BehaviorCommands</Name>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+          </Nodes>
+          <Edges>
+            <Edge From="0" To="1" Label="Source1" />
+            <Edge From="1" To="2" Label="Source1" />
+            <Edge From="2" To="3" Label="Source1" />
+            <Edge From="3" To="4" Label="Source1" />
+            <Edge From="4" To="5" Label="Source1" />
+            <Edge From="5" To="6" Label="Source1" />
+            <Edge From="6" To="7" Label="Source1" />
+          </Edges>
+        </Workflow>
+      </Expression>
+      <Expression xsi:type="IncludeWorkflow" Path="BonVision:Logging.LogEvent.bonsai">
+        <Format>EndGrating</Format>
+        <Selector xsi:nil="true" />
+        <Name>Allen.Log</Name>
+      </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:TakeLast">
           <rx:Count>1</rx:Count>
         </Combinator>
       </Expression>
       <Expression xsi:type="MemberSelector">
-        <Selector>Orientation.Value,SpatialFrequency.Value,Contrast.Value,TemporalFrequency.Value</Selector>
+        <Selector>Id,Delay,Duration,Diameter,X,Y,Contrast,SpatialFrequency,TemporalFrequency,Orientation</Selector>
       </Expression>
       <Expression xsi:type="rx:BehaviorSubject">
         <Name>Orientation</Name>
+      </Expression>
+      <Expression xsi:type="IncludeWorkflow" Path="BonVision:Logging.LogEvent.bonsai">
+        <Format>Orientation</Format>
+        <Selector xsi:nil="true" />
+        <Name>Allen.Log</Name>
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Zip" />
@@ -874,9 +985,6 @@
         <Name>EndExpt</Name>
       </Expression>
       <Expression xsi:type="SubscribeSubject">
-        <Name>Orientation</Name>
-      </Expression>
-      <Expression xsi:type="SubscribeSubject">
         <Name>LoggingRootPath</Name>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -888,7 +996,47 @@
         <Combinator xsi:type="rx:Zip" />
       </Expression>
       <Expression xsi:type="Format">
-        <Format>{0}/{1}_.csv</Format>
+        <Format>{0}/{1}_logger.csv</Format>
+        <Selector>Item1,Item2</Selector>
+      </Expression>
+      <Expression xsi:type="PropertyMapping">
+        <PropertyMappings>
+          <Property Name="FileName" />
+        </PropertyMappings>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="gl:RenderFrame" />
+      </Expression>
+      <Expression xsi:type="IncludeWorkflow" Path="BonVision:Logging.FrameEventLogger.bonsai">
+        <Name>Allen.Log</Name>
+        <Append>false</Append>
+        <Overwrite>true</Overwrite>
+        <Suffix>None</Suffix>
+        <FileName>C:/BonsaiDataPredictiveProcessing/769904/20250320011331/orientations_logger.csv</FileName>
+      </Expression>
+      <Expression xsi:type="IncludeWorkflow" Path="BonVision:Logging.LogEvent.bonsai">
+        <Format>Frame</Format>
+        <Selector xsi:nil="true" />
+        <Name>Allen.Log</Name>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="gl:Timer">
+          <gl:DueTime>PT2M</gl:DueTime>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="IncludeWorkflow" Path="BonVision:Logging.LogEvent.bonsai">
+        <Format>EndFrame</Format>
+        <Selector xsi:nil="true" />
+        <Name>Allen.Log</Name>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:TakeUntil" />
+      </Expression>
+      <Expression xsi:type="SubscribeSubject">
+        <Name>Orientation</Name>
+      </Expression>
+      <Expression xsi:type="Format">
+        <Format>{0}/{1}_orientations.csv</Format>
         <Selector>Item1,Item2</Selector>
       </Expression>
       <Expression xsi:type="PropertyMapping">
@@ -901,7 +1049,7 @@
         <Text><![CDATA[]]></Text>
       </Expression>
       <Expression xsi:type="io:CsvWriter">
-        <io:FileName>C:/BonsaiDataPredictiveProcessing/769904/20250317065126/orientations_.csv</io:FileName>
+        <io:FileName>C:/BonsaiDataPredictiveProcessing/769904/20250320011331/orientations_orientations.csv</io:FileName>
         <io:Append>true</io:Append>
         <io:Overwrite>false</io:Overwrite>
         <io:Suffix>FileCount</io:Suffix>
@@ -1001,47 +1149,69 @@
       <Edge From="67" To="68" Label="Source1" />
       <Edge From="68" To="69" Label="Source1" />
       <Edge From="69" To="70" Label="Source1" />
-      <Edge From="71" To="73" Label="Source1" />
-      <Edge From="72" To="73" Label="Source2" />
-      <Edge From="72" To="79" Label="Source2" />
-      <Edge From="72" To="83" Label="Source2" />
-      <Edge From="73" To="74" Label="Source1" />
-      <Edge From="74" To="85" Label="Source1" />
-      <Edge From="75" To="77" Label="Source1" />
-      <Edge From="76" To="77" Label="Source2" />
-      <Edge From="77" To="80" Label="Source1" />
-      <Edge From="78" To="79" Label="Source1" />
-      <Edge From="79" To="80" Label="Source2" />
+      <Edge From="71" To="72" Label="Source1" />
+      <Edge From="72" To="73" Label="Source1" />
+      <Edge From="73" To="75" Label="Source1" />
+      <Edge From="74" To="75" Label="Source2" />
+      <Edge From="74" To="81" Label="Source2" />
+      <Edge From="74" To="89" Label="Source2" />
+      <Edge From="75" To="76" Label="Source1" />
+      <Edge From="76" To="97" Label="Source1" />
+      <Edge From="77" To="79" Label="Source1" />
+      <Edge From="78" To="79" Label="Source2" />
+      <Edge From="79" To="82" Label="Source1" />
       <Edge From="80" To="81" Label="Source1" />
-      <Edge From="81" To="85" Label="Source2" />
+      <Edge From="81" To="82" Label="Source2" />
       <Edge From="82" To="83" Label="Source1" />
       <Edge From="83" To="84" Label="Source1" />
-      <Edge From="84" To="85" Label="Source3" />
-      <Edge From="85" To="86" Label="Source1" />
-      <Edge From="85" To="90" Label="Source1" />
+      <Edge From="84" To="85" Label="Source1" />
+      <Edge From="85" To="97" Label="Source2" />
       <Edge From="86" To="87" Label="Source1" />
       <Edge From="87" To="88" Label="Source1" />
       <Edge From="88" To="89" Label="Source1" />
-      <Edge From="89" To="92" Label="Source1" />
-      <Edge From="90" To="91" Label="Source1" />
-      <Edge From="91" To="92" Label="Source2" />
+      <Edge From="89" To="90" Label="Source1" />
+      <Edge From="90" To="97" Label="Source3" />
+      <Edge From="91" To="92" Label="Source1" />
       <Edge From="92" To="93" Label="Source1" />
       <Edge From="93" To="95" Label="Source1" />
       <Edge From="94" To="95" Label="Source2" />
       <Edge From="95" To="96" Label="Source1" />
-      <Edge From="96" To="97" Label="Source1" />
-      <Edge From="98" To="105" Label="Source1" />
-      <Edge From="99" To="101" Label="Source1" />
-      <Edge From="100" To="101" Label="Source2" />
+      <Edge From="96" To="97" Label="Source4" />
+      <Edge From="97" To="98" Label="Source1" />
+      <Edge From="97" To="103" Label="Source1" />
+      <Edge From="98" To="99" Label="Source1" />
+      <Edge From="99" To="100" Label="Source1" />
+      <Edge From="100" To="101" Label="Source1" />
       <Edge From="101" To="102" Label="Source1" />
-      <Edge From="102" To="103" Label="Source1" />
-      <Edge From="103" To="105" Label="Source2" />
-      <Edge From="104" To="105" Label="Source3" />
+      <Edge From="102" To="106" Label="Source1" />
+      <Edge From="103" To="104" Label="Source1" />
+      <Edge From="104" To="105" Label="Source1" />
+      <Edge From="105" To="106" Label="Source2" />
       <Edge From="106" To="107" Label="Source1" />
-      <Edge From="107" To="108" Label="Source1" />
-      <Edge From="108" To="109" Label="Source1" />
+      <Edge From="107" To="109" Label="Source1" />
+      <Edge From="108" To="109" Label="Source2" />
+      <Edge From="109" To="110" Label="Source1" />
       <Edge From="110" To="111" Label="Source1" />
-      <Edge From="111" To="112" Label="Source1" />
+      <Edge From="112" To="114" Label="Source1" />
+      <Edge From="113" To="114" Label="Source2" />
+      <Edge From="114" To="115" Label="Source1" />
+      <Edge From="114" To="124" Label="Source1" />
+      <Edge From="115" To="116" Label="Source1" />
+      <Edge From="116" To="118" Label="Source1" />
+      <Edge From="117" To="118" Label="Source2" />
+      <Edge From="118" To="119" Label="Source1" />
+      <Edge From="119" To="122" Label="Source1" />
+      <Edge From="120" To="121" Label="Source1" />
+      <Edge From="121" To="122" Label="Source2" />
+      <Edge From="123" To="127" Label="Source1" />
+      <Edge From="124" To="125" Label="Source1" />
+      <Edge From="125" To="127" Label="Source2" />
+      <Edge From="126" To="127" Label="Source3" />
+      <Edge From="128" To="129" Label="Source1" />
+      <Edge From="129" To="130" Label="Source1" />
+      <Edge From="130" To="131" Label="Source1" />
+      <Edge From="132" To="133" Label="Source1" />
+      <Edge From="133" To="134" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
