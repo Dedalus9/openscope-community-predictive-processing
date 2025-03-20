@@ -95,8 +95,6 @@
       </Expression>
       <Expression xsi:type="PropertyMapping">
         <PropertyMappings>
-          <Property Name="ColorR" />
-          <Property Name="ColorG" />
           <Property Name="ColorB" />
         </PropertyMappings>
       </Expression>
@@ -107,8 +105,8 @@
         <LocationY>-16.66</LocationY>
         <Layer>2</Layer>
         <Angle>0</Angle>
-        <ColorR>1</ColorR>
-        <ColorG>1</ColorG>
+        <ColorR>0</ColorR>
+        <ColorG>0</ColorG>
         <ColorB>1</ColorB>
         <ColorA>1</ColorA>
       </Expression>
@@ -260,7 +258,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="harp:MessageWriter">
-          <harp:FileName>C:/BonsaiDataPredictiveProcessing/769904/20250320011331/BonsaiData/20241009_366122_Behavior.harp/Behavior.bin</harp:FileName>
+          <harp:FileName>C:/BonsaiDataPredictiveProcessing/769904/20250320012152/BonsaiData/20241009_366122_Behavior.harp/Behavior.bin</harp:FileName>
           <harp:Suffix>None</harp:Suffix>
           <harp:Buffered>true</harp:Buffered>
           <harp:Overwrite>false</harp:Overwrite>
@@ -788,7 +786,7 @@
                     <SpatialFrequency>0.04</SpatialFrequency>
                     <TemporalFrequency>2</TemporalFrequency>
                     <Phase>0</Phase>
-                    <Angle>22.5</Angle>
+                    <Angle>292.5</Angle>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <DutyCycle xsi:nil="true" />
@@ -1012,7 +1010,7 @@
         <Append>false</Append>
         <Overwrite>true</Overwrite>
         <Suffix>None</Suffix>
-        <FileName>C:/BonsaiDataPredictiveProcessing/769904/20250320011331/orientations_logger.csv</FileName>
+        <FileName>C:/BonsaiDataPredictiveProcessing/769904/20250320012152/orientations_logger.csv</FileName>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="BonVision:Logging.LogEvent.bonsai">
         <Format>Frame</Format>
@@ -1049,7 +1047,7 @@
         <Text><![CDATA[]]></Text>
       </Expression>
       <Expression xsi:type="io:CsvWriter">
-        <io:FileName>C:/BonsaiDataPredictiveProcessing/769904/20250320011331/orientations_orientations.csv</io:FileName>
+        <io:FileName>C:/BonsaiDataPredictiveProcessing/769904/20250320012152/orientations_orientations.csv</io:FileName>
         <io:Append>true</io:Append>
         <io:Overwrite>false</io:Overwrite>
         <io:Suffix>FileCount</io:Suffix>
