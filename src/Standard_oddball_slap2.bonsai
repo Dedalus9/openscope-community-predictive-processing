@@ -1369,28 +1369,20 @@ double.Parse(it[2]) as Y)</scr:Expression>
       <Expression xsi:type="rx:PublishSubject">
         <Name>EndExpt</Name>
       </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="gl:RenderFrame" />
+      </Expression>
       <Expression xsi:type="SubscribeSubject">
         <Name>LoggingRootPath</Name>
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="StringProperty">
-          <Value>orientations</Value>
-        </Combinator>
-      </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="rx:Zip" />
-      </Expression>
       <Expression xsi:type="Format">
-        <Format>{0}/{1}_logger.csv</Format>
-        <Selector>Item1,Item2</Selector>
+        <Format>{0}/orientations_logger.csv</Format>
+        <Selector>it</Selector>
       </Expression>
       <Expression xsi:type="PropertyMapping">
         <PropertyMappings>
           <Property Name="FileName" />
         </PropertyMappings>
-      </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="gl:RenderFrame" />
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="BonVision:Logging.FrameEventLogger.bonsai">
         <Name>Allen.Log</Name>
@@ -1418,9 +1410,12 @@ double.Parse(it[2]) as Y)</scr:Expression>
       <Expression xsi:type="SubscribeSubject">
         <Name>Orientation</Name>
       </Expression>
+      <Expression xsi:type="SubscribeSubject">
+        <Name>LoggingRootPath</Name>
+      </Expression>
       <Expression xsi:type="Format">
-        <Format>{0}/{1}_orientations.csv</Format>
-        <Selector>Item1,Item2</Selector>
+        <Format>{0}/orientations_orientations.csv</Format>
+        <Selector>it</Selector>
       </Expression>
       <Expression xsi:type="PropertyMapping">
         <PropertyMappings>
@@ -1552,25 +1547,23 @@ double.Parse(it[2]) as Y)</scr:Expression>
       <Edge From="95" To="96" Label="Source2" />
       <Edge From="96" To="97" Label="Source1" />
       <Edge From="97" To="98" Label="Source1" />
-      <Edge From="99" To="101" Label="Source1" />
-      <Edge From="100" To="101" Label="Source2" />
+      <Edge From="99" To="103" Label="Source1" />
+      <Edge From="100" To="101" Label="Source1" />
       <Edge From="101" To="102" Label="Source1" />
-      <Edge From="101" To="111" Label="Source1" />
-      <Edge From="102" To="103" Label="Source1" />
-      <Edge From="103" To="105" Label="Source1" />
-      <Edge From="104" To="105" Label="Source2" />
+      <Edge From="102" To="103" Label="Source2" />
+      <Edge From="103" To="104" Label="Source1" />
+      <Edge From="104" To="107" Label="Source1" />
       <Edge From="105" To="106" Label="Source1" />
-      <Edge From="106" To="109" Label="Source1" />
-      <Edge From="107" To="108" Label="Source1" />
-      <Edge From="108" To="109" Label="Source2" />
-      <Edge From="110" To="114" Label="Source1" />
-      <Edge From="111" To="112" Label="Source1" />
-      <Edge From="112" To="114" Label="Source2" />
-      <Edge From="113" To="114" Label="Source3" />
+      <Edge From="106" To="107" Label="Source2" />
+      <Edge From="108" To="113" Label="Source1" />
+      <Edge From="109" To="110" Label="Source1" />
+      <Edge From="110" To="111" Label="Source1" />
+      <Edge From="111" To="113" Label="Source2" />
+      <Edge From="112" To="113" Label="Source3" />
+      <Edge From="114" To="115" Label="Source1" />
       <Edge From="115" To="116" Label="Source1" />
       <Edge From="116" To="117" Label="Source1" />
       <Edge From="117" To="118" Label="Source1" />
-      <Edge From="118" To="119" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
