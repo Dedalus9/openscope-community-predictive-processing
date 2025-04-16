@@ -1,0 +1,9 @@
+site_name: My Project
+site_url: https://<your-github-username>.github.io/<your-repo-name>/
+nav:
+  - Home: index.md
+  - Project Tracking: project-tracking.md
+  - Community Collaboration Policy: community-collaboration-policy.md
+theme:
+  name: material  # or 'readthedocs'
+docs_dir: docs 
