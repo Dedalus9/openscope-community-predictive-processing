@@ -19,3 +19,6 @@ docs_dir: docs
 
 plugins:
   - search
+
+# Add this line to enable the "Edit this page" button
+edit_uri: "edit/main/docs/"
