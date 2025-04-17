@@ -13,7 +13,7 @@ nav:
   - Stimuli Instructions: docs/stimuli/bonsai_instructions.md
 
 theme:
-  name: material
+  name: readthedocs
 
 docs_dir: docs
 
