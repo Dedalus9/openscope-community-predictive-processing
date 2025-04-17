@@ -3,14 +3,14 @@ site_url: https://allenneuraldynamics.github.io/openscope-community-predictive-p
 
 nav:
   - Home: index.md
-  - About the Project: docs/project-tracking.md
-  - Collaboration Policy: docs/collaboration-policy.md
-  - How to Contribute: docs/how_to_contribute.md
+  - About the Project: project-tracking.md
+  - Collaboration Policy: collaboration-policy.md
+  - How to Contribute: how_to_contribute.md
   - Experiments: []
   - Meetings: []
   - Hardware:
-      - Neuropixels Hardware: docs/hardware/allen_institute_neuropixels_hardware.md
-  - Stimuli Instructions: docs/stimuli/bonsai_instructions.md
+      - Neuropixels Hardware: hardware/allen_institute_neuropixels_hardware.md
+  - Stimuli Instructions: stimuli/bonsai_instructions.md
 
 theme:
   name: readthedocs
