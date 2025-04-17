@@ -29,4 +29,3 @@ six
 urllib3
 watchdog
 zipp
-mkdocs-glob-plugin
