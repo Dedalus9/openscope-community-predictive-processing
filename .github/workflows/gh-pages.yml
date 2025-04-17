@@ -22,6 +22,10 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Update mkdocs.yml
+        run: |
+          python update_mkdocs.py
+
       - name: Build and Deploy MkDocs
         run: |
           mkdocs gh-deploy --force
