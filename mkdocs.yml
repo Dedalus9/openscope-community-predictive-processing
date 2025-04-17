@@ -3,15 +3,14 @@ site_url: https://allenneuraldynamics.github.io/openscope-community-predictive-p
 
 nav:
   - Home: index.md
-  - About the Project: project-tracking.md
   - Collaboration Policy: collaboration-policy.md
-  - How to Contribute: how_to_contribute.md
-  - Experiments: []
-  - Meetings: []
+  - How to Contribute: how_to_contribute.md 
+  - Sub-Projects: project-tracking.md
   - Hardware:
       - Neuropixels Hardware: hardware/allen_institute_neuropixels_hardware.md
   - Stimuli Instructions: stimuli/bonsai_instructions.md
-
+  - Meetings: []
+  - Experiments: []
 theme:
   name: readthedocs
 
@@ -21,4 +20,4 @@ plugins:
   - search
 
 # Add this line to enable the "Edit this page" button
-edit_uri: "edit/main/docs/"
+edit_uri: "https://github.com/allenneuraldynamics/openscope-community-predictive-processing/edit/main/docs/"
