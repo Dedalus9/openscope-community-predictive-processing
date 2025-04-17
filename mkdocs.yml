@@ -1,10 +1,10 @@
 site_name: OpenScope Community Predictive Processing
-site_url: https://<your-github-username>.github.io/<your-repo-name>/
+site_url: https://allenneuraldynamics.github.io/openscope-community-predictive-processing/
 
 nav:
   - Home: index.md
   - About the Project: docs/project-tracking.md
-  - Collaboration Policy: docs/community-collaboration-policy.md
+  - Collaboration Policy: docs/collaboration-policy.md
   - How to Contribute: docs/how_to_contribute.md
   - Experiments: []
   - Meetings: []
