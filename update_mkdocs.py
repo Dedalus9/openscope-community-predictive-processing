@@ -22,21 +22,24 @@ def update_mkdocs():
     with open(MKDOCS_YML_PATH, "r") as f:
         mkdocs_config = yaml.safe_load(f)
 
-    # Update the experiments section
-    experiments_files = get_markdown_files(EXPERIMENTS_DIR)
+    # Ensure 'nav' exists and is a list
+    if "nav" not in mkdocs_config or not isinstance(mkdocs_config["nav"], list):
+        mkdocs_config["nav"] = []
+
+    # Remove existing Experiments and Meetings sections
     mkdocs_config["nav"] = [
-        item for item in mkdocs_config["nav"] if "Experiments" not in item
+        item for item in mkdocs_config["nav"] if not ("Experiments" in item or "Meetings" in item)
     ]
+
+    # Add Experiments section
+    experiments_files = get_markdown_files(EXPERIMENTS_DIR)
     if experiments_files:
         mkdocs_config["nav"].append(
             {"Experiments": [os.path.relpath(f) for f in experiments_files]}
         )
 
-    # Update the meetings section
+    # Add Meetings section
     meetings_files = get_markdown_files(MEETINGS_DIR)
-    mkdocs_config["nav"] = [
-        item for item in mkdocs_config["nav"] if "Meetings" not in item
-    ]
     if meetings_files:
         mkdocs_config["nav"].append(
             {"Meetings": [os.path.relpath(f) for f in meetings_files]}
