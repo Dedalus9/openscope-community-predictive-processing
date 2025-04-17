@@ -13,7 +13,6 @@ Each file here documents one day's experiment session for a specific mouse, usin
 - **Stimulus version:**
 - **Protocol followed:**
 - **Any deviations from protocol:**
-- **Behavior observations:**
 - **Notes & Issues:**
 
 These notes help improve reproducibility, track subtle variations, and support future reanalysis.

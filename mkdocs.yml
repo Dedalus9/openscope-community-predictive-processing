@@ -1,9 +1,21 @@
-site_name: My Project
+site_name: OpenScope Community Predictive Processing
 site_url: https://<your-github-username>.github.io/<your-repo-name>/
+
 nav:
   - Home: index.md
-  - Project Tracking: project-tracking.md
-  - Community Collaboration Policy: community-collaboration-policy.md
+  - About the Project: docs/project-tracking.md
+  - Collaboration Policy: docs/community-collaboration-policy.md
+  - How to Contribute: docs/how_to_contribute.md
+  - Experiments:
+      # Automatically include all markdown files in the experiments folder
+      - !glob "docs/experiments/*.md"
+  - Stimuli Instructions: docs/stimuli/bonsai_instructions.md
+
 theme:
   name: material  # or 'readthedocs'
-docs_dir: docs 
+
+docs_dir: docs
+
+plugins:
+  - search
+  - glob
