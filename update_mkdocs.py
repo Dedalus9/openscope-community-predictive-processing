@@ -35,14 +35,14 @@ def update_mkdocs():
     experiments_files = get_markdown_files(EXPERIMENTS_DIR)
     if experiments_files:
         mkdocs_config["nav"].append(
-            {"Experiments": [os.path.relpath(f) for f in experiments_files]}
+            {"Experiments": [os.path.relpath(f, "docs") for f in experiments_files]}
         )
 
     # Add Meetings section
     meetings_files = get_markdown_files(MEETINGS_DIR)
     if meetings_files:
         mkdocs_config["nav"].append(
-            {"Meetings": [os.path.relpath(f) for f in meetings_files]}
+            {"Meetings": [os.path.relpath(f, "docs") for f in meetings_files]}
         )
 
     # Save the updated mkdocs.yml
