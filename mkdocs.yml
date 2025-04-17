@@ -6,17 +6,16 @@ nav:
   - About the Project: docs/project-tracking.md
   - Collaboration Policy: docs/community-collaboration-policy.md
   - How to Contribute: docs/how_to_contribute.md
-  - Experiments:
-  - Meetings:
+  - Experiments: []
+  - Meetings: []
   - Hardware:
       - Neuropixels Hardware: docs/hardware/allen_institute_neuropixels_hardware.md
   - Stimuli Instructions: docs/stimuli/bonsai_instructions.md
 
 theme:
-  name: material  # or 'readthedocs'
+  name: material
 
 docs_dir: docs
 
 plugins:
   - search
-  - glob
