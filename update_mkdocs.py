@@ -59,7 +59,7 @@ def update_mkdocs():
     if experiments_files:
         experiments_entries = [format_nav_entry(f) for f in experiments_files]
         # Add the template link to experiments section
-        experiments_entries.append({"Template": "../templates/mouse_experiment_template.md"})
+        experiments_entries.append({"Template": "templates/mouse_experiment_template.md"})
         
         if project_resources_index is not None:
             mkdocs_config["nav"][project_resources_index]["Project Resources"].append(
@@ -71,7 +71,7 @@ def update_mkdocs():
     if meetings_files:
         meetings_entries = [format_nav_entry(f) for f in meetings_files]
         # Add the template link to meetings section
-        meetings_entries.append({"Template": "../templates/meeting_template.md"})
+        meetings_entries.append({"Template": "templates/meeting_template.md"})
         
         if project_management_index is not None:
             mkdocs_config["nav"][project_management_index]["Project Management"].append(
