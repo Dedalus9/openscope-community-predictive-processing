@@ -11,21 +11,25 @@ nav:
     - List of scripts: stimuli/list_scripts.md
     - Standard Oddball: stimuli/standard-oddball.md
     - Sensory-Motor Closed-Loop: stimuli/sensory-motor-closed-loop.md
-  - Hardware:  
+  - Hardware:
     - Hardware Overview: hardware-overview.md
     - SLAP2: hardware/allen_institute_slap2_hardware.md
     - Neuropixels: hardware/allen_institute_neuropixels_hardware.md
     - Mesoscope: hardware/allen_institute_mesoscope_hardware.md
-  - Experiments: []
   - Templates:
     - Experiment Template: templates/mouse_experiment_template.md
     - Meeting Template: templates/meeting_template.md
+  - Experiments:
+    - allen_institute_787727_2025-03-27: experiments/allen_institute_787727_2025-03-27.md
+    - allen_institute_794237_2025-04-03: experiments/allen_institute_794237_2025-04-03.md
+    - allen_institute_NA_2025-03-20: experiments/allen_institute_NA_2025-03-20.md
 - Project Management:
   - Team: people.md
   - How to Contribute: how_to_contribute.md
   - Collaboration Policy: collaboration-policy.md
   - Project Tracking: project-tracking.md
-  - Meetings: []
+  - Meetings:
+    - '2024-04-21': meetings/2024-04-21.md
 - FAQ: faq.md
 theme:
   name: readthedocs
