@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
   if (pagePath === '') pagePath = 'index';
   
   const pageTitle = document.title.replace(' - OpenScope Community Predictive Processing', '');
-  const searchQuery = encodeURIComponent(`Discussion: ${pageTitle} in:title repo:allenneuraldynamics/openscope-community-predictive-processing is:discussion`);
   
   // Create placeholder for discussion link
   const discussionContainer = document.createElement('div');
@@ -48,18 +47,27 @@ document.addEventListener('DOMContentLoaded', function() {
     content.appendChild(discussionContainer);
   }
   
-  // Search for existing discussions
-  fetch(`https://api.github.com/search/issues?q=${searchQuery}`)
-    .then(response => response.json())
-    .then(data => {
+  // First try to get all discussions (using GraphQL would be better but requires auth)
+  fetch('https://api.github.com/repos/allenneuraldynamics/openscope-community-predictive-processing/discussions')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch discussions');
+      }
+      return response.json();
+    })
+    .then(discussions => {
+      // Look for a discussion with a title matching this page
+      const searchTitle = `Discussion: ${pageTitle}`;
+      const matchingDiscussion = discussions.find(d => 
+        d.title.toLowerCase() === searchTitle.toLowerCase());
+      
       let linkHtml = '';
       
-      if (data.items && data.items.length > 0) {
+      if (matchingDiscussion) {
         // Found an existing discussion
-        const discussion = data.items[0];
         linkHtml = `
           <p>
-            <a href="${discussion.html_url}" target="_blank">
+            <a href="${matchingDiscussion.html_url}" target="_blank">
               💬 Join the discussion for this page on GitHub
             </a>
           </p>
@@ -79,15 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
       discussionContainer.innerHTML = `<hr>${linkHtml}`;
     })
     .catch(error => {
-      // Fall back to creating new discussions
-      discussionContainer.innerHTML = `
-        <hr>
-        <p>
-          <a href="https://github.com/allenneuraldynamics/openscope-community-predictive-processing/discussions/new?category=q-a&title=Discussion: ${encodeURIComponent(pageTitle)}" target="_blank">
-            💬 Discuss this page on GitHub
-          </a>
-          <span class="login-note">(A GitHub account is required to create or participate in discussions)</span>
-        </p>
-      `;
-    });
-});
+      // Fallback to search API as a backup approach
+      const searchQuery = encodeURIComponent(`"Discussion: ${pageTitle}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`);
+      
+      fetch(`https://api.github.com/search/issues?q=${searchQuery}`)
+        .then(response => response.json())
+        .then(data => {
+          let linkHtml = '';
+          
