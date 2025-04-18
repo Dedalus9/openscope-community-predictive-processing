@@ -48,6 +48,15 @@ document.addEventListener('DOMContentLoaded', function() {
       color: #666;
       margin-top: 0.5rem;
     }
+    .comment-count {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 6px;
+      background-color: #f1f8ff;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      color: #0366d6;
+    }
   `;
   document.head.appendChild(style);
   
@@ -76,14 +85,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const discussionId = knownDiscussions[pageIdentifier];
     const discussionUrl = `https://github.com/allenneuraldynamics/openscope-community-predictive-processing/discussions/${discussionId}`;
     
-    discussionContainer.innerHTML = `
-      <hr>
-      <p>
-        <a href="${discussionUrl}" target="_blank">
-          💬 Join the discussion for this page on GitHub
-        </a>
-      </p>
-    `;
+    // Fetch the discussion details to get comment count
+    fetch(`https://api.github.com/repos/allenneuraldynamics/openscope-community-predictive-processing/issues/${discussionId}`)
+      .then(response => response.json())
+      .then(discussion => {
+        const commentCount = discussion.comments || 0;
+        const commentText = commentCount === 1 ? 'comment' : 'comments';
+        
+        discussionContainer.innerHTML = `
+          <hr>
+          <p>
+            <a href="${discussionUrl}" target="_blank">
+              💬 Join the discussion for this page on GitHub
+            </a>
+            <span class="comment-count">${commentCount} ${commentText}</span>
+          </p>
+        `;
+      })
+      .catch(error => {
+        // If we can't get the comment count, just show the link
+        discussionContainer.innerHTML = `
+          <hr>
+          <p>
+            <a href="${discussionUrl}" target="_blank">
+              💬 Join the discussion for this page on GitHub
+            </a>
+          </p>
+        `;
+      });
+    
     return;
   }
   
@@ -106,12 +136,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (data.items && data.items.length > 0) {
           // Found an existing discussion or issue
           const discussion = data.items[0];
+          const commentCount = discussion.comments || 0;
+          const commentText = commentCount === 1 ? 'comment' : 'comments';
+          
           discussionContainer.innerHTML = `
             <hr>
             <p>
               <a href="${discussion.html_url}" target="_blank">
                 💬 Join the discussion for this page on GitHub
               </a>
+              <span class="comment-count">${commentCount} ${commentText}</span>
             </p>
           `;
         } else {
