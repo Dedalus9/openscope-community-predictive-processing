@@ -14,7 +14,7 @@ nav:
           - Mesoscope: hardware/allen_institute_mesoscope_hardware.md
       - Stimuli:
           - Bonsai Instructions: stimuli/bonsai_instructions.md
-          - Script Details: stimuli/script-details.md
+          - List of scripts: stimuli/script-details.md
           - Standard Oddball: stimuli/standard-oddball.md
           - Sensory-Motor Closed-Loop: stimuli/sensory-motor-closed-loop.md
   - Team: people.md
