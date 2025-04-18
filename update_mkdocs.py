@@ -32,33 +32,52 @@ def update_mkdocs():
     if "nav" not in mkdocs_config or not isinstance(mkdocs_config["nav"], list):
         mkdocs_config["nav"] = []
 
-    # Remove existing Experiments and Meetings sections
-    mkdocs_config["nav"] = [
-        item for item in mkdocs_config["nav"] if not ("Experiments" in item or "Meetings" in item)
-    ]
-
-    # Add Experiments section
+    # Find the Project Resources and Project Management sections
+    project_resources_index = None
+    project_management_index = None
+    
+    for i, item in enumerate(mkdocs_config["nav"]):
+        if isinstance(item, dict) and "Project Resources" in item:
+            project_resources_index = i
+        if isinstance(item, dict) and "Project Management" in item:
+            project_management_index = i
+    
+    # Remove existing Experiments section from Project Resources
+    if project_resources_index is not None:
+        project_resources = mkdocs_config["nav"][project_resources_index]["Project Resources"]
+        project_resources = [item for item in project_resources if not (isinstance(item, dict) and "Experiments" in item)]
+        mkdocs_config["nav"][project_resources_index]["Project Resources"] = project_resources
+    
+    # Remove existing Meetings section from Project Management
+    if project_management_index is not None:
+        project_management = mkdocs_config["nav"][project_management_index]["Project Management"]
+        project_management = [item for item in project_management if not (isinstance(item, dict) and "Meetings" in item)]
+        mkdocs_config["nav"][project_management_index]["Project Management"] = project_management
+    
+    # Add updated Experiments section to Project Resources
     experiments_files = get_markdown_files(EXPERIMENTS_DIR)
-    experiments_entries = [format_nav_entry(f) for f in experiments_files]
+    if experiments_files:
+        experiments_entries = [format_nav_entry(f) for f in experiments_files]
+        # Add the template link to experiments section
+        experiments_entries.append({"Template": "templates/mouse_experiment_template.md"})
+        
+        if project_resources_index is not None:
+            mkdocs_config["nav"][project_resources_index]["Project Resources"].append(
+                {"Experiments": experiments_entries}
+            )
     
-    # Add the template link to experiments section
-    experiments_entries.append({"Template": "templates/mouse_experiment_template.md"})
-    
-    mkdocs_config["nav"].append(
-        {"Experiments": experiments_entries}
-    )
-
-    # Add Meetings section
+    # Add updated Meetings section to Project Management
     meetings_files = get_markdown_files(MEETINGS_DIR)
-    meetings_entries = [format_nav_entry(f) for f in meetings_files]
+    if meetings_files:
+        meetings_entries = [format_nav_entry(f) for f in meetings_files]
+        # Add the template link to meetings section
+        meetings_entries.append({"Template": "templates/meeting_template.md"})
+        
+        if project_management_index is not None:
+            mkdocs_config["nav"][project_management_index]["Project Management"].append(
+                {"Meetings": meetings_entries}
+            )
     
-    # Add the template link to meetings section
-    meetings_entries.append({"Template": "templates/meeting_template.md"})
-    
-    mkdocs_config["nav"].append(
-        {"Meetings": meetings_entries}
-    )
-
     # Save the updated mkdocs.yml
     with open(MKDOCS_YML_PATH, "w") as f:
         yaml.dump(mkdocs_config, f, default_flow_style=False, sort_keys=False)

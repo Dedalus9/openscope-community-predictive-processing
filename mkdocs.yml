@@ -6,31 +6,31 @@ nav:
   - Overview: experimental-plan.md
   - Detailed Plan: detailed-experimental-plan.md
 - Project Resources:
-  - Hardware Overview: hardware-overview.md
-  - Hardware:
-    - SLAP2: hardware/allen_institute_slap2_hardware.md
-    - Neuropixels: hardware/allen_institute_neuropixels_hardware.md
-    - Mesoscope: hardware/allen_institute_mesoscope_hardware.md
   - Stimuli:
     - Bonsai Instructions: stimuli/bonsai_instructions.md
     - List of scripts: stimuli/list_scripts.md
     - Standard Oddball: stimuli/standard-oddball.md
     - Sensory-Motor Closed-Loop: stimuli/sensory-motor-closed-loop.md
-- Team: people.md
-- Contribute:
+  - Hardware:  
+    - Hardware Overview: hardware-overview.md
+    - SLAP2: hardware/allen_institute_slap2_hardware.md
+    - Neuropixels: hardware/allen_institute_neuropixels_hardware.md
+    - Mesoscope: hardware/allen_institute_mesoscope_hardware.md
+  - Experiments:
+    - allen_institute_787727_2025-03-27: experiments/allen_institute_787727_2025-03-27.md
+    - allen_institute_794237_2025-04-03: experiments/allen_institute_794237_2025-04-03.md
+    - allen_institute_NA_2025-03-20: experiments/allen_institute_NA_2025-03-20.md
+    - lab_mouse_id_XXXX_XX_XX: experiments/lab_mouse_id_XXXX_XX_XX.md
+    - Template: templates/mouse_experiment_template.md
+- Project Management:
+  - Team: people.md
   - How to Contribute: how_to_contribute.md
   - Collaboration Policy: collaboration-policy.md
   - Project Tracking: project-tracking.md
+  - Meetings:
+    - '2024-04-21': meetings/2024-04-21.md
+    - Template: templates/meeting_template.md
 - FAQ: faq.md
-- Experiments:
-  - allen_institute_787727_2025-03-27: experiments/allen_institute_787727_2025-03-27.md
-  - allen_institute_794237_2025-04-03: experiments/allen_institute_794237_2025-04-03.md
-  - allen_institute_NA_2025-03-20: experiments/allen_institute_NA_2025-03-20.md
-  - lab_mouse_id_XXXX_XX_XX: experiments/lab_mouse_id_XXXX_XX_XX.md
-  - Template: templates/mouse_experiment_template.md
-- Meetings:
-  - '2024-04-21': meetings/2024-04-21.md
-  - Template: templates/meeting_template.md
 theme:
   name: readthedocs
 docs_dir: docs
