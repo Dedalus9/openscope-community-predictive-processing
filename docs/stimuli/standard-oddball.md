@@ -46,9 +46,9 @@ The core of the experiment consists of:
 
 - **Standard Stimulus**: 0° orientation grating with 2 Hz temporal frequency (repeated ~20 times)
 - **Deviant Stimuli**: 
-  - **Orientation deviants**: 45° and 90° oriented gratings
-  - **Temporal frequency deviant**: 0 Hz (stationary grating at 0° orientation)
-  - **Contrast deviant**: 0 contrast (blank screen) with 2 Hz temporal frequency
+    - **Orientation deviants**: 45° and 90° oriented gratings
+    - **Temporal frequency deviant**: 0 Hz (stationary grating at 0° orientation)
+    - **Contrast deviant**: 0 contrast (blank screen) with 2 Hz temporal frequency
 
 Each deviant type violates a different expectation established by the standard stimulus:
 - Orientation deviants test orientation-specific adaptation
