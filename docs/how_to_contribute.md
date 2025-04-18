@@ -19,4 +19,7 @@
      `<institute>_<mouse_id>_<YYYY-MM-DD>.md`
    - Save the file in the [Experiment](`https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/tree/main/docs/experiments/`) directory.
 
+6. **Ask Questions**  
+   - If you have any questions or need clarification, feel free to post them in our [GitHub Discussions](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/discussions/21).
+
 Thank you for contributing to the project!

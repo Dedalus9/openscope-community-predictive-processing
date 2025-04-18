@@ -14,6 +14,32 @@ The collaborative experiment described in the [arXiv paper](https://arxiv.org/ab
 
 ---
 
+## Experimental Plan
+
+The OpenScope Community Predictive Processing project aims to investigate the neural mechanisms of predictive processing through a series of carefully designed experiments. These experiments focus on:
+
+1. **Temporal Mismatch Stimuli**: Testing how neurons respond to unexpected timing changes in sensory inputs.
+2. **Motor Mismatch Stimuli**: Exploring the neural responses to unexpected motor actions or outcomes.
+3. **Omission Mismatch Stimuli**: Studying the effects of omitted sensory inputs on neural activity.
+
+### Methodology
+
+- **Subjects**: Experiments are conducted on mice and primates to compare mechanisms across species.
+- **Techniques**: In-vivo two-photon imaging and electrophysiological recordings are used to capture neural activity.
+- **Data Sharing**: All datasets are collected and shared via the OpenScope program to enable community analysis and model validation.
+
+### Goals
+
+The primary goals of these experiments are:
+
+- To identify shared and distinct mechanisms of predictive processing across species.
+- To validate computational models of predictive processing.
+- To foster community-driven analysis and iterative refinement of predictive processing models.
+
+For more details, refer to the [arXiv paper](https://arxiv.org/abs/2504.09614).
+
+---
+
 ## About this Website
 
 This website is includes:
