@@ -13,30 +13,21 @@ This repository is dedicated to advancing research in predictive processing thro
 - Documentation for experimental stimuli and tools.
 - A centralized location for tracking project progress and team contributions.
 
-For more details, see the [Project Tracking](project-tracking.md) document.
-
 ---
 
 ## Scientific Context
 
-Predictive processing theorizes that the brain continuously predicts sensory inputs, refining neuronal responses by minimizing prediction errors. This framework likely relies on key computational primitives, such as:
-- **Stimulus adaptation**
-- **Dendritic computation**
-- **Excitatory/inhibitory balance**
-- **Hierarchical processing**
+Predictive processing theorizes that the brain continuously predicts sensory inputs, refining neuronal responses by minimizing prediction errors.
 
-The collaborative experiment described in the [arXiv paper](https://arxiv.org/abs/2504.09614) proposes testing these mechanisms using temporal, motor, and omission mismatch stimuli in mice and primates. The resulting dataset, shared via the OpenScope program, aims to foster community analysis and iterative refinement of predictive processing models.
+The collaborative experiment described in the [arXiv paper](https://arxiv.org/abs/2504.09614) proposes testing mechanisms behind predictive processing using temporal, motor, and omission mismatch stimuli in mice and primates. The resulting datasets, shared via the OpenScope program, and from collaborating laboratories, aims to foster community analysis and iterative refinement of predictive processing models.
 
 ---
 
 ## How to Contribute
 
-We welcome contributions from the community! To contribute:
-1. Familiarize yourself with the experimental proposal described in our original [arXiv paper](https://arxiv.org/abs/2504.09614).
-2. Review the [How to Contribute](how_to_contribute.md) guide.
-3. Familiarize yourself with the [Community Collaboration Policy](community-collaboration-policy.md).
-4. Check the [Issues](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/issues) tab for tasks that need attention.
-5. Submit your contributions via a pull request.
+We welcome contributions from the community! 
+
+To contribute, review the [How to Contribute](how_to_contribute.md) guide.
 
 ---
 
@@ -44,8 +35,8 @@ We welcome contributions from the community! To contribute:
 
 The repository includes the following key documents:
 - [How to Contribute](how_to_contribute.md): Step-by-step guide for contributors.
-- [Project Tracking](project-tracking.md): Overview of ongoing projects and team members.
 - [Community Collaboration Policy](community-collaboration-policy.md): Guidelines for respectful and productive collaboration.
+- [Project Tracking](project-tracking.md): Overview of ongoing projects and team members.
 - [Stimuli Instructions](stimuli/bonsai_instructions.md): Documentation for experimental stimuli.
 
 ---
