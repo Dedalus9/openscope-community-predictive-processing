@@ -1,14 +1,14 @@
 ## How to Contribute
 
 1. **Familiarize Yourself with the Project**  
-   - Review the [Project Tracking](project-tracking/) document to understand the current goals and progress.
+   - Review the [Project Tracking](project-tracking.md) document to understand the current goals and progress.
    - Read the [Community Collaboration Policy](collaboration-policy/) to ensure alignment with our values and expectations.
 
 2. **Reach Out to Team Members**  
-   - Contact team members listed in the [Project Tracking](project-tracking/) document for guidance or to discuss your ideas.
+   - Contact team members listed in the [Project Tracking](project-tracking.md) document for guidance or to discuss your ideas.
 
 3. **Add Your Name to Relevant Projects**  
-   - Update the [Project Tracking](project-tracking/) document to include your name under the projects you are contributing to.
+   - Update the [Project Tracking](project-tracking.md) document to include your name under the projects you are contributing to.
 
 4. **Explore Open Issues**  
    - Check the [Issues](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/issues) tab on GitHub for tasks that need attention.
@@ -17,6 +17,6 @@
 5. **Contribute Experimental Notes**  
    - If you are doing experiments in your lab, use the provided template to document experimental sessions. Each experiment should have its own markdown file named using the format:  
      `<institute>_<mouse_id>_<YYYY-MM-DD>.md`
-   - Save the file in the [`docs/experiments/`](experiments/) directory.
+   - Save the file in the [Experiment](`https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/tree/main/docs/experiments/`) directory.
 
 Thank you for contributing to the project!
