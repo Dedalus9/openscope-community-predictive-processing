@@ -66,46 +66,70 @@ document.addEventListener('DOMContentLoaded', function() {
     content.appendChild(discussionContainer);
   }
   
-  // Construct multiple search queries to increase chances of finding a match
-  // We'll search by page path, identifier, and title
-  const queries = [
-    `"${pageIdentifier}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`,
-    `"${pagePath}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`,
-    `"Discussion: ${pageTitle}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`
-  ];
-  
-  // Hard-coded mapping for known discussions
+  // Known discussions mapping - just IDs, not comment counts
   const knownDiscussions = {
-    'allen_institute_787727_2025-03-27': {
-      id: 22,
-      commentCount: 4  // Hard-coded comment count for this discussion
-    }
-    // Add more mappings as you create discussions
+    'allen_institute_787727_2025-03-27': 22
+    // Add more mappings as needed
   };
   
-  // Check if we have a hard-coded mapping for this page
+  // Check if we have a known discussion for this page
   if (knownDiscussions[pageIdentifier]) {
-    const discussionInfo = knownDiscussions[pageIdentifier];
-    const discussionUrl = `https://github.com/allenneuraldynamics/openscope-community-predictive-processing/discussions/${discussionInfo.id}`;
+    const discussionId = knownDiscussions[pageIdentifier];
+    const discussionUrl = `https://github.com/allenneuraldynamics/openscope-community-predictive-processing/discussions/${discussionId}`;
     
-    // Use the hard-coded comment count
-    const commentCount = discussionInfo.commentCount || 0;
-    const commentText = commentCount === 1 ? 'comment' : 'comments';
-    
+    // Create the link without waiting for count
     discussionContainer.innerHTML = `
       <hr>
       <p>
         <a href="${discussionUrl}" target="_blank">
           💬 Join the discussion for this page on GitHub
         </a>
-        <span class="comment-count">${commentCount} ${commentText}</span>
       </p>
     `;
+    
+    // Then fetch the discussion page to get the actual comment count
+    fetch(discussionUrl, { method: 'GET' })
+      .then(response => response.text())
+      .then(html => {
+        // Use DOM parsing to extract the comment count from the HTML
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        
+        // Look for the comment count in the discussion page
+        // This selector targets the discussion timeline item count
+        const timelineItems = doc.querySelectorAll('.TimelineItem');
+        // Subtract 1 for the main post
+        const commentCount = Math.max(0, timelineItems.length - 1);
+        
+        const commentText = commentCount === 1 ? 'comment' : 'comments';
+        
+        // Update the link with the comment count
+        discussionContainer.innerHTML = `
+          <hr>
+          <p>
+            <a href="${discussionUrl}" target="_blank">
+              💬 Join the discussion for this page on GitHub
+            </a>
+            <span class="comment-count">${commentCount} ${commentText}</span>
+          </p>
+        `;
+      })
+      .catch(error => {
+        console.error('Error fetching discussion page:', error);
+        // The basic link is already showing, so just leave it as is
+      });
     
     return;
   }
   
-  // Otherwise try to find existing discussions through the API
+  // Construct search queries to find matching discussions
+  const queries = [
+    `"${pageIdentifier}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`,
+    `"${pagePath}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`,
+    `"Discussion: ${pageTitle}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`
+  ];
+  
+  // Try to find existing discussions through the API
   function searchWithQuery(queryIndex) {
     if (queryIndex >= queries.length) {
       // We've exhausted all queries, create a new discussion
@@ -124,18 +148,46 @@ document.addEventListener('DOMContentLoaded', function() {
         if (data.items && data.items.length > 0) {
           // Found an existing discussion or issue
           const discussion = data.items[0];
-          const commentCount = discussion.comments || 0;
-          const commentText = commentCount === 1 ? 'comment' : 'comments';
+          const discussionUrl = discussion.html_url;
           
+          // Create the link without waiting for count
           discussionContainer.innerHTML = `
             <hr>
             <p>
-              <a href="${discussion.html_url}" target="_blank">
+              <a href="${discussionUrl}" target="_blank">
                 💬 Join the discussion for this page on GitHub
               </a>
-              <span class="comment-count">${commentCount} ${commentText}</span>
             </p>
           `;
+          
+          // Then fetch the actual page to get the comment count
+          fetch(discussionUrl, { method: 'GET' })
+            .then(response => response.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(html, 'text/html');
+              
+              // Extract the comment count
+              const timelineItems = doc.querySelectorAll('.TimelineItem');
+              const commentCount = Math.max(0, timelineItems.length - 1);
+              
+              const commentText = commentCount === 1 ? 'comment' : 'comments';
+              
+              // Update the link with the comment count
+              discussionContainer.innerHTML = `
+                <hr>
+                <p>
+                  <a href="${discussionUrl}" target="_blank">
+                    💬 Join the discussion for this page on GitHub
+                  </a>
+                  <span class="comment-count">${commentCount} ${commentText}</span>
+                </p>
+              `;
+            })
+            .catch(error => {
+              console.error('Error fetching discussion page:', error);
+              // The basic link is already showing, so just leave it as is
+            });
         } else {
           // Try the next query
           searchWithQuery(queryIndex + 1);
