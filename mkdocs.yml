@@ -16,19 +16,13 @@ nav:
     - SLAP2: hardware/allen_institute_slap2_hardware.md
     - Neuropixels: hardware/allen_institute_neuropixels_hardware.md
     - Mesoscope: hardware/allen_institute_mesoscope_hardware.md
-  - Experiments:
-    - allen_institute_787727_2025-03-27: experiments/allen_institute_787727_2025-03-27.md
-    - allen_institute_794237_2025-04-03: experiments/allen_institute_794237_2025-04-03.md
-    - allen_institute_NA_2025-03-20: experiments/allen_institute_NA_2025-03-20.md
-    - Template: templates/mouse_experiment_template.md
+  - Experiments: []
 - Project Management:
   - Team: people.md
   - How to Contribute: how_to_contribute.md
   - Collaboration Policy: collaboration-policy.md
   - Project Tracking: project-tracking.md
-  - Meetings:
-    - '2024-04-21': meetings/2024-04-21.md
-    - Template: templates/meeting_template.md
+  - Meetings: []
 - FAQ: faq.md
 theme:
   name: readthedocs
