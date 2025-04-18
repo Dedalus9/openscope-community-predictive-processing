@@ -12,7 +12,5 @@ Each file here documents one day's experiment session for a specific mouse, usin
 - **Rig / Setup ID:**
 - **Stimulus version:**
 - **Protocol followed:**
-- **Any deviations from protocol:**
 - **Notes & Issues:**
-
 These notes help improve reproducibility, track subtle variations, and support future reanalysis.
