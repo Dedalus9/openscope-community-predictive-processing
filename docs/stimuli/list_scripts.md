@@ -39,7 +39,3 @@ If you've created a new script that should be added to this documentation, follo
     - Hardware considerations
 
 4. Update `mkdocs.yml` to include your new markdown file
-
-5. Update `README.md` for significant additions
-
-6. Run `python update_mkdocs.py` to rebuild the documentation site
