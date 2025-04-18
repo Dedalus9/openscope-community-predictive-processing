@@ -22,7 +22,7 @@ This page lists the team members involved in the OpenScope Community Predictive 
 | Colleen J. Gillon | Imperial College London | c.gillon@imperial.ac.uk |
 | Arno Granier | Department of Physiology, University of Bern | arno.granier@unibe.ch |
 | Jordan P. Hamm | Department of Psychiatry, New York University Grossman School of Medicine | Jordan.Hamm@nyulangone.org |
-| Loreen Hertäg | Modeling of Cognitive Processes, Institute of Software Engineering and Theoretical Computer Science, Berlin Institute of Technology | loreen.hertaeg@tu-berlin.de |
+| Loreen Hertäg | Berlin Institute of Technology | loreen.hertaeg@tu-berlin.de |
 | Henry Kennedy | University of Lyon, Université Claude Bernard Lyon 1, INSERM | henry.kennedy@inserm.fr |
 | Sandeep Kumar | Princeton Neuroscience Institute, Princeton University | sk35@princeton.edu |
 | Alexander Ladd | University of Washington | aladd38@uw.edu |
@@ -57,13 +57,13 @@ This page lists the team members involved in the OpenScope Community Predictive 
 
 ## Contributing Laboratories
 
-| Laboratory | Principal Investigator | Focus Area | Experimental Contribution |
+| Laboratory | Investigator | Focus Area | Experimental Contribution |
 |------------|------------------------|------------|---------------------------|
-| Allen Institute | Jérôme A. Lecoq | Neural Recordings | Two-photon calcium imaging, Neuropixels recordings, Mesoscope imaging |
+| Allen Institute for neural dynamics | Jérôme A. Lecoq | Neural Recordings | Neuropixels recordings, Mesoscope imaging |
 | Bastos Lab | André M. Bastos | Primate Studies | Primate data recordings |
 | Najafi Labs | Farzaneh Najafi | Inhibitory Cell Types | Temporal jittered data recordings across inhibitory cell types and visual areas |
 | Ruediger Labs | Sarah Ruediger | Excitatory Cell Types | Temporal jittered data recordings across excitatory cell types and visual areas |
-| Podgorski Lab | Kaspar Podgorski | Dendritic Recording | Dendritic recording with voltage imaging |
+| Allen Institute for neural dynamics | Kaspar Podgorski | Dendritic Recording | Dendritic recording with voltage imaging |
 | Oweiss Lab | Karim Oweiss | Brain-Computer Interfaces | Calcium and voltage imaging with BCI and optogenetics |
 
 ## Steering Committee
