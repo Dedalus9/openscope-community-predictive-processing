@@ -15,6 +15,7 @@ nav:
       - Stimuli:
           - Bonsai Instructions: stimuli/bonsai_instructions.md
           - Script Details: stimuli/script-details.md
+  - Team: people.md
   - Contribute:
       - How to Contribute: how_to_contribute.md
       - Collaboration Policy: collaboration-policy.md
