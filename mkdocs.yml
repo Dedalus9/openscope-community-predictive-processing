@@ -21,7 +21,8 @@ nav:
       - Collaboration Policy: collaboration-policy.md
       - Project Tracking: project-tracking.md
       - Templates:
-          - Experiment Template: experiments/experimental-template.md
+          - Experiment Template: templates/mouse_experiment_template.md
+          - Meeting Template: templates/meeting_template.md
   - FAQ: faq.md
   - Meetings: []
   - Experiments: []
