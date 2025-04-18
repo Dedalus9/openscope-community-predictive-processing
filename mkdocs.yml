@@ -17,6 +17,9 @@ nav:
     - Neuropixels: hardware/allen_institute_neuropixels_hardware.md
     - Mesoscope: hardware/allen_institute_mesoscope_hardware.md
   - Experiments: []
+  - Templates:
+    - Experiment Template: templates/mouse_experiment_template.md
+    - Meeting Template: templates/meeting_template.md
 - Project Management:
   - Team: people.md
   - How to Contribute: how_to_contribute.md
