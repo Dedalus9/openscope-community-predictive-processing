@@ -4,15 +4,11 @@ This document provides an overview of the scripts specifically used for oddball 
 
 ## Oddball Protocol Scripts
 
-1. **Standard_oddball.bonsai** - The standard oddball protocol script (generic version)
+1. **Standard_oddball_slap2.bonsai** - Standard oddball protocol optimized for SLAP2 hardware
    - For detailed information, see [Standard Oddball Protocol](standard-oddball.md)
    - Located in `code/stimulus-control/src/`
 
-2. **Standard_oddball_slap2.bonsai** - Standard oddball protocol optimized for SLAP2 hardware
-   - For detailed information, see [Standard Oddball Protocol](standard-oddball.md)
-   - Located in `code/stimulus-control/src/`
-
-3. **Sensory_motor_oddball_slap2.bonsai** - Implements the sensory-motor oddball paradigm for SLAP2 hardware
+2. **Sensory_motor_oddball_slap2.bonsai** - Implements the sensory-motor oddball paradigm for SLAP2 hardware
    - For detailed information, see [Sensory-Motor Closed Loop Protocol](sensory-motor-closed-loop.md)
    - Located in `code/stimulus-control/src/`
 
@@ -37,7 +33,3 @@ To add a new script to this documentation:
    - Any hardware-specific considerations
 
 4. Update the `mkdocs.yml` file at the root of the repository to include your new markdown file in the navigation structure
-
-5. Consider updating the `README.md` if the new script is a significant addition to the project
-
-6. Run `python update_mkdocs.py` to rebuild the documentation site with your changes
