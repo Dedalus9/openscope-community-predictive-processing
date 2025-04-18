@@ -66,28 +66,28 @@ Animals will be exposed to a sequence of drifting gratings with the same orienta
 To evaluate the relative contributions of different mechanisms, we will use two complementary approaches:
 
 1. **Two-photon imaging**:
-   - Ideal for recording from different classes of inhibitory neurons in dense networks
-   - Provides cellular-level recording with the ability to track specific cell types
-   - Will capture activity in specific cell types and compartments (e.g., dendrites)
+    - Ideal for recording from different classes of inhibitory neurons in dense networks
+    - Provides cellular-level recording with the ability to track specific cell types
+    - Will capture activity in specific cell types and compartments (e.g., dendrites)
 
 2. **Neuropixels recordings**:
-   - Captures spike timing with high temporal resolution
-   - Allows for recording from multiple brain regions simultaneously
-   - Provides broad coverage across brain regions and layers
+    - Captures spike timing with high temporal resolution
+    - Allows for recording from multiple brain regions simultaneously
+    - Provides broad coverage across brain regions and layers
 
 ### 3. Species and Brain Regions
 
 1. **Mice**:
-   - Primary visual cortex (V1)
-   - Higher visual areas (LM)
-   - Motor areas (M1, M2)
-   - Prefrontal cortex
-   - LGN
+    - Primary visual cortex (V1)
+    - Higher visual areas (LM)
+    - Motor areas (M1, M2)
+    - Prefrontal cortex
+    - LGN
 
 2. **Primates** (collaborative studies):
-   - V1, V2, V3
-   - MT/MST
-   - Prefrontal cortex
+    - V1, V2, V3
+    - MT/MST
+    - Prefrontal cortex
 
 ### 4. Recording Sessions
 
