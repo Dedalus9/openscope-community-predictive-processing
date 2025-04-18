@@ -2,14 +2,24 @@ document.addEventListener('DOMContentLoaded', function() {
   // Skip if not on a content page
   if (!document.querySelector('.rst-content .document')) return;
   
-  // Get the current page path and title
+  // Get the current page path (this is more reliable than the title)
   const pathname = window.location.pathname;
   const basePath = '/openscope-community-predictive-processing/';
   let pagePath = pathname.startsWith(basePath) ? pathname.substring(basePath.length) : pathname;
+  // Remove trailing slash and .html extension if present
   pagePath = pagePath.replace(/\/$/, '').replace(/\.html$/, '');
   if (pagePath === '') pagePath = 'index';
   
-  const pageTitle = document.title.replace(' - OpenScope Community Predictive Processing', '');
+  // Extract key identifiers from the path - this is crucial for matching discussions
+  const pathParts = pagePath.split('/');
+  const pageIdentifier = pathParts[pathParts.length - 1]; // Last segment of path
+  
+  console.log('Page path:', pagePath);
+  console.log('Page identifier:', pageIdentifier);
+  
+  // Get the page title as a fallback
+  const pageTitle = document.title.replace(' - OpenScope Community Predictive Processing', '').trim();
+  console.log('Page title:', pageTitle);
   
   // Create placeholder for discussion link
   const discussionContainer = document.createElement('div');
@@ -47,50 +57,88 @@ document.addEventListener('DOMContentLoaded', function() {
     content.appendChild(discussionContainer);
   }
   
-  // Use the search API without the is:discussion qualifier which is better supported
-  const searchQuery = encodeURIComponent(`"Discussion: ${pageTitle}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`);
+  // Construct multiple search queries to increase chances of finding a match
+  // We'll search by page path, identifier, and title
+  const queries = [
+    `"${pageIdentifier}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`,
+    `"${pagePath}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`,
+    `"Discussion: ${pageTitle}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`
+  ];
   
-  fetch(`https://api.github.com/search/issues?q=${searchQuery}`)
-    .then(response => response.json())
-    .then(data => {
-      console.log('GitHub API Response:', data);
-      let linkHtml = '';
-      
-      if (data.items && data.items.length > 0) {
-        // Found an existing discussion or issue
-        const discussion = data.items[0];
-        linkHtml = `
-          <p>
-            <a href="${discussion.html_url}" target="_blank">
-              💬 Join the discussion for this page on GitHub
-            </a>
-          </p>
-        `;
-      } else {
-        // No discussion exists - create new one
-        linkHtml = `
-          <p>
-            <a href="https://github.com/allenneuraldynamics/openscope-community-predictive-processing/discussions/new?category=q-a&title=Discussion: ${encodeURIComponent(pageTitle)}" target="_blank">
-              💬 Start a discussion for this page on GitHub
-            </a>
-            <span class="login-note">(A GitHub account is required to create or participate in discussions)</span>
-          </p>
-        `;
-      }
-      
-      discussionContainer.innerHTML = `<hr>${linkHtml}`;
-    })
-    .catch(error => {
-      console.error('Error fetching discussions:', error);
-      // Fall back to creating new discussions
-      discussionContainer.innerHTML = `
-        <hr>
-        <p>
-          <a href="https://github.com/allenneuraldynamics/openscope-community-predictive-processing/discussions/new?category=q-a&title=Discussion: ${encodeURIComponent(pageTitle)}" target="_blank">
-            💬 Discuss this page on GitHub
-          </a>
-          <span class="login-note">(A GitHub account is required to create or participate in discussions)</span>
-        </p>
-      `;
-    });
+  // Hard-coded mapping for known discussions
+  const knownDiscussions = {
+    'allen_institute_787727_2025-03-27': 22,
+    // Add more mappings as you create discussions
+  };
+  
+  // Check if we have a hard-coded mapping for this page
+  if (knownDiscussions[pageIdentifier]) {
+    const discussionId = knownDiscussions[pageIdentifier];
+    const discussionUrl = `https://github.com/allenneuraldynamics/openscope-community-predictive-processing/discussions/${discussionId}`;
+    
+    discussionContainer.innerHTML = `
+      <hr>
+      <p>
+        <a href="${discussionUrl}" target="_blank">
+          💬 Join the discussion for this page on GitHub
+        </a>
+      </p>
+    `;
+    return;
+  }
+  
+  // Otherwise try to find existing discussions through the API
+  function searchWithQuery(queryIndex) {
+    if (queryIndex >= queries.length) {
+      // We've exhausted all queries, create a new discussion
+      createNewDiscussionLink();
+      return;
+    }
+    
+    const searchQuery = encodeURIComponent(queries[queryIndex]);
+    console.log('Searching with query:', queries[queryIndex]);
+    
+    fetch(`https://api.github.com/search/issues?q=${searchQuery}`)
+      .then(response => response.json())
+      .then(data => {
+        console.log('GitHub API Response for query', queryIndex, ':', data);
+        
+        if (data.items && data.items.length > 0) {
+          // Found an existing discussion or issue
+          const discussion = data.items[0];
+          discussionContainer.innerHTML = `
+            <hr>
+            <p>
+              <a href="${discussion.html_url}" target="_blank">
+                💬 Join the discussion for this page on GitHub
+              </a>
+            </p>
+          `;
+        } else {
+          // Try the next query
+          searchWithQuery(queryIndex + 1);
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching discussions:', error);
+        // Try the next query on error
+        searchWithQuery(queryIndex + 1);
+      });
+  }
+  
+  function createNewDiscussionLink() {
+    // No discussion exists - create new one
+    discussionContainer.innerHTML = `
+      <hr>
+      <p>
+        <a href="https://github.com/allenneuraldynamics/openscope-community-predictive-processing/discussions/new?category=q-a&title=Discussion: ${encodeURIComponent(pagePath)}" target="_blank">
+          💬 Start a discussion for this page on GitHub
+        </a>
+        <span class="login-note">(A GitHub account is required to create or participate in discussions)</span>
+      </p>
+    `;
+  }
+  
+  // Start the search process
+  searchWithQuery(0);
 });
