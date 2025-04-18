@@ -1,0 +1,16 @@
+/* Custom styles for OpenScope Community Predictive Processing site */
+
+/* Make content area take full width */
+.wy-nav-content {
+    max-width: 100% !important;
+}
+
+/* Fix nested list indentation */
+ol li ul {
+    margin-bottom: 12px !important;
+    margin-top: 5px !important;
+}
+
+ol li ul li {
+    margin-left: 20px !important;
+}

@@ -35,3 +35,7 @@ plugins:
 
 # Add this line to enable the "Edit this page" button
 edit_uri: "https://github.com/allenneuraldynamics/openscope-community-predictive-processing/edit/main/docs/"
+
+# Extra CSS files
+extra_css:
+  - custom.css
