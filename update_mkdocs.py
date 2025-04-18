@@ -39,17 +39,25 @@ def update_mkdocs():
 
     # Add Experiments section
     experiments_files = get_markdown_files(EXPERIMENTS_DIR)
-    if experiments_files:
-        mkdocs_config["nav"].append(
-            {"Experiments": [format_nav_entry(f) for f in experiments_files]}
-        )
+    experiments_entries = [format_nav_entry(f) for f in experiments_files]
+    
+    # Add the template link to experiments section
+    experiments_entries.append({"Template": "templates/mouse_experiment_template.md"})
+    
+    mkdocs_config["nav"].append(
+        {"Experiments": experiments_entries}
+    )
 
     # Add Meetings section
     meetings_files = get_markdown_files(MEETINGS_DIR)
-    if meetings_files:
-        mkdocs_config["nav"].append(
-            {"Meetings": [format_nav_entry(f) for f in meetings_files]}
-        )
+    meetings_entries = [format_nav_entry(f) for f in meetings_files]
+    
+    # Add the template link to meetings section
+    meetings_entries.append({"Template": "templates/meeting_template.md"})
+    
+    mkdocs_config["nav"].append(
+        {"Meetings": meetings_entries}
+    )
 
     # Save the updated mkdocs.yml
     with open(MKDOCS_YML_PATH, "w") as f:
