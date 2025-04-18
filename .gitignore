@@ -12,3 +12,5 @@ Bonsai.exe.WebView2
 *.exe.settings
 *.bonsai.layout
 venv/
+
+.DS_Store
