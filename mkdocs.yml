@@ -32,3 +32,5 @@ plugins:
 edit_uri: https://github.com/allenneuraldynamics/openscope-community-predictive-processing/edit/main/docs/
 extra_css:
 - custom.css
+extra_javascript:
+- js/discussion-links.js
