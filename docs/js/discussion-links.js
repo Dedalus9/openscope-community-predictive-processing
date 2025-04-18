@@ -76,43 +76,31 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Hard-coded mapping for known discussions
   const knownDiscussions = {
-    'allen_institute_787727_2025-03-27': 22,
+    'allen_institute_787727_2025-03-27': {
+      id: 22,
+      commentCount: 4  // Hard-coded comment count for this discussion
+    }
     // Add more mappings as you create discussions
   };
   
   // Check if we have a hard-coded mapping for this page
   if (knownDiscussions[pageIdentifier]) {
-    const discussionId = knownDiscussions[pageIdentifier];
-    const discussionUrl = `https://github.com/allenneuraldynamics/openscope-community-predictive-processing/discussions/${discussionId}`;
+    const discussionInfo = knownDiscussions[pageIdentifier];
+    const discussionUrl = `https://github.com/allenneuraldynamics/openscope-community-predictive-processing/discussions/${discussionInfo.id}`;
     
-    // Fetch the discussion details to get comment count
-    fetch(`https://api.github.com/repos/allenneuraldynamics/openscope-community-predictive-processing/issues/${discussionId}`)
-      .then(response => response.json())
-      .then(discussion => {
-        const commentCount = discussion.comments || 0;
-        const commentText = commentCount === 1 ? 'comment' : 'comments';
-        
-        discussionContainer.innerHTML = `
-          <hr>
-          <p>
-            <a href="${discussionUrl}" target="_blank">
-              💬 Join the discussion for this page on GitHub
-            </a>
-            <span class="comment-count">${commentCount} ${commentText}</span>
-          </p>
-        `;
-      })
-      .catch(error => {
-        // If we can't get the comment count, just show the link
-        discussionContainer.innerHTML = `
-          <hr>
-          <p>
-            <a href="${discussionUrl}" target="_blank">
-              💬 Join the discussion for this page on GitHub
-            </a>
-          </p>
-        `;
-      });
+    // Use the hard-coded comment count
+    const commentCount = discussionInfo.commentCount || 0;
+    const commentText = commentCount === 1 ? 'comment' : 'comments';
+    
+    discussionContainer.innerHTML = `
+      <hr>
+      <p>
+        <a href="${discussionUrl}" target="_blank">
+          💬 Join the discussion for this page on GitHub
+        </a>
+        <span class="comment-count">${commentCount} ${commentText}</span>
+      </p>
+    `;
     
     return;
   }
