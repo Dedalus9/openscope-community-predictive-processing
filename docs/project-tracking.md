@@ -17,7 +17,7 @@ We use a [GitHub Kanban board](https://github.com/orgs/AllenNeuralDynamics/proje
     - Use labels to categorize issues (e.g., `data-analysis`, `stimulus-design`, `documentation`).
 
 2. **Track on the Kanban Board**:
-    - All issues are automatically added to the [Kanban board](https://github.com/orgs/AllenNeuralDynamics/projects/149/views/1).
+    - All issues are automatically added to the [Kanban board](https://github.com/orgs/AllenNeuralDynamics/projects/149/views/7).
     - The board is organized into columns representing different stages of the workflow:
         - **To Do**: Tasks that are planned but not yet started.
         - **In Progress**: Tasks currently being worked on.
