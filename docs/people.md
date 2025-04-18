@@ -23,7 +23,6 @@ This page lists the team members involved in the OpenScope Community Predictive 
 | Arno Granier | Department of Physiology, University of Bern | arno.granier@unibe.ch |
 | Jordan P. Hamm | Department of Psychiatry, New York University Grossman School of Medicine | Jordan.Hamm@nyulangone.org |
 | Loreen Hertäg | Modeling of Cognitive Processes, Institute of Software Engineering and Theoretical Computer Science, Berlin Institute of Technology | loreen.hertaeg@tu-berlin.de |
-| Nina Hubig | XAI in neuromedical research, Interdisciplinary Transformation University | nina.hubig@it-u.at |
 | Henry Kennedy | University of Lyon, Université Claude Bernard Lyon 1, INSERM | henry.kennedy@inserm.fr |
 | Sandeep Kumar | Princeton Neuroscience Institute, Princeton University | sk35@princeton.edu |
 | Alexander Ladd | University of Washington | aladd38@uw.edu |
@@ -55,7 +54,6 @@ This page lists the team members involved in the OpenScope Community Predictive 
 | Jacob A. Westerberg | Department of Vision and Cognition, Netherlands Institute for Neuroscience | j.westerberg@nin.knaw.nl |
 | Katharina Wilmes | Department of Physiology, University of Bern | katharina.wilmes@gmail.com |
 | Yihan Sophy Xiong | Department of Psychology, Vanderbilt University | yihan.xiong@vanderbilt.edu |
-| Amit Yaron | International Research Center for Neurointelligence, University of Tokyo | yaron.amit0612@mail.u-tokyo.ac.jp |
 
 ## Contributing Laboratories
 
