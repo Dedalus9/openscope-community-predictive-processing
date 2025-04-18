@@ -12,6 +12,8 @@ The project utilizes three primary recording systems:
 
 Each system offers unique advantages for studying predictive processing mechanisms at different spatial and temporal scales.
 
+![Overview of recording systems](/assets/images/recording_systems_overview.png)
+
 ---
 
 ## Quick Links to Detailed Hardware Documentation

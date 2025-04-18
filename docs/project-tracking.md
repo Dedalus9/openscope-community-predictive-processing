@@ -10,25 +10,25 @@ We use a [GitHub Kanban board](https://github.com/orgs/AllenNeuralDynamics/proje
 
 ### Workflow Overview:
 1. **Create a GitHub Issue**:
-   - Each task or deliverable should be created as a GitHub issue in the repository.
-   - Clearly define the task, its scope, and any relevant details.
-   - Assign the issue to the appropriate team member(s).
+    - Each task or deliverable should be created as a GitHub issue in the repository.
+    - Clearly define the task, its scope, and any relevant details.
+    - Assign the issue to the appropriate team member(s).
 
 2. **Track on the Kanban Board**:
-   - All issues are automatically added to the [Kanban board](https://github.com/orgs/AllenNeuralDynamics/projects/149/views/1).
-   - The board is organized into columns representing different stages of the workflow:
-     - **To Do**: Tasks that are planned but not yet started.
-     - **In Progress**: Tasks currently being worked on.
-     - **Review**: Tasks that are completed and awaiting review.
-     - **Done**: Tasks that are completed and approved.
+    - All issues are automatically added to the [Kanban board](https://github.com/orgs/AllenNeuralDynamics/projects/149/views/1).
+    - The board is organized into columns representing different stages of the workflow:
+        - **To Do**: Tasks that are planned but not yet started.
+        - **In Progress**: Tasks currently being worked on.
+        - **Review**: Tasks that are completed and awaiting review.
+        - **Done**: Tasks that are completed and approved.
 
 3. **Assign Clear Ownership**:
-   - Each issue should have a clear assignee responsible for completing the task.
-   - Use labels to categorize issues (e.g., `data-analysis`, `stimulus-design`, `documentation`).
+    - Each issue should have a clear assignee responsible for completing the task.
+    - Use labels to categorize issues (e.g., `data-analysis`, `stimulus-design`, `documentation`).
 
 4. **Update Regularly**:
-   - Team members should update the status of their issues on the Kanban board as they progress through the workflow.
-   - Add comments to issues to provide updates or request feedback.
+    - Team members should update the status of their issues on the Kanban board as they progress through the workflow.
+    - Add comments to issues to provide updates or request feedback.
 
 ---
 
