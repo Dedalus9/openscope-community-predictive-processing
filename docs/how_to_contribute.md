@@ -11,7 +11,7 @@
    - Update the [Project Tracking](project-tracking.md) document to include your name under the projects you are contributing to.
 
 4. **Explore Open Issues**  
-   - Check the [Issues](https://github.com/AllenNeuralDynamics/penscope-community-predictive-processing/issues) tab on GitHub for tasks that need attention.
+   - Check the [Issues](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/issues) tab on GitHub for tasks that need attention.
    - Look for issues l  abeled `good first issue` if you're new to the project.
 
 5. **Contribute Experimental Notes**  
