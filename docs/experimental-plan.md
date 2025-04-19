@@ -92,7 +92,7 @@ All data collected through this project will be:
 ## Current Status and Progress
 
 For the current status of experiments, please refer to:
-- The [experiment notes](experiments/) for details on completed sessions
+- The [experiment notes](experiments/allen_institute_787727_2025-03-27.md) for details on completed sessions
 - The [project tracking page](project-tracking.md) for overall progress
 
 ## References

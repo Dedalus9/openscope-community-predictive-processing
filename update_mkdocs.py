@@ -57,9 +57,7 @@ def update_mkdocs():
     # Add updated Experiments section to Project Resources
     experiments_files = get_markdown_files(EXPERIMENTS_DIR)
     if experiments_files:
-        experiments_entries = [format_nav_entry(f) for f in experiments_files]
-        # Don't add template link here since it's already in the Templates section
-        
+        experiments_entries = [format_nav_entry(f) for f in experiments_files]        
         if project_resources_index is not None:
             mkdocs_config["nav"][project_resources_index]["Project Resources"].append(
                 {"Experiments": experiments_entries}
@@ -69,8 +67,6 @@ def update_mkdocs():
     meetings_files = get_markdown_files(MEETINGS_DIR)
     if meetings_files:
         meetings_entries = [format_nav_entry(f) for f in meetings_files]
-        # Don't add template link here since it's already in the Templates section
-        
         if project_management_index is not None:
             mkdocs_config["nav"][project_management_index]["Project Management"].append(
                 {"Meetings": meetings_entries}

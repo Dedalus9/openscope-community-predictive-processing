@@ -61,7 +61,7 @@ To contribute, review the [How to Contribute](how_to_contribute.md) guide.
 
 The repository includes the following key documents:
 - [How to Contribute](how_to_contribute.md): Step-by-step guide for contributors.
-- [Community Collaboration Policy](community-collaboration-policy.md): Guidelines for respectful and productive collaboration.
+- [Collaboration Policy](collaboration-policy.md): Guidelines for respectful and productive collaboration.
 - [Project Tracking](project-tracking.md): Overview of ongoing projects and team members.
 - [Stimuli Instructions](stimuli/bonsai_instructions.md): Documentation for experimental stimuli.
 

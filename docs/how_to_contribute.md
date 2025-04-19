@@ -2,7 +2,7 @@
 
 1. **Familiarize Yourself with the Project**  
     - Review the [Project Tracking](project-tracking.md) document to understand the current goals and progress.
-    - Read the [Community Collaboration Policy](collaboration-policy/) to ensure alignment with our values and expectations.
+    - Read the [Community Collaboration Policy](collaboration-policy.md) to ensure alignment with our values and expectations.
 
 2. **Reach Out to Team Members**  
     - Contact team members listed in the [Project Tracking](project-tracking.md) document for guidance or to discuss your ideas.

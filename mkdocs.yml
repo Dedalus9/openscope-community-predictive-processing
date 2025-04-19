@@ -1,5 +1,7 @@
 site_name: OpenScope Community Predictive Processing
 site_url: https://allenneuraldynamics.github.io/openscope-community-predictive-processing/
+use_directory_urls: true
+
 nav:
 - Home: index.md
 - Experimental Plan:
@@ -17,8 +19,8 @@ nav:
     - Neuropixels: hardware/allen_institute_neuropixels_hardware.md
     - Mesoscope: hardware/allen_institute_mesoscope_hardware.md
   - Templates:
-    - Experiment Template: templates/mouse_experiment_template.md
-    - Meeting Template: templates/meeting_template.md
+    - Experiment Template: template-files/mouse_experiment_template.md
+    - Meeting Template: template-files/meeting_template.md
   - Experiments:
     - allen_institute_787727_2025-03-27: experiments/allen_institute_787727_2025-03-27.md
     - allen_institute_794237_2025-04-03: experiments/allen_institute_794237_2025-04-03.md
@@ -31,6 +33,7 @@ nav:
   - Meetings:
     - '2024-04-21': meetings/2024-04-21.md
 - FAQ: faq.md
+
 theme:
   name: readthedocs
 docs_dir: docs
@@ -42,3 +45,10 @@ extra_css:
 extra_javascript:
 - js/discussion-links.js
 - js/github-profiles.js
+
+# Config to ensure all files are included
+strict: true
+dev_addr: 127.0.0.1:8000
+
+# Include all files in the build
+use_directory_urls: true
