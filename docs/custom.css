@@ -1,5 +1,10 @@
 /* Custom styles for OpenScope Community Predictive Processing site */
 
+/* Removed logo from navigation sidebar */
+.wy-side-nav-search {
+    background-color: #2980B9;  /* Maintain the default background color */
+}
+
 /* Make content area take full width */
 .wy-nav-content {
     max-width: 100% !important;

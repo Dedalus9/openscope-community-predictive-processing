@@ -1,4 +1,7 @@
-# OpenScope Community Predictive Processing
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+    <img src="img/openscope_logo.png" alt="OpenScope Logo" style="width: 200px; margin-right: 20px;">
+    <h1>OpenScope Community Predictive Processing</h1>
+</div>
 
 Welcome to the **OpenScope Community Predictive Processing** repository! This project is part of the Allen Institute's initiative to foster collaboration and innovation in predictive processing research. The repository serves as a hub for community-driven contributions, documentation, and project tracking.
 
