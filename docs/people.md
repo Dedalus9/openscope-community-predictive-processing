@@ -8,7 +8,7 @@ Simple list with GitHub handles:
 
 | Name | GitHub |
 |------|--------|
-| Jérôme A. Lecoq | <span class="github-user">jeromelecoq</span> |
+| Jérôme A. Lecoq | @jeromelecoq |
 | André M. Bastos | |
 | Farzaneh Najafi | |
 | Sarah Ruediger | |
@@ -42,7 +42,7 @@ Full team information including GitHub handles:
 | Sandeep Kumar | sk35@princeton.edu | |
 | Alexander Ladd | aladd38@uw.edu | |
 | Hugo Ladret | hugo.ladret@fmi.ch | |
-| Jérôme A. Lecoq | jeromel@alleninstitute.org | <span class="github-user">jeromelecoq</span> |
+| Jérôme A. Lecoq | jeromel@alleninstitute.org | @jeromelecoq |
 | Alexander Maier | alex.maier@vanderbilt.edu | |
 | Patrick McCarthy | patrick.mccarthy@dtc.ox.ac.uk | |
 | Jie Mei | jie.mei@it-u.at | |
@@ -95,5 +95,5 @@ TBD
 This page is maintained in the GitHub repository. To add your information:
 
 1. Fork the repository
-2. Edit the `docs/people.md` file with your details
+2. Edit the `docs/people.md` file with your details including your GitHub handle (use the format "@username")
 3. Submit a pull request with your changes

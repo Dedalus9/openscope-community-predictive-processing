@@ -23,24 +23,86 @@ if (typeof module !== 'undefined') {
   };
 }
 
-// GitHub Profile Renderer - Simplified version
+// GitHub Profile Renderer - Enhanced version
 document.addEventListener('DOMContentLoaded', function() {
-    // Find all elements with github-user class
+    // First approach: Process explicit github-user spans
     const githubUsers = document.querySelectorAll('.github-user');
     
-    // Process each GitHub user reference
     githubUsers.forEach(function(element) {
         const username = element.textContent.trim().replace('@', '');
         if (!username) return;
         
-        // Replace the element with a simple link to GitHub
+        // Replace with a GitHub link
         const link = document.createElement('a');
         link.href = `https://github.com/${username}`;
         link.target = '_blank';
         link.textContent = `@${username}`;
         link.className = 'github-link';
         
-        // Replace the original element with our link
         element.parentNode.replaceChild(link, element);
     });
+    
+    // Second approach: Auto-detect GitHub usernames in text
+    // Look for GitHub username patterns in the document - @username format
+    const detectGitHubUsernames = function(node) {
+        if (node.nodeType === 3) { // Text node
+            const text = node.nodeValue;
+            // Match GitHub username pattern: @username
+            // Username requirements: 
+            // - starts with @
+            // - followed by letters, numbers, or hyphens (no spaces)
+            // - at least 1 character long
+            const regex = /@([a-zA-Z0-9-]+)/g;
+            let match;
+            let lastIndex = 0;
+            const fragments = [];
+            
+            while ((match = regex.exec(text)) !== null) {
+                // Text before the match
+                if (match.index > lastIndex) {
+                    fragments.push(document.createTextNode(text.substring(lastIndex, match.index)));
+                }
+                
+                // The username
+                const username = match[1];
+                const link = document.createElement('a');
+                link.href = `https://github.com/${username}`;
+                link.target = '_blank';
+                link.textContent = `@${username}`;
+                link.className = 'github-link auto-detected';
+                fragments.push(link);
+                
+                lastIndex = regex.lastIndex;
+            }
+            
+            // Text after the last match
+            if (lastIndex < text.length) {
+                fragments.push(document.createTextNode(text.substring(lastIndex)));
+            }
+            
+            // Replace the text node with the fragments
+            if (fragments.length > 1) {
+                const parent = node.parentNode;
+                fragments.forEach(function(fragment) {
+                    parent.insertBefore(fragment, node);
+                });
+                parent.removeChild(node);
+                return true;
+            }
+        }
+        return false;
+    };
+    
+    // Process all text nodes in the document body
+    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    const nodes = [];
+    let node;
+    while ((node = walk.nextNode())) {
+        nodes.push(node);
+    }
+    
+    // Process nodes in reverse order to maintain correct indices
+    for (let i = nodes.length - 1; i >= 0; i--) {
+        detectGitHubUsernames(nodes[i]);
+    }
 });
