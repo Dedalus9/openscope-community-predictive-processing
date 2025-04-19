@@ -8,6 +8,10 @@ This document tracks the progress and key aspects of our Predictive Processing p
 
 We use a [GitHub Kanban board](https://github.com/orgs/AllenNeuralDynamics/projects/149/views/1) to track individual tickets and provide visibility into the progress of the project. The board organizes tickets added to the repository and follows a standard workflow.
 
+<div class="github-project-embed">
+    <iframe src="https://github.com/orgs/AllenNeuralDynamics/projects/149/views/4" style="width: 100%; height: 800px; border: 1px solid #e1e4e8; border-radius: 6px;"></iframe>
+</div>
+
 ### Workflow Overview:
 1. **Create a GitHub Issue**:
     - Each task or deliverable should be created as a GitHub issue in the repository.
