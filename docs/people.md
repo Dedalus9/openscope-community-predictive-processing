@@ -2,6 +2,17 @@
 
 This page lists the team members involved in the OpenScope Community Predictive Processing project.
 
+## Core Team Members
+
+Simple list with GitHub handles:
+
+| Name | GitHub |
+|------|--------|
+| Jérôme A. Lecoq | <span class="github-user">jeromelecoq</span> |
+| André M. Bastos | |
+| Farzaneh Najafi | |
+| Sarah Ruediger | |
+
 ## All Team Members
 
 Full team information including GitHub handles:
@@ -12,7 +23,7 @@ Full team information including GitHub handles:
 | Nicholas Audette | nicholas.audette@uconn.edu | |
 | Ryszard Auksztulewicz | ryszard.auksztulewicz@maastrichtuniversity.nl | |
 | Krzysztof Basiński | k.basinski@gumed.edu.pl | |
-| André M. Bastos | andre.bastos@vanderbilt.edu | <span class="github-user">andremarcosbastos</span> |
+| André M. Bastos | andre.bastos@vanderbilt.edu | |
 | Michael Berry | berry@princeton.edu | |
 | Andres Canales-Johnson | afc37@cam.ac.uk | |
 | Hannah Choi | hannahch@gatech.edu | |
@@ -38,14 +49,14 @@ Full team information including GitHub handles:
 | Jorge Mejias | j.f.mejias@uva.nl | |
 | Fabian Mikulasch | fabian.mikulasch@ds.mpg.de | |
 | Noga Mudrik | nmudrik1@jhmi.edu | |
-| Farzaneh Najafi | fnajafi3@gatech.edu | <span class="github-user">fnajafi</span> |
+| Farzaneh Najafi | fnajafi3@gatech.edu | |
 | Kevin Nejad | kevin.kermaninejad@dpag.ox.ac.uk | |
 | Hamed Nejat | hamed.nejat@vanderbilt.edu | |
 | Karim Oweiss | koweiss@ufl.edu | |
 | Mihai A. Petrovici | mihai.petrovici@unibe.ch | |
 | Viola Priesemann | viola.priesemann@ds.mpg.de | |
 | Lucas Rudelt | lucas.rudelt@ds.mpg.de | |
-| Sarah Ruediger | s.ruediger@ucl.ac.uk | <span class="github-user">sruediger</span> |
+| Sarah Ruediger | s.ruediger@ucl.ac.uk | |
 | Simone Russo | srusso30@gatech.edu | |
 | Alessandro Salatiello | salatiello.alessandro@gmail.com | |
 | Walter Senn | walter.senn@unibe.ch | |
