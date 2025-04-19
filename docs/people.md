@@ -2,17 +2,6 @@
 
 This page lists the team members involved in the OpenScope Community Predictive Processing project.
 
-## Core Team Members
-
-Simple list with GitHub handles:
-
-| Name | GitHub |
-|------|--------|
-| Jérôme A. Lecoq | @jeromelecoq |
-| André M. Bastos | |
-| Farzaneh Najafi | |
-| Sarah Ruediger | |
-
 ## All Team Members
 
 Full team information including GitHub handles:
