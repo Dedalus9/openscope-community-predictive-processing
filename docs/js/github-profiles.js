@@ -1,14 +1,3 @@
-// GitHub profiles for team members
-const GITHUB_PROFILES = {
-  // This is a mapping of names to GitHub usernames
-  "Jérôme A. Lecoq": "jeromelecoq",
-  "André M. Bastos": "andremarcosbastos",
-  "Farzaneh Najafi": "fnajafi",
-  "Sarah Ruediger": "sruediger",
-  // Add more team members and their GitHub usernames here
-  // Format: "Full Name": "github-username",
-};
-
 // Function to get GitHub username by person's name
 function getGitHubUsername(fullName) {
   return GITHUB_PROFILES[fullName] || null;
