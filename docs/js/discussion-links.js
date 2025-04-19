@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Known discussions mapping - Add your known discussions here to avoid API calls
   const knownDiscussions = {
     'allen_institute_787727_2025-03-27': 22,
+    'collaboration-policy': 21, // Adding direct mapping for collaboration policy to the forum
     // Add more mappings as needed
   };
   
@@ -168,9 +169,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Construct search queries to find matching discussions
   const queries = [
-    `"${pageIdentifier}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`,
-    `"${pagePath}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`,
-    `"Discussion: ${pageTitle}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`
+    `"${pageIdentifier}" in:title is:discussion repo:allenneuraldynamics/openscope-community-predictive-processing`,
+    `"${pagePath}" in:title is:discussion repo:allenneuraldynamics/openscope-community-predictive-processing`,
+    `"Discussion: ${pageTitle}" in:title is:discussion repo:allenneuraldynamics/openscope-community-predictive-processing`
   ];
   
   // Try to find existing discussions through the API
@@ -212,22 +213,33 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('GitHub API Response for query', queryIndex + 1, ':', data);
         
         if (data.items && data.items.length > 0) {
-          // Found an existing discussion or issue
-          const discussion = data.items[0];
-          const discussionUrl = discussion.html_url;
+          // Filter to only include actual discussions (not issues)
+          const discussions = data.items.filter(item => 
+            item.html_url.includes('/discussions/') && 
+            !item.html_url.includes('/issues/')
+          );
           
-          // Cache the result
-          saveToCache(discussionUrl);
-          
-          // Create the link
-          discussionContainer.innerHTML = `
-            <hr>
-            <p>
-              <a href="${discussionUrl}" target="_blank">
-                💬 Join the discussion for this page on GitHub
-              </a>
-            </p>
-          `;
+          if (discussions.length > 0) {
+            // Found an existing discussion
+            const discussion = discussions[0];
+            const discussionUrl = discussion.html_url;
+            
+            // Cache the result
+            saveToCache(discussionUrl);
+            
+            // Create the link
+            discussionContainer.innerHTML = `
+              <hr>
+              <p>
+                <a href="${discussionUrl}" target="_blank">
+                  💬 Join the discussion for this page on GitHub
+                </a>
+              </p>
+            `;
+          } else {
+            // Try the next query
+            searchWithQuery(queryIndex + 1);
+          }
         } else {
           // Try the next query
           searchWithQuery(queryIndex + 1);
