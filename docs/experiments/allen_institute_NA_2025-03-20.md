@@ -2,7 +2,7 @@
 
 - **Mouse ID:** N/A (Test Run)
 - **Date:** 2025-03-20
-- **Experimenter:** Carter, Jerome
+- **Experimenter:** @rcpeene @jeromelecoq 
 - **Rig / Setup ID:** SLAP2
 - **Stimulus version:** [90074dbff8ec7e6215d78f65160ba81775b2cbb0](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/commit/90074dbff8ec7e6215d78f65160ba81775b2cbb0)
 - **Protocol followed:** Full stimulus and blank recording

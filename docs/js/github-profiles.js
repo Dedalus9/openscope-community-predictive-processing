@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'meeting':
                 processMeetingPage();
                 break;
+            case 'experiment':
+                processExperimentPage();
+                break;
             default:
                 processDefaultPage();
                 break;
@@ -37,6 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Check for meeting page
         if (document.querySelector('h1') && document.querySelector('h1').textContent.includes('Meeting Notes')) {
             return 'meeting';
+        }
+
+        // Check for experiment page
+        if (document.querySelector('h1') && document.querySelector('h1').textContent.includes('Experiment Session Notes')) {
+            return 'experiment';
         }
         
         // Default handling
@@ -150,6 +158,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Find GitHub handles in this line
                 processGitHubHandlesInText(line);
+            }
+        });
+    };
+    
+    // Process experiment pages
+    const processExperimentPage = function() {
+        // On experiment pages, look for the experimenter line
+        const listItems = document.querySelectorAll('li');
+        
+        listItems.forEach(function(item) {
+            const text = item.textContent.trim();
+            if (text.startsWith('Experimenter:')) {
+                // This is the experimenter line, process GitHub handles here
+                processGitHubHandlesInText(item);
             }
         });
     };
