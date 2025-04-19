@@ -1,3 +1,9 @@
+// GitHub handles mapping for team members
+const GITHUB_PROFILES = {
+  "Test": "test"
+  // Add more team members here in the format "Full Name": "github-username"
+};
+
 // Function to get GitHub username by person's name
 function getGitHubUsername(fullName) {
   return GITHUB_PROFILES[fullName] || null;
@@ -58,9 +64,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Insert card after the handle
             handle.parentNode.insertBefore(cardContainer, handle.nextSibling);
             
-            // Fetch GitHub profile data
+            // Fetch GitHub profile data - add error handling for rate limits
             fetch(`https://api.github.com/users/${username}`)
                 .then(response => {
+                    if (response.status === 403) {
+                        // Likely a rate limit issue
+                        throw new Error('GitHub API rate limit exceeded. Please try again later.');
+                    }
                     if (!response.ok) {
                         throw new Error('GitHub profile not found');
                     }
@@ -89,6 +99,42 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         });
     };
+    
+    // Add CSS for GitHub profiles
+    const style = document.createElement('style');
+    style.textContent = `
+        .github-profile-card {
+            margin: 10px 0;
+        }
+        .profile-card {
+            display: flex;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 10px;
+            background-color: #f6f8fa;
+            max-width: 400px;
+        }
+        .profile-image img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .profile-info h4 {
+            margin: 0 0 5px 0;
+        }
+        .profile-info .bio {
+            margin: 0;
+            font-size: 0.9em;
+            color: #586069;
+        }
+        .loading {
+            font-style: italic;
+            color: #586069;
+            font-size: 0.9em;
+        }
+    `;
+    document.head.appendChild(style);
     
     // Run processor
     processGitHubHandles();
