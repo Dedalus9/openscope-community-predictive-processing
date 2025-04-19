@@ -41,3 +41,4 @@ extra_css:
 - custom.css
 extra_javascript:
 - js/discussion-links.js
+- js/github-profiles.js

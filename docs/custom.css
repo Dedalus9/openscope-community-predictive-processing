@@ -14,3 +14,105 @@ ol li ul {
 ol li ul li {
     margin-left: 20px !important;
 }
+
+/* GitHub Profile Styles */
+.github-handle {
+    display: inline-block;
+    position: relative;
+    color: #0366d6;
+    cursor: pointer;
+}
+
+.github-handle::before {
+    content: "@";
+    opacity: 0.7;
+}
+
+.github-profile-card {
+    margin: 10px 0;
+    max-width: 400px;
+}
+
+.profile-card {
+    display: flex;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #f6f8fa;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.profile-image {
+    flex: 0 0 80px;
+    margin-right: 15px;
+}
+
+.profile-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #e1e4e8;
+}
+
+.profile-info {
+    flex: 1;
+    overflow: hidden;
+}
+
+.profile-info h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.profile-info .bio {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    color: #586069;
+}
+
+.profile-info .stats {
+    font-size: 0.85em;
+    color: #586069;
+}
+
+.profile-info .stats span {
+    margin-right: 10px;
+}
+
+.loading, .error {
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.loading {
+    background-color: #f1f8ff;
+    color: #0366d6;
+}
+
+.error {
+    background-color: #ffeef0;
+    color: #cb2431;
+}
+
+/* Team Members Table */
+.team-members-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.team-members-table th {
+    background-color: #f6f8fa;
+    text-align: left;
+    padding: 8px;
+}
+
+.team-members-table td {
+    padding: 8px;
+    vertical-align: top;
+    border-top: 1px solid #e1e4e8;
+}
+
+.team-members-table tr:hover {
+    background-color: #f6f8fa;
+}
