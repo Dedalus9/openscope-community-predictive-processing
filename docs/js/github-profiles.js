@@ -25,6 +25,31 @@ if (typeof module !== 'undefined') {
 
 // GitHub Profile Renderer - Enhanced version
 document.addEventListener('DOMContentLoaded', function() {
+    // Process table cells with GitHub handles
+    const processGitHubHandles = function() {
+        // Find all table cells in the document
+        const tableCells = document.querySelectorAll('td, th');
+        
+        tableCells.forEach(function(cell) {
+            const text = cell.textContent.trim();
+            // Check if the cell contains a GitHub handle (starts with @)
+            if (text.startsWith('@') && text.length > 1) {
+                const username = text.substring(1); // Remove the @ symbol
+                
+                // Clear the cell and create a link
+                cell.innerHTML = '';
+                
+                const link = document.createElement('a');
+                link.href = `https://github.com/${username}`;
+                link.target = '_blank';
+                link.textContent = `@${username}`;
+                link.className = 'github-link';
+                
+                cell.appendChild(link);
+            }
+        });
+    };
+    
     // First approach: Process explicit github-user spans
     const githubUsers = document.querySelectorAll('.github-user');
     
@@ -105,4 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = nodes.length - 1; i >= 0; i--) {
         detectGitHubUsernames(nodes[i]);
     }
+    
+    // Also process table cells specifically (which may not be caught by the text walker)
+    processGitHubHandles();
 });
