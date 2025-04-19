@@ -6,10 +6,13 @@ This document tracks the progress and key aspects of our Predictive Processing p
 
 ## Project Management Workflow
 
-We use a [GitHub Kanban board](https://github.com/orgs/AllenNeuralDynamics/projects/149/views/1) to track individual tickets and provide visibility into the progress of the project. The board organizes tickets added to the repository and follows a standard workflow.
+We use a [GitHub Kanban board](https://github.com/orgs/AllenNeuralDynamics/projects/149/views/4) to track individual tickets and provide visibility into the progress of the project. The board organizes tickets added to the repository and follows a standard workflow.
 
-<div class="github-project-embed">
-    <iframe src="https://github.com/orgs/AllenNeuralDynamics/projects/149/views/4" style="width: 100%; height: 800px; border: 1px solid #e1e4e8; border-radius: 6px;"></iframe>
+<div class="github-project-link" style="text-align: center; margin: 20px 0; padding: 15px; background-color: #f6f8fa; border: 1px solid #e1e4e8; border-radius: 6px;">
+    <h3>🔄 Live Project Board</h3>
+    <p>View our current tasks and progress on the live GitHub project board:</p>
+    <a href="https://github.com/orgs/AllenNeuralDynamics/projects/149/views/4" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #2ea44f; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; margin: 10px 0;">Open GitHub Project Board</a>
+    <p style="font-size: 0.9em; color: #586069; margin-top: 10px;">Note: You need to be logged into GitHub and have appropriate permissions to view the board.</p>
 </div>
 
 ### Workflow Overview:
