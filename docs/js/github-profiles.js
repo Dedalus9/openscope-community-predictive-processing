@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (text.startsWith('@')) {
                 const username = text.substring(1);
                 if (username && username.length > 0) {
-                    // Just use the span without displaying the handle again (will be shown in card)
-                    cell.innerHTML = `<span class="github-handle" data-username="${username}"></span>`;
+                    // Replace the entire cell content with a span to avoid the @ appearing alone
+                    cell.innerHTML = `<span class="github-handle-wrapper"><span class="github-handle" data-username="${username}"></span></span>`;
                 }
             }
         });
@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
         elements.forEach(function(element) {
             // Skip elements that are within profile cards (to avoid reprocessing)
             if (element.closest('.github-profile-card') || 
-                element.closest('.profile-card')) {
+                element.closest('.profile-card') ||
+                element.closest('.github-handle-wrapper')) {
                 return;
             }
             
@@ -36,9 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Not preceded by text that would make it an email
             const pattern = /(^|\s)@([a-zA-Z0-9-]+)(?!\S*@)/g;
             
-            // Replace all instances of GitHub handles with profile cards
+            // Replace all instances of GitHub handles with profile cards - completely replace the match
             element.innerHTML = text.replace(pattern, function(match, prefix, username) {
-                return `${prefix}<span class="github-handle" data-username="${username}"></span>`;
+                // Include the prefix (space) in the wrapper to avoid orphaned @ symbols
+                return `<span class="github-handle-wrapper">${prefix}<span class="github-handle" data-username="${username}"></span></span>`;
             });
         });
         
@@ -56,8 +58,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add loading indicator
             cardContainer.innerHTML = `<div class="loading">Loading GitHub profile...</div>`;
             
-            // Insert card after the handle
-            handle.parentNode.insertBefore(cardContainer, handle.nextSibling);
+            // Insert card after the handle wrapper, not just the handle
+            const handleWrapper = handle.closest('.github-handle-wrapper');
+            if (handleWrapper) {
+                handleWrapper.parentNode.insertBefore(cardContainer, handleWrapper.nextSibling);
+            } else {
+                handle.parentNode.insertBefore(cardContainer, handle.nextSibling);
+            }
             
             // Fetch GitHub profile data
             const headers = {
@@ -93,6 +100,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
                         </div>
                     `;
+                    
+                    // Once the profile is loaded, we can safely hide the handle wrapper
+                    if (handleWrapper) {
+                        handleWrapper.style.display = 'none';
+                    }
                 })
                 .catch(error => {
                     // If fetching fails, just show a simple link
