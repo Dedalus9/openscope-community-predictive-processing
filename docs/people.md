@@ -63,12 +63,12 @@ Full team information including GitHub handles:
 
 | Laboratory | Investigator | Focus Area | Experimental Contribution |
 |------------|--------------|------------|---------------------------|
-| Allen Institute for neural dynamics | Jérôme A. Lecoq | Neural Recordings | Neuropixels recordings, Mesoscope imaging |
-| Bastos Lab | André M. Bastos | Primate Studies | Primate data recordings |
-| Najafi Lab | Farzaneh Najafi | Inhibitory Cell Types | Temporal jittered data recordings across inhibitory cell types and visual areas |
-| Ruediger Lab | Sarah Ruediger | Excitatory Cell Types | Temporal jittered data recordings across excitatory cell types and visual areas |
-| Allen Institute for neural dynamics | Kaspar Podgorski | Dendritic Recording | Dendritic recording with voltage imaging |
-| Oweiss Lab | Karim Oweiss | Brain-Computer Interfaces | Calcium and voltage imaging with BCI and optogenetics |
+| [Allen Institute for Neural Dynamics](https://www.allenneuraldynamics.org/projects/openscope) | Jérôme A. Lecoq | Neural Recordings | Neuropixels recordings, Mesoscope imaging |
+| [Bastos Lab](https://www.bastoslabvu.com) | André M. Bastos | Primate Studies | Primate data recordings |
+| [Najafi Lab](https://www.najafilab.org) | Farzaneh Najafi | Inhibitory Cell Types | Temporal jittered data recordings across inhibitory cell types and visual areas |
+| [Ruediger Lab](https://www.ruedigerlab.com/) | Sarah Ruediger | Excitatory Cell Types | Temporal jittered data recordings across excitatory cell types and visual areas |
+| [Allen Institute for Neural Dynamics](https://www.allenneuraldynamics.org/projects/single-cell-computation) | Kaspar Podgorski | Dendritic Recording | Dendritic recording with voltage imaging |
+| [Oweiss Lab](https://oweisslab.ece.ufl.edu) | Karim Oweiss | Brain-Computer Interfaces | Calcium and voltage imaging with BCI and optogenetics |
 
 ## Steering Committee
 
