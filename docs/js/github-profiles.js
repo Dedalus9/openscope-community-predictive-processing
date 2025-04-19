@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (text.startsWith('@')) {
                 const username = text.substring(1);
                 if (username && username.length > 0) {
-                    // Replace cell content with a profile link
-                    cell.innerHTML = `<span class="github-handle" data-username="${username}">@${username}</span>`;
+                    // Just use the span without displaying the handle again (will be shown in card)
+                    cell.innerHTML = `<span class="github-handle" data-username="${username}"></span>`;
                 }
             }
         });
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Replace all instances of GitHub handles with profile cards
             element.innerHTML = text.replace(pattern, function(match, prefix, username) {
-                return `${prefix}<span class="github-handle" data-username="${username}">@${username}</span>`;
+                return `${prefix}<span class="github-handle" data-username="${username}"></span>`;
             });
         });
         
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cardContainer.className = 'github-profile-card';
             
             // Add loading indicator
-            cardContainer.innerHTML = `<div class="loading">Loading @${username}'s profile...</div>`;
+            cardContainer.innerHTML = `<div class="loading">Loading GitHub profile...</div>`;
             
             // Insert card after the handle
             handle.parentNode.insertBefore(cardContainer, handle.nextSibling);
@@ -76,16 +76,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     return response.json();
                 })
                 .then(data => {
-                    // Create profile card with GitHub data - just use handle if no name
+                    // Create profile card with GitHub data - use real name if available, with handle underneath
+                    const displayName = data.name || username;
+                    
                     cardContainer.innerHTML = `
                         <div class="profile-card">
                             <div class="profile-image">
                                 <a href="${data.html_url}" target="_blank">
-                                    <img src="${data.avatar_url}" alt="@${username}'s avatar">
+                                    <img src="${data.avatar_url}" alt="${displayName}'s avatar">
                                 </a>
                             </div>
                             <div class="profile-info">
-                                <h4><a href="${data.html_url}" target="_blank">@${username}</a></h4>
+                                <h4><a href="${data.html_url}" target="_blank">${displayName}</a></h4>
+                                <p class="username">@${username}</p>
                                 ${data.bio ? `<p class="bio">${data.bio}</p>` : ''}
                             </div>
                         </div>
@@ -122,8 +125,13 @@ document.addEventListener('DOMContentLoaded', function() {
         .profile-info h4 {
             margin: 0 0 5px 0;
         }
+        .profile-info .username {
+            margin: 0 0 5px 0;
+            font-size: 0.8em;
+            color: #586069;
+        }
         .profile-info .bio {
-            margin: 0;
+            margin: 5px 0 0 0;
             font-size: 0.9em;
             color: #586069;
         }
