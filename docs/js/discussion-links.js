@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Known discussions mapping - Add your known discussions here to avoid API calls
   const knownDiscussions = {
-    'allen_institute_787727_2025-03-27': 22
+    'allen_institute_787727_2025-03-27': 22,
     // Add more mappings as needed
   };
   
