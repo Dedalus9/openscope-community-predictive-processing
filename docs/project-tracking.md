@@ -36,7 +36,7 @@ We use a [GitHub Kanban board](https://github.com/orgs/AllenNeuralDynamics/proje
 *Design and implement stimuli for investigating predictive processing mechanisms across multiple experimental paradigms.*
 
 **👥 Contributors:**  
-*Jerome Lecoq, Carter, Maedeh, Kaspar*
+@jeromelecoq, Carter, Maedeh, Kaspar*
 
 **📝 Description:**  
 This project focuses on developing and implementing four key experimental paradigms to investigate different aspects of predictive processing:
