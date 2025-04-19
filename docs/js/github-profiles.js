@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = document.createElement('div');
         container.className = 'github-profiles-container';
         
-        const row = document.createElement('div');
+        let row = document.createElement('div');
         row.className = 'github-profiles-row';
         container.appendChild(row);
         
