@@ -1,29 +1,162 @@
 // GitHub Profile Renderer - Site-wide version
 document.addEventListener('DOMContentLoaded', function() {
-    // Process GitHub handles in any element
+    // Process all GitHub handles in the document with context awareness
     const processGitHubHandles = function() {
-        // Create a container for all profile cards if multiple are present
-        const mainContainer = document.createElement('div');
-        mainContainer.className = 'github-profiles-container';
-        let profilesAdded = 0;
-        let currentRow = null;
+        // Detect the current page type based on content
+        const pageType = detectPageType();
         
-        // Special handling for table cells with GitHub handles
+        // Process the page according to its type
+        switch(pageType) {
+            case 'project-tracking':
+                processProjectTrackingPage();
+                break;
+            case 'team':
+                processTeamPage();
+                break;
+            case 'meeting':
+                processMeetingPage();
+                break;
+            default:
+                processDefaultPage();
+                break;
+        }
+    };
+    
+    // Detect the page type based on content structure
+    const detectPageType = function() {
+        // Check for project tracking page
+        if (document.querySelector('h1') && document.querySelector('h1').textContent.includes('Project Tracking')) {
+            return 'project-tracking';
+        }
+        
+        // Check for team page
+        if (document.querySelector('h1') && document.querySelector('h1').textContent.includes('Team Members')) {
+            return 'team';
+        }
+        
+        // Check for meeting page
+        if (document.querySelector('h1') && document.querySelector('h1').textContent.includes('Meeting Notes')) {
+            return 'meeting';
+        }
+        
+        // Default handling
+        return 'default';
+    };
+    
+    // Process the project tracking page (sectioned by project)
+    const processProjectTrackingPage = function() {
+        // Find all project sections (they start with h2 elements)
+        const projectSections = document.querySelectorAll('h2');
+        
+        projectSections.forEach(function(sectionHeading) {
+            // For each section, find the contributors section
+            let nextElement = sectionHeading.nextElementSibling;
+            let contributorsElement = null;
+            
+            // Look through the next several elements after the heading
+            // until we find the contributors section or hit the next h2
+            while (nextElement && nextElement.tagName !== 'H2') {
+                // Look for elements that contain "Contributors:"
+                if (nextElement.textContent && 
+                    (nextElement.textContent.includes('Contributors:') || 
+                     nextElement.textContent.includes('👥 Contributors'))) {
+                    contributorsElement = nextElement;
+                    break;
+                }
+                nextElement = nextElement.nextElementSibling;
+            }
+            
+            if (!contributorsElement) return;
+            
+            // Look for GitHub handles in the text
+            const text = contributorsElement.innerHTML;
+            if (!text) return;
+            
+            // Pattern to match GitHub handles
+            const pattern = /@([a-zA-Z0-9-]+)\b/g;
+            let match;
+            const usernames = [];
+            
+            // Find all GitHub handles in the text
+            while ((match = pattern.exec(text)) !== null) {
+                usernames.push(match[1]);
+            }
+            
+            if (usernames.length === 0) return;
+            
+            // Create a container for the profiles
+            const container = document.createElement('div');
+            container.className = 'github-profiles-container';
+            
+            let row = document.createElement('div');
+            row.className = 'github-profiles-row';
+            container.appendChild(row);
+            
+            // Create profile cards for each username
+            usernames.forEach(function(username, index) {
+                // Create a new row every 3 profiles
+                if (index > 0 && index % 3 === 0) {
+                    row = document.createElement('div');
+                    row.className = 'github-profiles-row';
+                    container.appendChild(row);
+                }
+                
+                // Create profile card
+                const card = document.createElement('div');
+                card.className = 'github-profile-card';
+                card.innerHTML = `<div class="loading">Loading GitHub profile...</div>`;
+                row.appendChild(card);
+                
+                // Fetch and display profile
+                fetchAndDisplayProfile(username, card);
+            });
+            
+            // Insert profiles container after the contributors element
+            contributorsElement.parentNode.insertBefore(container, contributorsElement.nextSibling);
+        });
+    };
+    
+    // Process the team page (handles inside tables)
+    const processTeamPage = function() {
+        // Find all table cells that might contain GitHub handles
         const tableCells = document.querySelectorAll('td');
+        
         tableCells.forEach(function(cell) {
             const text = cell.textContent.trim();
-            // Check if it's likely a GitHub handle cell
+            // Check if the cell contains a GitHub handle (starts with @)
             if (text.startsWith('@')) {
                 const username = text.substring(1);
                 if (username && username.length > 0) {
-                    // Replace the entire cell content with a span to avoid the @ appearing alone
-                    cell.innerHTML = `<span class="github-handle-wrapper"><span class="github-handle" data-username="${username}"></span></span>`;
+                    // Create profile element directly in the cell
+                    fetchAndDisplayProfileInline(username, cell);
                 }
             }
         });
+    };
+    
+    // Process meeting pages
+    const processMeetingPage = function() {
+        // Find potential lines with facilitators or attendees
+        const lines = document.querySelectorAll('li, p');
         
-        // Find all text content that might contain GitHub handles
-        // This includes paragraphs, list items, headings, etc.
+        lines.forEach(function(line) {
+            const text = line.innerHTML;
+            if (!text) return;
+            
+            // Only process lines that might contain facilitator or attendee info
+            if (text.includes('Facilitator:') || 
+                text.includes('Attendees:') || 
+                text.includes('Present:')) {
+                
+                // Find GitHub handles in this line
+                processGitHubHandlesInText(line);
+            }
+        });
+    };
+    
+    // Default page processing (generic handling)
+    const processDefaultPage = function() {
+        // Find all elements that might contain GitHub handles
         const elements = document.querySelectorAll('p, li, h1, h2, h3, h4, h5, h6, span, div');
         
         elements.forEach(function(element) {
@@ -35,140 +168,189 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Use a regex to find GitHub handles (@username format)
-            // that are not within email addresses
-            const text = element.innerHTML;
-            if (!text) return;
-            
-            // Pattern: space or start of string, followed by @, followed by letters/numbers/hyphens
-            // Not preceded by text that would make it an email
-            const pattern = /(^|\s)@([a-zA-Z0-9-]+)(?!\S*@)/g;
-            
-            // Replace all instances of GitHub handles with profile cards - completely replace the match
-            element.innerHTML = text.replace(pattern, function(match, prefix, username) {
-                // Include the prefix (space) in the wrapper to avoid orphaned @ symbols
-                return `<span class="github-handle-wrapper">${prefix}<span class="github-handle" data-username="${username}"></span></span>`;
-            });
+            processGitHubHandlesInText(element);
         });
+    };
+    
+    // Helper: Get content until the next heading
+    const getContentUntilNextHeading = function(heading) {
+        const sectionContent = document.createElement('div');
+        let currentElement = heading.nextElementSibling;
         
-        // Count total handle instances to decide on layout
-        const githubHandles = document.querySelectorAll('.github-handle');
-        const totalHandles = githubHandles.length;
-        
-        // If we have multiple handles, append the container to the document body
-        // and prepare for a grid layout
-        if (totalHandles > 1) {
-            document.body.appendChild(mainContainer);
-            currentRow = document.createElement('div');
-            currentRow.className = 'github-profiles-row';
-            mainContainer.appendChild(currentRow);
+        while (currentElement && currentElement.tagName !== 'H2') {
+            sectionContent.appendChild(currentElement.cloneNode(true));
+            currentElement = currentElement.nextElementSibling;
         }
         
-        // Now process all the handles we've wrapped
-        githubHandles.forEach(function(handle) {
-            const username = handle.getAttribute('data-username');
-            if (!username) return;
-            
-            // Create profile card container
-            const cardContainer = document.createElement('div');
-            cardContainer.className = 'github-profile-card';
-            
-            // Add loading indicator
-            cardContainer.innerHTML = `<div class="loading">Loading GitHub profile...</div>`;
-            
-            // If multiple handles exist, add to the grid container
-            if (totalHandles > 1) {
-                if (profilesAdded > 0 && profilesAdded % 3 === 0) {
-                    // Create a new row every 3 profiles
-                    currentRow = document.createElement('div');
-                    currentRow.className = 'github-profiles-row';
-                    mainContainer.appendChild(currentRow);
-                }
-                currentRow.appendChild(cardContainer);
-                profilesAdded++;
-                
-                // Hide the original handle wrapper
-                const handleWrapper = handle.closest('.github-handle-wrapper');
-                if (handleWrapper) {
-                    handleWrapper.style.display = 'none';
-                }
-            } else {
-                // Insert card after the handle wrapper for single profile case
-                const handleWrapper = handle.closest('.github-handle-wrapper');
-                if (handleWrapper) {
-                    handleWrapper.parentNode.insertBefore(cardContainer, handleWrapper.nextSibling);
-                } else {
-                    handle.parentNode.insertBefore(cardContainer, handle.nextSibling);
-                }
-            }
-            
-            // Fetch GitHub profile data
-            const headers = {
-                'Accept': 'application/vnd.github.v3+json'
-            };
-            
-            fetch(`https://api.github.com/users/${username}`, { headers })
-                .then(response => {
-                    if (response.status === 403) {
-                        // Likely a rate limit issue
-                        throw new Error('GitHub API rate limit exceeded. Please try again later.');
-                    }
-                    if (!response.ok) {
-                        throw new Error('GitHub profile not found');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    // Create profile card with GitHub data - use real name if available, with handle underneath
-                    const displayName = data.name || username;
-                    
-                    cardContainer.innerHTML = `
-                        <div class="profile-card">
-                            <div class="profile-image">
-                                <a href="${data.html_url}" target="_blank">
-                                    <img src="${data.avatar_url}" alt="${displayName}'s avatar">
-                                </a>
-                            </div>
-                            <div class="profile-info">
-                                <h4><a href="${data.html_url}" target="_blank">${displayName}</a></h4>
-                                <p class="username">@${username}</p>
-                                ${data.bio ? `<p class="bio">${data.bio}</p>` : ''}
-                            </div>
-                        </div>
-                    `;
-                    
-                    // For single profile case, hide the original handle wrapper
-                    if (totalHandles === 1) {
-                        const handleWrapper = handle.closest('.github-handle-wrapper');
-                        if (handleWrapper) {
-                            handleWrapper.style.display = 'none';
-                        }
-                    }
-                })
-                .catch(error => {
-                    // If fetching fails, just show a simple link
-                    cardContainer.innerHTML = `<a href="https://github.com/${username}" target="_blank">@${username}</a>`;
-                    console.error('Error fetching GitHub profile:', error);
+        return sectionContent;
+    };
+    
+    // Helper: Find GitHub handles in an element
+    const findGitHubHandlesInElement = function(element) {
+        const handleElements = [];
+        const text = element.innerHTML;
+        if (!text) return handleElements;
+        
+        // Pattern: space or start of string, followed by @, followed by letters/numbers/hyphens
+        const pattern = /(^|\s)@([a-zA-Z0-9-]+)(?!\S*@)/g;
+        
+        // Temporarily replace handles with markers to find them
+        const markedText = text.replace(pattern, function(match, prefix, username) {
+            return `${prefix}<span class="github-handle-marker" data-username="${username}">@${username}</span>`;
+        });
+        
+        if (markedText !== text) {
+            element.innerHTML = markedText;
+            const markers = element.querySelectorAll('.github-handle-marker');
+            markers.forEach(marker => {
+                handleElements.push({
+                    element: marker,
+                    username: marker.getAttribute('data-username')
                 });
+            });
+        }
+        
+        return handleElements;
+    };
+    
+    // Helper: Process GitHub handles in text
+    const processGitHubHandlesInText = function(element) {
+        const handleElements = findGitHubHandlesInElement(element);
+        
+        if (handleElements.length > 0) {
+            // Create profiles container
+            const profilesContainer = createProfilesContainer(handleElements);
+            
+            // Insert after the element
+            element.parentNode.insertBefore(profilesContainer, element.nextSibling);
+            
+            // Hide the original handles
+            handleElements.forEach(handle => {
+                handle.element.style.display = 'none';
+            });
+        }
+    };
+    
+    // Helper: Create profiles container for a set of handles
+    const createProfilesContainer = function(handleElements) {
+        const container = document.createElement('div');
+        container.className = 'github-profiles-container';
+        
+        const row = document.createElement('div');
+        row.className = 'github-profiles-row';
+        container.appendChild(row);
+        
+        handleElements.forEach(function(handle, index) {
+            // Create a new row every 3 profiles
+            if (index > 0 && index % 3 === 0) {
+                const newRow = document.createElement('div');
+                newRow.className = 'github-profiles-row';
+                container.appendChild(newRow);
+                row = newRow;
+            }
+            
+            // Create profile card
+            const card = document.createElement('div');
+            card.className = 'github-profile-card';
+            card.innerHTML = `<div class="loading">Loading GitHub profile...</div>`;
+            row.appendChild(card);
+            
+            // Fetch and display profile
+            fetchAndDisplayProfile(handle.username, card);
         });
         
-        // If we added profiles to the grid, position it properly on the page
-        if (profilesAdded > 0) {
-            // Find a good location to insert the grid (near the first handle)
-            const firstHandleWrapper = document.querySelector('.github-handle-wrapper');
-            if (firstHandleWrapper && firstHandleWrapper.parentNode) {
-                // Move from body to proper location in document
-                document.body.removeChild(mainContainer);
-                firstHandleWrapper.parentNode.insertBefore(mainContainer, firstHandleWrapper.nextSibling);
-            }
-        }
+        return container;
+    };
+    
+    // Helper: Fetch and display a GitHub profile in a table cell
+    const fetchAndDisplayProfileInline = function(username, cell) {
+        // Clear the cell content first
+        cell.innerHTML = `<div class="loading">Loading...</div>`;
+        
+        // Fetch GitHub profile data
+        const headers = {
+            'Accept': 'application/vnd.github.v3+json'
+        };
+        
+        fetch(`https://api.github.com/users/${username}`, { headers })
+            .then(response => {
+                if (response.status === 403) {
+                    throw new Error('GitHub API rate limit exceeded');
+                }
+                if (!response.ok) {
+                    throw new Error('GitHub profile not found');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Create compact inline profile
+                const displayName = data.name || username;
+                
+                cell.innerHTML = `
+                    <div class="inline-profile">
+                        <a href="${data.html_url}" target="_blank" class="profile-link">
+                            <img src="${data.avatar_url}" alt="${displayName}'s avatar" class="profile-avatar">
+                            <span class="profile-name">${displayName}</span>
+                        </a>
+                    </div>
+                `;
+            })
+            .catch(error => {
+                // If fetching fails, just show the username
+                cell.innerHTML = `<a href="https://github.com/${username}" target="_blank">@${username}</a>`;
+                console.error('Error fetching GitHub profile:', error);
+            });
+    };
+    
+    // Helper: Fetch and display a GitHub profile
+    const fetchAndDisplayProfile = function(username, cardContainer) {
+        // Fetch GitHub profile data
+        const headers = {
+            'Accept': 'application/vnd.github.v3+json'
+        };
+        
+        fetch(`https://api.github.com/users/${username}`, { headers })
+            .then(response => {
+                if (response.status === 403) {
+                    throw new Error('GitHub API rate limit exceeded');
+                }
+                if (!response.ok) {
+                    throw new Error('GitHub profile not found');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Create profile card with GitHub data
+                const displayName = data.name || username;
+                
+                cardContainer.innerHTML = `
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <a href="${data.html_url}" target="_blank">
+                                <img src="${data.avatar_url}" alt="${displayName}'s avatar">
+                            </a>
+                        </div>
+                        <div class="profile-info">
+                            <h4><a href="${data.html_url}" target="_blank">${displayName}</a></h4>
+                            <p class="username">@${username}</p>
+                            ${data.bio ? `<p class="bio">${data.bio}</p>` : ''}
+                        </div>
+                    </div>
+                `;
+            })
+            .catch(error => {
+                // If fetching fails, just show a simple link
+                cardContainer.innerHTML = `<a href="https://github.com/${username}" target="_blank">@${username}</a>`;
+                console.error('Error fetching GitHub profile:', error);
+            });
     };
     
     // Add CSS for GitHub profiles
     const style = document.createElement('style');
     style.textContent = `
+        /* Shared container styles */
         .github-profiles-container {
-            margin: 20px 0;
+            margin: 10px 0 20px 0;
             max-width: 100%;
         }
         .github-profiles-row {
@@ -183,6 +365,8 @@ document.addEventListener('DOMContentLoaded', function() {
             min-width: 200px;
             max-width: calc(33.333% - 10px);
         }
+        
+        /* Card styles */
         .profile-card {
             display: flex;
             border: 1px solid #e1e4e8;
@@ -216,6 +400,29 @@ document.addEventListener('DOMContentLoaded', function() {
             overflow: hidden;
             text-overflow: ellipsis;
         }
+        
+        /* Inline profile for tables */
+        .inline-profile {
+            display: flex;
+            align-items: center;
+        }
+        .profile-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #0366d6;
+        }
+        .profile-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .profile-name {
+            font-size: 14px;
+        }
+        
+        /* Loading state */
         .loading {
             font-style: italic;
             color: #586069;
