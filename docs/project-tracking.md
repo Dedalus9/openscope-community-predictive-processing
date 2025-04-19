@@ -36,7 +36,7 @@ We use a [GitHub Kanban board](https://github.com/orgs/AllenNeuralDynamics/proje
 *Design and implement stimuli for investigating predictive processing mechanisms across multiple experimental paradigms.*
 
 **👥 Contributors:**  
-@jeromelecoq, Carter, Maedeh, Kaspar*
+@jeromelecoq @rcpeene
 
 **📝 Description:**  
 This project focuses on developing and implementing four key experimental paradigms to investigate different aspects of predictive processing:
@@ -61,7 +61,7 @@ Each stimulus paradigm is implemented in Bonsai and includes appropriate control
 *Ensure all data and metadata are properly curated, formatted, and shared through public repositories.*
 
 **👥 Contributors:**  
-*Jerome Lecoq*
+@jeromelecoq @rcpeene
 
 **📝 Description:**  
 This project focuses on the critical task of data management, ensuring that all datasets are released without embargo, following the community policy.  
