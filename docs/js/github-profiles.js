@@ -1,29 +1,24 @@
-// GitHub handles mapping for team members
-const GITHUB_PROFILES = {
-  "Test": "test"
-  // Add more team members here in the format "Full Name": "github-username"
-};
-
-// Function to get GitHub username by person's name
-function getGitHubUsername(fullName) {
-  return GITHUB_PROFILES[fullName] || null;
-}
-
-// Export the functions and data for use in other scripts
-if (typeof module !== 'undefined') {
-  module.exports = {
-    GITHUB_PROFILES,
-    getGitHubUsername
-  };
-}
-
 // GitHub Profile Renderer - Site-wide version
 document.addEventListener('DOMContentLoaded', function() {
     // Process GitHub handles in any element
     const processGitHubHandles = function() {
+        // Special handling for table cells with GitHub handles
+        const tableCells = document.querySelectorAll('td');
+        tableCells.forEach(function(cell) {
+            const text = cell.textContent.trim();
+            // Check if it's likely a GitHub handle cell
+            if (text.startsWith('@')) {
+                const username = text.substring(1);
+                if (username && username.length > 0) {
+                    // Replace cell content with a profile link
+                    cell.innerHTML = `<span class="github-handle" data-username="${username}">@${username}</span>`;
+                }
+            }
+        });
+        
         // Find all text content that might contain GitHub handles
-        // This includes paragraphs, list items, table cells, headings, etc.
-        const elements = document.querySelectorAll('p, li, td, th, h1, h2, h3, h4, h5, h6, span, div');
+        // This includes paragraphs, list items, headings, etc.
+        const elements = document.querySelectorAll('p, li, h1, h2, h3, h4, h5, h6, span, div');
         
         elements.forEach(function(element) {
             // Skip elements that are within profile cards (to avoid reprocessing)
@@ -59,13 +54,17 @@ document.addEventListener('DOMContentLoaded', function() {
             cardContainer.className = 'github-profile-card';
             
             // Add loading indicator
-            cardContainer.innerHTML = `<div class="loading">Loading ${username}'s profile...</div>`;
+            cardContainer.innerHTML = `<div class="loading">Loading @${username}'s profile...</div>`;
             
             // Insert card after the handle
             handle.parentNode.insertBefore(cardContainer, handle.nextSibling);
             
-            // Fetch GitHub profile data - add error handling for rate limits
-            fetch(`https://api.github.com/users/${username}`)
+            // Fetch GitHub profile data
+            const headers = {
+                'Accept': 'application/vnd.github.v3+json'
+            };
+            
+            fetch(`https://api.github.com/users/${username}`, { headers })
                 .then(response => {
                     if (response.status === 403) {
                         // Likely a rate limit issue
@@ -77,16 +76,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     return response.json();
                 })
                 .then(data => {
-                    // Create profile card with GitHub data
+                    // Create profile card with GitHub data - just use handle if no name
                     cardContainer.innerHTML = `
                         <div class="profile-card">
                             <div class="profile-image">
                                 <a href="${data.html_url}" target="_blank">
-                                    <img src="${data.avatar_url}" alt="${username}'s avatar">
+                                    <img src="${data.avatar_url}" alt="@${username}'s avatar">
                                 </a>
                             </div>
                             <div class="profile-info">
-                                <h4><a href="${data.html_url}" target="_blank">${data.name || username}</a></h4>
+                                <h4><a href="${data.html_url}" target="_blank">@${username}</a></h4>
                                 ${data.bio ? `<p class="bio">${data.bio}</p>` : ''}
                             </div>
                         </div>
