@@ -1,7 +1,6 @@
 // GitHub profiles for team members
 const GITHUB_PROFILES = {
   // This is a mapping of names to GitHub usernames
-  // Add actual usernames as you collect them from team members
   "Jérôme A. Lecoq": "jeromelecoq",
   "André M. Bastos": "andremarcosbastos",
   "Farzaneh Najafi": "fnajafi",
@@ -23,7 +22,7 @@ if (typeof module !== 'undefined') {
   };
 }
 
-// GitHub Profile Renderer - Enhanced version
+// GitHub Profile Renderer - Fixed version
 document.addEventListener('DOMContentLoaded', function() {
     // Process table cells with GitHub handles
     const processGitHubHandles = function() {
@@ -32,105 +31,56 @@ document.addEventListener('DOMContentLoaded', function() {
         
         tableCells.forEach(function(cell) {
             const text = cell.textContent.trim();
-            // Check if the cell contains a GitHub handle (starts with @)
-            if (text.startsWith('@') && text.length > 1) {
+            // Check if the cell contains ONLY a GitHub handle (starts with @ and not an email)
+            if (text.startsWith('@') && text.length > 1 && !text.includes('@', 1)) {
                 const username = text.substring(1); // Remove the @ symbol
                 
-                // Clear the cell and create a link
+                // Clear the cell content
                 cell.innerHTML = '';
                 
-                const link = document.createElement('a');
-                link.href = `https://github.com/${username}`;
-                link.target = '_blank';
-                link.textContent = `@${username}`;
-                link.className = 'github-link';
+                // Create profile card container
+                const cardContainer = document.createElement('div');
+                cardContainer.className = 'github-profile-card';
                 
-                cell.appendChild(link);
+                // Add loading indicator
+                cardContainer.innerHTML = `<div class="loading">Loading ${username}'s profile...</div>`;
+                
+                // Add the card to the cell
+                cell.appendChild(cardContainer);
+                
+                // Fetch GitHub profile data
+                fetch(`https://api.github.com/users/${username}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('GitHub profile not found');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        // Create profile card with GitHub data
+                        cardContainer.innerHTML = `
+                            <div class="profile-card">
+                                <div class="profile-image">
+                                    <a href="${data.html_url}" target="_blank">
+                                        <img src="${data.avatar_url}" alt="${username}'s avatar">
+                                    </a>
+                                </div>
+                                <div class="profile-info">
+                                    <h4><a href="${data.html_url}" target="_blank">${data.name || username}</a></h4>
+                                    ${data.bio ? `<p class="bio">${data.bio}</p>` : ''}
+                                </div>
+                            </div>
+                        `;
+                    })
+                    .catch(error => {
+                        // If fetching fails, just show a simple link
+                        cardContainer.innerHTML = `<a href="https://github.com/${username}" target="_blank">@${username}</a>`;
+                        console.error('Error fetching GitHub profile:', error);
+                    });
             }
         });
     };
     
-    // First approach: Process explicit github-user spans
-    const githubUsers = document.querySelectorAll('.github-user');
-    
-    githubUsers.forEach(function(element) {
-        const username = element.textContent.trim().replace('@', '');
-        if (!username) return;
-        
-        // Replace with a GitHub link
-        const link = document.createElement('a');
-        link.href = `https://github.com/${username}`;
-        link.target = '_blank';
-        link.textContent = `@${username}`;
-        link.className = 'github-link';
-        
-        element.parentNode.replaceChild(link, element);
-    });
-    
-    // Second approach: Auto-detect GitHub usernames in text
-    // Look for GitHub username patterns in the document - @username format
-    const detectGitHubUsernames = function(node) {
-        if (node.nodeType === 3) { // Text node
-            const text = node.nodeValue;
-            // Match GitHub username pattern: @username
-            // Username requirements: 
-            // - starts with @
-            // - followed by letters, numbers, or hyphens (no spaces)
-            // - at least 1 character long
-            const regex = /@([a-zA-Z0-9-]+)/g;
-            let match;
-            let lastIndex = 0;
-            const fragments = [];
-            
-            while ((match = regex.exec(text)) !== null) {
-                // Text before the match
-                if (match.index > lastIndex) {
-                    fragments.push(document.createTextNode(text.substring(lastIndex, match.index)));
-                }
-                
-                // The username
-                const username = match[1];
-                const link = document.createElement('a');
-                link.href = `https://github.com/${username}`;
-                link.target = '_blank';
-                link.textContent = `@${username}`;
-                link.className = 'github-link auto-detected';
-                fragments.push(link);
-                
-                lastIndex = regex.lastIndex;
-            }
-            
-            // Text after the last match
-            if (lastIndex < text.length) {
-                fragments.push(document.createTextNode(text.substring(lastIndex)));
-            }
-            
-            // Replace the text node with the fragments
-            if (fragments.length > 1) {
-                const parent = node.parentNode;
-                fragments.forEach(function(fragment) {
-                    parent.insertBefore(fragment, node);
-                });
-                parent.removeChild(node);
-                return true;
-            }
-        }
-        return false;
-    };
-    
-    // Process all text nodes in the document body
-    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-    const nodes = [];
-    let node;
-    while ((node = walk.nextNode())) {
-        nodes.push(node);
-    }
-    
-    // Process nodes in reverse order to maintain correct indices
-    for (let i = nodes.length - 1; i >= 0; i--) {
-        detectGitHubUsernames(nodes[i]);
-    }
-    
-    // Also process table cells specifically (which may not be caught by the text walker)
+    // Process all table cells
     processGitHubHandles();
 });

@@ -29,27 +29,27 @@ ol li ul li {
 }
 
 .github-profile-card {
-    margin: 10px 0;
-    max-width: 400px;
+    margin: 5px 0;
+    max-width: 300px;
 }
 
 .profile-card {
     display: flex;
     border: 1px solid #e1e4e8;
     border-radius: 6px;
-    padding: 10px;
+    padding: 8px;
     background-color: #f6f8fa;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .profile-image {
-    flex: 0 0 80px;
-    margin-right: 15px;
+    flex: 0 0 50px;
+    margin-right: 10px;
 }
 
 .profile-image img {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 1px solid #e1e4e8;
 }
@@ -59,15 +59,21 @@ ol li ul li {
     overflow: hidden;
 }
 
-.profile-info h3 {
+.profile-info h4 {
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
+    font-size: 16px;
 }
 
 .profile-info .bio {
-    font-size: 0.9em;
-    margin-bottom: 8px;
+    font-size: 12px;
+    margin: 0;
     color: #586069;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .profile-info .stats {
@@ -80,9 +86,9 @@ ol li ul li {
 }
 
 .loading, .error {
-    padding: 10px;
+    padding: 6px;
     border-radius: 4px;
-    font-size: 0.9em;
+    font-size: 12px;
 }
 
 .loading {
