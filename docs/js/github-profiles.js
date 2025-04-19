@@ -2,6 +2,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Process GitHub handles in any element
     const processGitHubHandles = function() {
+        // Create a container for all profile cards if multiple are present
+        const mainContainer = document.createElement('div');
+        mainContainer.className = 'github-profiles-container';
+        let profilesAdded = 0;
+        let currentRow = null;
+        
         // Special handling for table cells with GitHub handles
         const tableCells = document.querySelectorAll('td');
         tableCells.forEach(function(cell) {
@@ -24,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Skip elements that are within profile cards (to avoid reprocessing)
             if (element.closest('.github-profile-card') || 
                 element.closest('.profile-card') ||
-                element.closest('.github-handle-wrapper')) {
+                element.closest('.github-handle-wrapper') ||
+                element.closest('.github-profiles-container')) {
                 return;
             }
             
@@ -44,9 +51,20 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Now process all the handles we've wrapped
+        // Count total handle instances to decide on layout
         const githubHandles = document.querySelectorAll('.github-handle');
+        const totalHandles = githubHandles.length;
         
+        // If we have multiple handles, append the container to the document body
+        // and prepare for a grid layout
+        if (totalHandles > 1) {
+            document.body.appendChild(mainContainer);
+            currentRow = document.createElement('div');
+            currentRow.className = 'github-profiles-row';
+            mainContainer.appendChild(currentRow);
+        }
+        
+        // Now process all the handles we've wrapped
         githubHandles.forEach(function(handle) {
             const username = handle.getAttribute('data-username');
             if (!username) return;
@@ -58,12 +76,30 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add loading indicator
             cardContainer.innerHTML = `<div class="loading">Loading GitHub profile...</div>`;
             
-            // Insert card after the handle wrapper, not just the handle
-            const handleWrapper = handle.closest('.github-handle-wrapper');
-            if (handleWrapper) {
-                handleWrapper.parentNode.insertBefore(cardContainer, handleWrapper.nextSibling);
+            // If multiple handles exist, add to the grid container
+            if (totalHandles > 1) {
+                if (profilesAdded > 0 && profilesAdded % 3 === 0) {
+                    // Create a new row every 3 profiles
+                    currentRow = document.createElement('div');
+                    currentRow.className = 'github-profiles-row';
+                    mainContainer.appendChild(currentRow);
+                }
+                currentRow.appendChild(cardContainer);
+                profilesAdded++;
+                
+                // Hide the original handle wrapper
+                const handleWrapper = handle.closest('.github-handle-wrapper');
+                if (handleWrapper) {
+                    handleWrapper.style.display = 'none';
+                }
             } else {
-                handle.parentNode.insertBefore(cardContainer, handle.nextSibling);
+                // Insert card after the handle wrapper for single profile case
+                const handleWrapper = handle.closest('.github-handle-wrapper');
+                if (handleWrapper) {
+                    handleWrapper.parentNode.insertBefore(cardContainer, handleWrapper.nextSibling);
+                } else {
+                    handle.parentNode.insertBefore(cardContainer, handle.nextSibling);
+                }
             }
             
             // Fetch GitHub profile data
@@ -101,9 +137,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     `;
                     
-                    // Once the profile is loaded, we can safely hide the handle wrapper
-                    if (handleWrapper) {
-                        handleWrapper.style.display = 'none';
+                    // For single profile case, hide the original handle wrapper
+                    if (totalHandles === 1) {
+                        const handleWrapper = handle.closest('.github-handle-wrapper');
+                        if (handleWrapper) {
+                            handleWrapper.style.display = 'none';
+                        }
                     }
                 })
                 .catch(error => {
@@ -112,13 +151,37 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.error('Error fetching GitHub profile:', error);
                 });
         });
+        
+        // If we added profiles to the grid, position it properly on the page
+        if (profilesAdded > 0) {
+            // Find a good location to insert the grid (near the first handle)
+            const firstHandleWrapper = document.querySelector('.github-handle-wrapper');
+            if (firstHandleWrapper && firstHandleWrapper.parentNode) {
+                // Move from body to proper location in document
+                document.body.removeChild(mainContainer);
+                firstHandleWrapper.parentNode.insertBefore(mainContainer, firstHandleWrapper.nextSibling);
+            }
+        }
     };
     
     // Add CSS for GitHub profiles
     const style = document.createElement('style');
     style.textContent = `
+        .github-profiles-container {
+            margin: 20px 0;
+            max-width: 100%;
+        }
+        .github-profiles-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
         .github-profile-card {
-            margin: 10px 0;
+            margin: 5px 0;
+            flex: 1 1 calc(33.333% - 10px);
+            min-width: 200px;
+            max-width: calc(33.333% - 10px);
         }
         .profile-card {
             display: flex;
@@ -126,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
             border-radius: 6px;
             padding: 10px;
             background-color: #f6f8fa;
-            max-width: 400px;
+            height: 100%;
         }
         .profile-image img {
             width: 50px;
@@ -136,6 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         .profile-info h4 {
             margin: 0 0 5px 0;
+            font-size: 0.95em;
         }
         .profile-info .username {
             margin: 0 0 5px 0;
@@ -144,13 +208,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         .profile-info .bio {
             margin: 5px 0 0 0;
-            font-size: 0.9em;
+            font-size: 0.85em;
             color: #586069;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .loading {
             font-style: italic;
             color: #586069;
             font-size: 0.9em;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .github-profile-card {
+                flex: 1 1 calc(50% - 10px);
+                max-width: calc(50% - 10px);
+            }
+        }
+        @media (max-width: 480px) {
+            .github-profile-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
         }
     `;
     document.head.appendChild(style);
