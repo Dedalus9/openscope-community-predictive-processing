@@ -48,6 +48,12 @@ document.addEventListener('DOMContentLoaded', function() {
       color: #666;
       margin-top: 0.5rem;
     }
+    .github-discussion-link .api-limit-note {
+      font-size: 0.8rem;
+      color: #d73a49;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
   `;
   document.head.appendChild(style);
   
@@ -57,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     content.appendChild(discussionContainer);
   }
   
-  // Known discussions mapping
+  // Known discussions mapping - Add your known discussions here to avoid API calls
   const knownDiscussions = {
     'allen_institute_787727_2025-03-27': 22
     // Add more mappings as needed
@@ -80,6 +86,86 @@ document.addEventListener('DOMContentLoaded', function() {
     return;
   }
   
+  // Local storage cache keys
+  const CACHE_PREFIX = 'github_discussion_';
+  const CACHE_TIMESTAMP = 'github_discussion_timestamp';
+  const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+  
+  // Check cache first
+  function checkCacheForDiscussion() {
+    try {
+      // Check if cache exists and is not expired
+      const timestamp = localStorage.getItem(CACHE_TIMESTAMP);
+      const now = new Date().getTime();
+      const cacheValid = timestamp && (now - parseInt(timestamp) < CACHE_DURATION);
+      
+      if (cacheValid) {
+        const cachedItem = localStorage.getItem(CACHE_PREFIX + pageIdentifier);
+        if (cachedItem) {
+          const cache = JSON.parse(cachedItem);
+          if (cache.url) {
+            // Create link from cached data
+            discussionContainer.innerHTML = `
+              <hr>
+              <p>
+                <a href="${cache.url}" target="_blank">
+                  💬 Join the discussion for this page on GitHub
+                </a>
+              </p>
+            `;
+            return true;
+          } else if (cache.noDiscussion) {
+            // No discussion found in previous search
+            createNewDiscussionLink();
+            return true;
+          }
+        }
+      } else {
+        // Cache expired, clear it
+        clearCacheItems();
+      }
+    } catch (e) {
+      console.error('Error checking cache:', e);
+    }
+    
+    return false;
+  }
+  
+  // Clear expired cache items
+  function clearCacheItems() {
+    try {
+      // Get all localStorage keys
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith(CACHE_PREFIX)) {
+          localStorage.removeItem(key);
+        }
+      }
+      localStorage.removeItem(CACHE_TIMESTAMP);
+    } catch (e) {
+      console.error('Error clearing cache:', e);
+    }
+  }
+  
+  // Save to cache
+  function saveToCache(url) {
+    try {
+      localStorage.setItem(CACHE_TIMESTAMP, new Date().getTime().toString());
+      if (url) {
+        localStorage.setItem(CACHE_PREFIX + pageIdentifier, JSON.stringify({ url }));
+      } else {
+        localStorage.setItem(CACHE_PREFIX + pageIdentifier, JSON.stringify({ noDiscussion: true }));
+      }
+    } catch (e) {
+      console.error('Error saving to cache:', e);
+    }
+  }
+  
+  // Check cache before proceeding with API calls
+  if (checkCacheForDiscussion()) {
+    return;
+  }
+  
   // Construct search queries to find matching discussions
   const queries = [
     `"${pageIdentifier}" in:title repo:allenneuraldynamics/openscope-community-predictive-processing`,
@@ -92,21 +178,46 @@ document.addEventListener('DOMContentLoaded', function() {
     if (queryIndex >= queries.length) {
       // We've exhausted all queries, create a new discussion
       createNewDiscussionLink();
+      saveToCache(null); // Cache that no discussion was found
       return;
     }
     
     const searchQuery = encodeURIComponent(queries[queryIndex]);
     console.log('Searching with query:', queries[queryIndex]);
     
-    fetch(`https://api.github.com/search/issues?q=${searchQuery}`)
-      .then(response => response.json())
+    // Prepare request options
+    const requestOptions = {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/vnd.github.v3+json'
+        // If you want to use token-based auth, uncomment and add your token:
+        // 'Authorization': 'token YOUR_GITHUB_TOKEN'
+      }
+    };
+    
+    fetch(`https://api.github.com/search/issues?q=${searchQuery}`, requestOptions)
+      .then(response => {
+        // Check for rate limit errors
+        if (response.status === 403) {
+          // Handle rate limit exceeded
+          console.warn('GitHub API rate limit exceeded');
+          showRateLimitMessage();
+          return null;
+        }
+        return response.json();
+      })
       .then(data => {
-        console.log('GitHub API Response for query', queryIndex, ':', data);
+        if (!data) return; // Handled by the rate limit code above
+        
+        console.log('GitHub API Response for query', queryIndex + 1, ':', data);
         
         if (data.items && data.items.length > 0) {
           // Found an existing discussion or issue
           const discussion = data.items[0];
           const discussionUrl = discussion.html_url;
+          
+          // Cache the result
+          saveToCache(discussionUrl);
           
           // Create the link
           discussionContainer.innerHTML = `
@@ -124,9 +235,21 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .catch(error => {
         console.error('Error fetching discussions:', error);
-        // Try the next query on error
-        searchWithQuery(queryIndex + 1);
+        // Show fallback for errors
+        createNewDiscussionLink();
       });
+  }
+  
+  function showRateLimitMessage() {
+    discussionContainer.innerHTML = `
+      <hr>
+      <p>
+        <a href="https://github.com/allenneuraldynamics/openscope-community-predictive-processing/discussions" target="_blank">
+          💬 View GitHub discussions
+        </a>
+        <span class="api-limit-note">GitHub API rate limit exceeded. Please try again later or browse all discussions.</span>
+      </p>
+    `;
   }
   
   function createNewDiscussionLink() {
