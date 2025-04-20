@@ -5,10 +5,18 @@ This page addresses common questions about the OpenScope Community Predictive Pr
 ## General Project Questions
 
 ### What is the OpenScope Community Predictive Processing project?
-The OpenScope Community Predictive Processing project is a collaborative effort to investigate the neural mechanisms underlying predictive processing in the brain. Through carefully designed experiments using in-vivo two-photon imaging and electrophysiological recordings, the project aims to test whether mismatch stimuli engage shared or distinct mechanisms. For a comprehensive overview, see our [arXiv paper](https://arxiv.org/abs/2504.09614).
+The OpenScope Community Predictive Processing project is a collaborative effort to investigate the neural mechanisms underlying predictive processing in the brain. Through carefully designed experiments using in-vivo two-photon imaging and electrophysiological recordings, the project aims to test whether mismatch stimuli engage shared or distinct mechanisms. 
+
+For more details, see:
+- [Project Overview](index.md#-scientific-context)
+- [Our arXiv paper](https://arxiv.org/abs/2504.09614)
 
 ### Who is involved in this project?
 The project involves researchers from multiple institutions, including the Allen Institute and various collaborating laboratories (Bastos lab, Najafi lab, Ruediger lab, and Oweiss lab). We also welcome contributions from the broader research community.
+
+For more information:
+- [Project Team](people.md)
+- [How to Contribute](how_to_contribute.md)
 
 ### What are the main research questions?
 The project addresses several key questions:
@@ -17,10 +25,18 @@ The project addresses several key questions:
 * How do these mechanisms differ across species (mice vs. primates)?
 * What computational primitives (stimulus adaptation, dendritic computation, E/I balance, hierarchical processing) are central to predictive processing?
 
+Learn more:
+- [Experimental Plan](experimental-plan.md)
+- [Analysis Plan](analysis-plan.md)
+
 ## Data and Resources
 
 ### How can I access the experimental data?
 Specific access instructions and links will be provided on this website as datasets become available.
+
+Access data here:
+- [Experiment Summary](experiment-summary.md)
+- [OpenScope Data Portal](https://portal.brain-map.org/explore/circuits/visual-coding-neuropixels)
 
 ### What types of data are being collected?
 The project collects several types of data:
@@ -29,6 +45,10 @@ The project collects several types of data:
 * Neuropixels recordings with SST-optotagging
 * Voltage imaging recordings of pyramidal cell somata and dendrites
 * Behavioral data (running speed, eye movements)
+
+See our methods:
+- [Hardware Overview](hardware-overview.md)
+- [Detailed Methods](detailed-experimental-plan.md)
 
 ### In what format are the data stored?
 Data are standardized in Neurodata Without Borders (NWB) format to ensure interoperability and ease of use across the research community.
@@ -43,16 +63,20 @@ There are several ways to contribute:
 
 * Analyze existing datasets and share your findings
 * Develop or validate computational models using our data
-* Contribute to the codebase for data analysis or visualization
+* Contribute to the codebases for data analysis or visualization
 * Conduct complementary experiments in your own lab
 
-See the [How to Contribute](how_to_contribute.md) page for more details.
+Get started here:
+- [How to Contribute](how_to_contribute.md)
+- [Ways to Get Involved](how_to_contribute.md#ways-to-get-involved)
 
 ### How do I report issues or suggest improvements?
 Issues can be reported on our [GitHub Issues page](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/issues). For discussions and suggestions, please use our [GitHub Discussions](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/discussions/21).
 
 ### How do I cite this project in my publications?
 Please cite our [arXiv paper](https://arxiv.org/abs/2504.09614) when using data or code from this project:
+
+For details on authorship in future publications, please review our [Collaboration Policy](collaboration-policy.md).
 
 ## Technical Questions
 
@@ -63,6 +87,10 @@ Four main experimental paradigms are used:
 * **Sensorimotor Mismatch**: Closed-loop visuo-motor interactions with occasional mismatches
 * **Sequence Mismatch**: Learned sequences with occasional disruptions
 * **Temporal Mismatch**: Stimuli with unexpected timing changes
+
+Explore our approach:
+- [Experimental Plan](experimental-plan.md)
+- [Detailed Methods](detailed-experimental-plan.md)
 
 ### What hardware is used for the recordings?
 The project uses three primary recording systems:
