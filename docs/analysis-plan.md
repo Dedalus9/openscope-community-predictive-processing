@@ -12,7 +12,7 @@ Our analysis is structured to address three main scientific questions, each focu
 
 These questions are designed to help distinguish between competing hypotheses about whether predictive processing relies on a unified neural mechanism or multiple specialized mechanisms.
 
-## What Kind of Information Is Encoded by Mismatch Responses?
+## I. What kind of information is encoded by mismatch responses?
 
 We will determine whether mismatch responses represent:
 
@@ -36,7 +36,7 @@ We will determine whether mismatch responses represent:
 
 For each of these possibilities, we will compare results across paradigms to test whether the same information coding principles apply consistently to different types of prediction errors.
 
-## Distinguish Between Two Categories of Prediction Made by Neurons
+## II. Distinguish between two categories of prediction made by neurons
 
 We will distinguish between two fundamental categories of neural prediction:
 
@@ -66,7 +66,7 @@ We will distinguish between two fundamental categories of neural prediction:
 
 These analyses will help us determine whether neural activity primarily represents precise stimulus predictions or statistical regularities, and how these mechanisms develop with experience.
 
-## Mismatch Responses Across Different Types of Predictions
+## III. Mismatch responses across different types of predictions
 
 We will compare neural responses across our five experimental paradigms to determine:
 

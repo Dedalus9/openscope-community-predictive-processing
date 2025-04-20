@@ -25,12 +25,3 @@
 
 ### Next Steps and Action Items
 - [List actionable items and assign responsibilities.]
-
----
-
-## Related Documents
-
-- **[Project Tracking](../project-tracking.md)**: Current status of all ongoing projects
-- **[Previous Meeting](../meetings/YYYY-MM-DD.md)**: Notes from the previous meeting
-- **[Experiment Summary](../experiment-summary.md)**: Recent experimental progress
-- **[How to Contribute](../how_to_contribute.md)**: Guidelines for project contribution

@@ -86,12 +86,3 @@ This page is maintained in the GitHub repository. To add your information:
 1. Fork the repository
 2. Edit the `docs/people.md` file with your details including your GitHub handle (use the format "@username")
 3. Submit a pull request with your changes
-
----
-
-## Related Documents
-
-- **[How to Contribute](how_to_contribute.md)**: Instructions for joining the project
-- **[Project Tracking](project-tracking.md)**: Current projects and their team members
-- **[Collaboration Policy](collaboration-policy.md)**: Guidelines for collaboration
-- **[FAQ](faq.md)**: Answers to common questions about the project

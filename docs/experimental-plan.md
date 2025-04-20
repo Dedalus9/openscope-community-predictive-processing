@@ -140,7 +140,7 @@ We will determine whether mismatch responses represent:
 
 This analysis will help us understand the computational principles underlying prediction error signals and determine whether the same information coding scheme is used across different paradigms.
 
-### Distinguish Between Two Categories of Prediction Made by Neurons
+### II. Distinguish between two categories of prediction made by neurons
 
 We will distinguish between:
 - A. Detailed predictions about the identity of the upcoming stimulus
@@ -152,7 +152,7 @@ Our analyses will include:
 - Examining the emergence of prediction signals in both single neurons and neural populations
 - Testing multiple hypotheses including predictive coding vs. static tuning, predictive activity, pattern completion, and changes in population representation structure
 
-### Mismatch Responses Across Different Types of Predictions
+### III. Mismatch responses across different types of predictions
 
 We will compare neural responses across our five experimental paradigms to determine:
 
@@ -174,7 +174,7 @@ All data will be:
 ## Current Status and Timeline
 
 For current experimental progress, please refer to:
-- [Experiment notes](../experiments/) for details on completed sessions
+- [Experiment notes](experiments/) for details on completed sessions
 - [Project tracking page](project-tracking.md) for overall progress
 
 ## References
