@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Process the project tracking page (sectioned by project)
     const processProjectTrackingPage = function() {
-        // Find all project sections (they start with h2 elements)
-        const projectSections = document.querySelectorAll('h2');
+        // Find all project sections (they start with h2 or h3 elements)
+        const projectSections = document.querySelectorAll('h2, h3');
         
         projectSections.forEach(function(sectionHeading) {
             // For each section, find the contributors section
@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
             let contributorsElement = null;
             
             // Look through the next several elements after the heading
-            // until we find the contributors section or hit the next h2
-            while (nextElement && nextElement.tagName !== 'H2') {
+            // until we find the contributors section or hit the next h2 or h3
+            while (nextElement && nextElement.tagName !== 'H2' && nextElement.tagName !== 'H3') {
                 // Look for elements that contain "Contributors:"
                 if (nextElement.textContent && 
                     (nextElement.textContent.includes('Contributors:') || 

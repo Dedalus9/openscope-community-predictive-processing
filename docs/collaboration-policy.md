@@ -34,7 +34,7 @@ All datasets are released without embargo via the Allen Institute or the DANDI/N
 ### 1.2 Dataset Authorship Rights
 
 - **Co‑authorship option:** Dataset creators may opt in as co-authors on any manuscript using their data.
-- **First publication claim:** Dataset creators are entitled to authorship on the first paper that analyzes or validates their dataset.
+- **First publication claim:** Dataset creators are entitled to authorship on the first two papers that analyzes or validates their dataset. Our intent is to encourage data sharing. 
 - **Opt‑in process:** Whenever a dataset is proposed for manuscript use, its creators will be invited to opt in as authors.
 
 ---
@@ -95,8 +95,9 @@ A Steering Committee oversees policy adherence, authorship transparency, and dis
 
 ### 4.2 Composition
 
-The committee includes one representative from each lab contributing data, along with representatives from major data analysis groups.
-To be determined. 
+The committee includes one representative from each lab contributing data, along with representatives from major data analysis groups. It contains representatives from all collaborating laboratories.
+
+Composition to be determined: 
 - Member 1
 - Member 2
 - …
