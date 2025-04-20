@@ -52,9 +52,9 @@ This paradigm tests how neural responses change when self-generated motor action
 
 - **Setup**: Animals run on a wheel with visual stimuli coupled to their movement
 - **Conditions**:
-  - Standard: Visual flow synchronized with running speed
-  - Deviant: Visual flow speeds up, slows down, or decouples from running
-  - Control: Passive viewing of matched visual flow patterns
+    - Standard: Visual flow synchronized with running speed
+    - Deviant: Visual flow speeds up, slows down, or decouples from running
+    - Control: Passive viewing of matched visual flow patterns
 - **Duration**: 60 minutes (includes 10-minute habituation)
 
 ### 3. Sequence Mismatch Paradigm
@@ -63,9 +63,9 @@ This paradigm examines how the brain detects violations in learned sequences of 
 
 - **Setup**: Animals habituated to specific sequences of 4 stimuli
 - **Implementation**:
-  - Sequences repeat once per second for 37 minutes
-  - Deviant stimuli introduced in the third position of the sequence
-  - Controls for context-dependent prediction
+    - Sequences repeat once per second for 37 minutes
+    - Deviant stimuli introduced in the third position of the sequence
+    - Controls for context-dependent prediction
 - **Duration**: 60 minutes (includes 20-minute habituation)
 
 ### 4. Temporal Mismatch Paradigm
@@ -74,9 +74,9 @@ This paradigm investigates how the brain responds to unexpected timing changes i
 
 - **Setup**: Alternating blocks of fixed vs. jittered timing
 - **Implementation**:
-  - Standard: 250ms stimulus duration, 500ms ISI
-  - Deviant: 150ms or 350ms stimulus duration
-  - Focus on timing predictability rather than stimulus identity
+    - Standard: 250ms stimulus duration, 500ms ISI
+    - Deviant: 150ms or 350ms stimulus duration
+    - Focus on timing predictability rather than stimulus identity
 - **Duration**: 60 minutes (includes 10-minute habituation per block)
 
 ### 5. Omission Paradigm
@@ -118,8 +118,8 @@ We employ three complementary recording approaches to investigate predictive pro
 - Higher visual areas (LM, AL)
 - Motor areas (M1, M2)
 - Targeted recordings from specific cell types using transgenic lines:
-  - Excitatory neurons: Slc17a7-IRES2-Cre lines
-  - Inhibitory neurons: Sst-IRES-Cre, Vip-IRES-Cre lines
+    - Excitatory neurons: Slc17a7-IRES2-Cre lines
+    - Inhibitory neurons: Sst-IRES-Cre, Vip-IRES-Cre lines
 
 ### Primates (Collaborative Studies)
 - Homologous visual cortical areas (V1, V2, V4)

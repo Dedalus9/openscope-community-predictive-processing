@@ -59,28 +59,28 @@ To systematically investigate different aspects of predictive processing, we've 
 All experiments will feature sequences of drifting gratings with five types of oddball events:
 
 1. **Orientation Oddballs**: Unexpected changes in grating orientation
-   - Standard: 0° orientation drifting gratings
-   - Deviant: 90° or 45° orientation drifting gratings
-   - Ratio: 120:1 (standard:deviant)
+    - Standard: 0° orientation drifting gratings
+    - Deviant: 90° or 45° orientation drifting gratings
+    - Ratio: 120:1 (standard:deviant)
 
 2. **Motion Oddballs**: Unexpected changes in drift direction or speed
-   - Standard: Consistent motion parameters
-   - Deviant: Reversed or halted motion
-   - Ratio: 120:1 (standard:deviant)
+    - Standard: Consistent motion parameters
+    - Deviant: Reversed or halted motion
+    - Ratio: 120:1 (standard:deviant)
 
 3. **Omission Oddballs**: Complete absence of expected stimulus
-   - 5% probability of stimulus omission
-   - Never occurs during a stimulus change or preceding a change
+    - 5% probability of stimulus omission
+    - Never occurs during a stimulus change or preceding a change
 
 4. **Temporal Oddballs**: Unexpected timing of stimulus presentation
-   - Standard: 250ms stimulus duration, 500ms ISI
-   - Deviant: 150ms or 350ms stimulus duration
-   - Blocks alternate between fixed and jittered timing
+    - Standard: 250ms stimulus duration, 500ms ISI
+    - Deviant: 150ms or 350ms stimulus duration
+    - Blocks alternate between fixed and jittered timing
 
 5. **Sensorimotor Oddballs**: Unexpected sensory feedback during motor activity
-   - Standard: Visual flow coupled to running speed
-   - Deviant: Flow faster/slower than expected based on running speed
-   - Implemented during active running periods
+    - Standard: Visual flow coupled to running speed
+    - Deviant: Flow faster/slower than expected based on running speed
+    - Implemented during active running periods
 
 ### 2. Session Structure and Paradigms
 
@@ -138,14 +138,14 @@ To evaluate the relative contributions of different mechanisms, we will use thre
 - Ultra-fast subcellular imaging (220 Hz)
 - Targeted recording of dendrites and somata simultaneously
 - Cell-type specific targeting through transgenic mouse lines:
-  - Slc17a7-IRES2-Cre for excitatory neurons
-  - Sst-IRES-Cre for somatostatin inhibitory neurons
-  - Vip-IRES-Cre for VIP inhibitory neurons
+    - Slc17a7-IRES2-Cre for excitatory neurons
+    - Sst-IRES-Cre for somatostatin inhibitory neurons
+    - Vip-IRES-Cre for VIP inhibitory neurons
 - Allows direct investigation of apical dendrite contributions
 - Specific objectives:
-  - Determine whether prediction errors are computed at the level of single neurons
-  - Test whether top-down predictions and bottom-up inputs are integrated in specific dendritic compartments
-  - Examine how inhibitory interneurons shape prediction error signals
+    - Determine whether prediction errors are computed at the level of single neurons
+    - Test whether top-down predictions and bottom-up inputs are integrated in specific dendritic compartments
+    - Examine how inhibitory interneurons shape prediction error signals
 
 #### Neuropixels Recordings
 
@@ -155,9 +155,9 @@ To evaluate the relative contributions of different mechanisms, we will use thre
 - Implementation of optogenetic tagging for cell-type identification
 - Coverage of multiple regions in a single recording
 - Specific objectives:
-  - Compare response latencies across areas to determine signal flow direction
-  - Evaluate layer-specific responses across different prediction paradigms
-  - Investigate oscillatory synchronization during prediction and error states
+    - Compare response latencies across areas to determine signal flow direction
+    - Evaluate layer-specific responses across different prediction paradigms
+    - Investigate oscillatory synchronization during prediction and error states
 
 #### Mesoscope Imaging
 
@@ -167,9 +167,9 @@ To evaluate the relative contributions of different mechanisms, we will use thre
 - Tracking same neural populations across sessions
 - Coverage of multiple visual areas (V1 and higher areas)
 - Specific objectives:
-  - Examine inter-area coordination during prediction and error signaling
-  - Determine whether common neural ensembles participate in different prediction paradigms
-  - Track changes in prediction signals over multiple sessions
+    - Examine inter-area coordination during prediction and error signaling
+    - Determine whether common neural ensembles participate in different prediction paradigms
+    - Track changes in prediction signals over multiple sessions
 
 ### 4. Experimental Subjects and Brain Regions
 
@@ -177,22 +177,22 @@ To evaluate the relative contributions of different mechanisms, we will use thre
 
 - Number: 82 mice across all recording methods
 - Mouse lines:
-  - Excitatory neurons: Slc17a7-IRES2-Cre × Ai93 or Ai148
-  - Inhibitory neurons: Sst-IRES-Cre × Ai93, Vip-IRES-Cre × Ai148
+    - Excitatory neurons: Slc17a7-IRES2-Cre × Ai93 or Ai148
+    - Inhibitory neurons: Sst-IRES-Cre × Ai93, Vip-IRES-Cre × Ai148
 - Brain regions:
-  - Primary visual cortex (V1)
-  - Secondary visual areas (LM, AL)
-  - Motor cortex (M1, M2)
-  - Prefrontal regions
+    - Primary visual cortex (V1)
+    - Secondary visual areas (LM, AL)
+    - Motor cortex (M1, M2)
+    - Prefrontal regions
 
 #### Primates (Collaborative Studies)
 
 - Non-human primates (macaques)
 - Comparable visual oddball and prediction paradigms
 - Brain regions:
-  - V1, V2, V4
-  - MT/MST
-  - Prefrontal regions
+    - V1, V2, V4
+    - MT/MST
+    - Prefrontal regions
 
 ### 5. Experimental Timeline
 
@@ -206,7 +206,7 @@ Each mouse will undergo:
 
 ## Analysis Plan
 
-This document focuses on the experimental design. For our detailed analysis approach, please see the [Analysis Plan](analysis-plan.md) document, which covers:
+This document focuses on the experimental design. For our deta  iled analysis approach, please see the [Analysis Plan](analysis-plan.md) document, which covers:
 
 1. What kind of information is encoded by mismatch responses
 2. Distinguishing between categories of predictions made by neurons

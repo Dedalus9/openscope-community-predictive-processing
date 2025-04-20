@@ -12,9 +12,6 @@ The Allen Institute uses a modified Mesoscope system, also referred to as a "Mul
 - Record from two different brain areas in a single experiment
 - Acquire data at higher throughput than conventional microscopes
 
-<!-- Image placeholder - will be added when available -->
-<!-- ![Dual-Beam Mesoscope](../img/mesoscope/mesoscope_diagram.jpg) -->
-
 ## Technical Specifications
 
 The Dual-Beam Mesoscope consists of three key components:
