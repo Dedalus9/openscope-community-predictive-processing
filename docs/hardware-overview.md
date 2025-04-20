@@ -1,69 +1,41 @@
-# Hardware Documentation
+# Hardware Overview
 
-This page provides an overview of the hardware setups used in the OpenScope Community Predictive Processing project. Each hardware configuration has been carefully selected to support specific aspects of the experimental design.
+This page provides a brief introduction to the specialized hardware systems used in the OpenScope Community Predictive Processing project at the Allen Institute. For detailed specifications and technical information, please follow the links to each system's dedicated documentation page.
 
-## Overview of Recording Systems
+## Recording Systems
 
-The project utilizes three primary recording systems:
+The project employs three advanced neural recording platforms, each offering unique capabilities for studying predictive processing at different scales:
 
-1. **SLAP2 (Swept Line Active Polarization)** - For high-speed subcellular imaging
-2. **Neuropixels Probes** - For high-density electrophysiological recordings
-3. **Mesoscope** - For wide-field calcium imaging
+![Hardware Recording Systems](/img/hardware_systems_placeholder.png)
 
-Each system offers unique advantages for studying predictive processing mechanisms at different spatial and temporal scales.
+### SLAP2 (Swept Line Active Polarization)
 
----
+The SLAP2 microscope is designed for ultra-fast subcellular imaging, capable of recording from arbitrary sets of pixels across multiple sample planes at speeds up to 220 Hz.
 
-## Quick Links to Detailed Hardware Documentation
+[→ Learn more about SLAP2 Hardware](hardware/allen_institute_slap2_hardware.md)
 
-- [SLAP2 Setup](hardware/allen_institute_slap2_hardware.md) - High-speed subcellular imaging
-- [Neuropixels Setup](hardware/allen_institute_neuropixels_hardware.md) - High-density neural recordings
-- [Mesoscope Setup](hardware/allen_institute_mesoscope_hardware.md) - Wide-field calcium imaging
+### Neuropixels Probes
 
----
+Neuropixels technology enables high-density electrophysiological recordings with hundreds of simultaneous recording sites distributed across multiple brain regions, providing millisecond-precision spike timing.
 
-## Hardware Selection Rationale
+[→ Learn more about Neuropixels Hardware](hardware/allen_institute_neuropixels_hardware.md)
 
-### Two-Photon Imaging (SLAP2)
+### Mesoscope
 
-Two-photon calcium imaging using the SLAP2 system provides:
-- Cellular-level recording with the ability to track specific cell types
-- Ability to image dendrites and somata simultaneously
-- Access to genetically defined cell populations through viral labeling
+The Allen Institute's Dual-Beam Mesoscope (Multiscope) enables simultaneous multi-plane calcium imaging across multiple cortical regions and depths, significantly increasing data collection throughput.
 
-This approach is ideal for studying:
-- Cell-type specific contributions to predictive processing
-- Dendritic computation during prediction and surprise
-- Layer-specific dynamics in cortical circuits
+[→ Learn more about Mesoscope Hardware](hardware/allen_institute_mesoscope_hardware.md)
 
-### Neuropixels Recordings
+## Complementary Capabilities
 
-Neuropixels probes enable:
-- Millisecond-precision spike timing across hundreds of neurons
-- Simultaneous recording from multiple brain regions
-- Layer-specific activity patterns
+These three recording systems provide complementary information about neural activity:
 
-This approach is crucial for:
-- Determining the precise timing of prediction signals
-- Tracking prediction-related activity across distributed networks
-- Relating spike timing to local field potentials
+| System | Spatial Resolution | Temporal Resolution | Coverage | Cell Type Specificity |
+|--------|-------------------|---------------------|----------|------------------------|
+| SLAP2 | Subcellular | Very high (~5ms) | Single area, targeted cells | High |
+| Neuropixels | Single-cell | Highest (<1ms) | Multiple areas, depth spanning | Low |
+| Mesoscope | Cellular | Moderate (~90ms) | Multiple areas, multiple depths | High |
 
-### Wide-Field Imaging (Mesoscope)
+## Integration with Experimental Design
 
-The mesoscope system allows:
-- Simultaneous imaging across multiple cortical regions
-- Tracking of global activity patterns
-- Low-resolution but high-coverage neural recordings
-
-This approach helps with:
-- Identifying which brain regions participate in different prediction tasks
-- Understanding large-scale dynamics during prediction formation
-- Relating local processing to global brain states
-
----
-
-## Hardware Integration
-
-All hardware systems are integrated with the same stimulus delivery system to ensure comparability of results. The Bonsai software framework is used for stimulus presentation, hardware synchronization, and data logging.
-
-For details on stimulus implementation, see the [Bonsai Instructions](stimuli/bonsai_instructions.md).
+All hardware platforms are integrated with standardized stimulus delivery systems to ensure comparability across experiments. For details on stimulus implementation, see the [Bonsai Instructions](stimuli/bonsai_instructions.md).
