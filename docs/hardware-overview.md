@@ -4,7 +4,9 @@ This page provides a brief introduction to the specialized hardware systems used
 
 ## Recording Systems
 
-The project employs three advanced neural recording platforms, each offering unique capabilities for studying predictive processing at different scales.
+The project employs three advanced neural recording platforms, each offering unique capabilities for studying predictive processing at different scales:
+
+![Hardware Recording Systems](/img/hardware_systems_placeholder.png)
 
 ### SLAP2 (Swept Line Active Polarization)
 
@@ -23,6 +25,16 @@ Neuropixels technology enables high-density electrophysiological recordings with
 The Allen Institute's Dual-Beam Mesoscope (Multiscope) enables simultaneous multi-plane calcium imaging across multiple cortical regions and depths, significantly increasing data collection throughput.
 
 [→ Learn more about Mesoscope Hardware](hardware/allen_institute_mesoscope_hardware.md)
+
+## Complementary Capabilities
+
+These three recording systems provide complementary information about neural activity:
+
+| System | Spatial Resolution | Temporal Resolution | Coverage | Cell Type Specificity |
+|--------|-------------------|---------------------|----------|------------------------|
+| SLAP2 | Subcellular | Very high (~5ms) | Single area, targeted cells | High |
+| Neuropixels | Single-cell | Highest (<1ms) | Multiple areas, depth spanning | Low |
+| Mesoscope | Cellular | Moderate (~90ms) | Multiple areas, multiple depths | High |
 
 ## Integration with Experimental Design
 

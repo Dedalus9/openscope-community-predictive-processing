@@ -1,100 +1,181 @@
 # Experimental Plan
 
-This document outlines the detailed experimental plan for investigating neural mechanisms of predictive processing as part of the OpenScope community project.
+This document outlines the experimental plan for investigating neural mechanisms of predictive processing as part of the OpenScope community project.
 
 ## Overview
 
-The OpenScope Community Predictive Processing project involves a series of experiments designed to investigate how the brain processes predictions and prediction errors. These experiments span across different species (mice and primates) and utilize various recording techniques to provide a comprehensive understanding of predictive processing mechanisms.
+The OpenScope Community Predictive Processing project involves a series of experiments designed to investigate how the brain processes predictions and prediction errors. The project aims to resolve existing conflicts in the field by systematically testing whether different types of mismatch stimuli engage shared or distinct neural mechanisms across species.
+
+## Scientific Rationale
+
+Predictive processing theories propose that the brain continuously predicts sensory inputs and highlights prediction errors. However, current experimental and theoretical findings show both convergences and divergences:
+
+**Convergences:**
+- Top-down inputs shape mismatch signals
+- Inhibitory interneurons play crucial roles in prediction errors
+- Cortical layers show differential involvement in predictive processing
+
+**Divergences:**
+- The role of species-specific hierarchies (mouse vs. primate)
+- Modality-dependent layer roles in processing prediction errors
+- Implementation of predictive coding in neural circuits
+
+To address these knowledge gaps, our experiments are designed to test specific hypotheses about how the brain generates and processes prediction errors.
 
 ## Key Research Questions
 
-1. Do temporal, motor, and omission mismatch stimuli engage shared or distinct neural mechanisms?
-2. How do these mechanisms differ across species (mice vs. primates)?
-3. What computational primitives (e.g., stimulus adaptation, dendritic computation, excitatory/inhibitory balance, hierarchical processing) are central to predictive processing?
+1. Do different types of mismatch stimuli engage shared or distinct neural mechanisms?
+2. How do excitatory and inhibitory neurons contribute to different types of prediction errors?
+3. Which computational primitives (stimulus adaptation, dendritic computation, E/I balance, hierarchical processing) are central to predictive processing?
+4. How do prediction error mechanisms differ across species?
 
 ## Experimental Paradigms
 
-### 1. Temporal Mismatch Paradigm
+Based on the current literature reviewed in our paper (Neural mechanisms of predictive processing: a collaborative community experiment through the OpenScope program), we will use several complementary paradigms designed to engage different prediction mechanisms:
 
-In this paradigm, subjects are exposed to stimuli with regular timing patterns that occasionally deviate from the expected timing.
+### 1. Standard Mismatch Paradigm
 
-- **Stimuli**: Visual gratings presented at regular intervals with occasional timing deviations
-- **Parameters**:
-    - Baseline (standard) trials: 960 presentations
-    - Mismatch (deviant) trials: 8 presentations
-    - Ratio: 120:1 (standard:deviant)
-    - Inter-stimulus interval: [TBD]
+This paradigm examines how the brain responds to violations of expectations in stimulus sequences under passive viewing conditions.
 
-### 2. Motor Mismatch Paradigm
+- **Stimuli**: Visual gratings presented with regular patterns that are occasionally violated
+- **Implementation**: 
+  - Standard stimuli: Repeated presentation of gratings with the same orientation/spatial frequency
+  - Deviant stimuli: Unexpected changes in grating orientation (45° or 90°), halted motion (0 Hz), or blank screens
+  - Ratio: 120:1 (standard:deviant)
+- **Duration**: 60 minutes (includes 10-minute habituation)
 
-This paradigm tests how neural responses change when motor actions lead to unexpected sensory outcomes.
+### 2. Sensorimotor Mismatch Paradigm
 
-- **Setup**: Subjects (mice) run on a wheel while visual stimuli are presented
+This paradigm tests how neural responses change when self-generated motor actions lead to unexpected sensory outcomes.
+
+- **Setup**: Animals run on a wheel with visual stimuli coupled to their movement
 - **Conditions**:
-    - Standard: Visual stimulus coupled with motor action
-    - Deviant: Unexpected visual stimulus or absence of expected stimulus following motor action
-- **Implementation**: The `Sensory_motor_oddball_slap2.bonsai` workflow controls this experiment
+  - Standard: Visual flow synchronized with running speed
+  - Deviant: Visual flow speeds up, slows down, or decouples from running
+  - Control: Passive viewing of matched visual flow patterns
+- **Duration**: 60 minutes (includes 10-minute habituation)
 
-### 3. Omission Mismatch Paradigm
+### 3. Sequence Mismatch Paradigm
 
-This paradigm examines neural responses when an expected stimulus is omitted entirely.
+This paradigm examines how the brain detects violations in learned sequences of stimuli.
 
-- **Procedure**: Regular presentation of stimuli with occasional omissions
+- **Setup**: Animals habituated to specific sequences of 4 stimuli
+- **Implementation**:
+  - Sequences repeat once per second for 37 minutes
+  - Deviant stimuli introduced in the third position of the sequence
+  - Controls for context-dependent prediction
+- **Duration**: 60 minutes (includes 20-minute habituation)
+
+### 4. Temporal Mismatch Paradigm
+
+This paradigm investigates how the brain responds to unexpected timing changes in stimulus presentation.
+
+- **Setup**: Alternating blocks of fixed vs. jittered timing
+- **Implementation**:
+  - Standard: 250ms stimulus duration, 500ms ISI
+  - Deviant: 150ms or 350ms stimulus duration
+  - Focus on timing predictability rather than stimulus identity
+- **Duration**: 60 minutes (includes 10-minute habituation per block)
+
+### 5. Omission Paradigm
+
+This paradigm examines neural responses when an expected stimulus is completely omitted.
+
+- **Procedure**: Regular presentation of stimuli with occasional omissions (5% probability)
 - **Analysis focus**: Neural activity during the time window when the stimulus would have occurred
+- **Control**: Random stimulus presentations without established expectations
+- **Duration**: 60 minutes (includes 10-minute habituation)
 
 ## Recording Techniques
 
-1. **In-vivo Two-Photon Imaging**:
-    - Used for detailed cellular-level recording
-    - Captures activity in specific cell types and compartments (e.g., dendrites)
-    - Implementation: SLAP2 system for high-speed imaging
+We employ three complementary recording approaches to investigate predictive processing at different spatial and temporal scales:
 
-2. **Electrophysiological Recordings**:
-    - Neuropixels probes for high-density neural recordings
-    - Captures spiking activity and local field potentials
+### 1. SLAP2 (Swept Line Active Polarization)
+
+- Ultra-fast subcellular imaging (220 Hz)
+- Cellular-level recording with ability to track specific cell types and dendritic compartments
+- Allows investigation of apical dendrite roles in integrating top-down and bottom-up signals
+
+### 2. Neuropixels Probes
+
+- High-density electrophysiological recordings (>380 channels)
+- Millisecond-precision spike timing across hundreds of neurons
+- Simultaneous recording from multiple brain regions and layers
+- Captures both spiking activity and local field potentials
+
+### 3. Mesoscope
+
+- Wide-field calcium imaging across multiple cortical regions
+- Simultaneous multi-plane imaging (4 depths across 2 areas)
+- Tracking of the same neural populations across different experimental sessions
 
 ## Species and Brain Regions
 
-1. **Mice**:
-    - Primary visual cortex (V1)
-    - Higher visual areas
-    - Targeted virus injections for cell-type specificity
-    - Examples: AAV for expression of iGluSnFR4 in V1 or ASAP8 voltage indicators
+### Mice
+- Primary visual cortex (V1)
+- Higher visual areas (LM, AL)
+- Motor areas (M1, M2)
+- Targeted recordings from specific cell types using transgenic lines:
+  - Excitatory neurons: Slc17a7-IRES2-Cre lines
+  - Inhibitory neurons: Sst-IRES-Cre, Vip-IRES-Cre lines
 
-2. **Primates** (future/collaborative studies):
-    - Homologous visual cortical areas
-    - Comparative analysis with mouse data
+### Primates (Collaborative Studies)
+- Homologous visual cortical areas (V1, V2, V4)
+- Prefrontal cortex
+- Comparative analysis with mouse data to address species differences
 
-## Data Analysis Approaches
+## Data Analysis Framework
 
-1. **Single Neuron Analysis**:
-    - Response properties to expected vs. unexpected stimuli
-    - Adaptation and tuning curves
-    - Prediction error signals
+Our analysis plan is structured to address three main scientific questions aligned with our review paper (Neural mechanisms of predictive processing: a collaborative community experiment through the OpenScope program):
 
-2. **Population Dynamics**:
-    - Correlation structure
-    - Dimensionality reduction techniques
-    - Decoding accuracy of expected vs. unexpected stimuli
+### I. What kind of information is encoded by mismatch responses?
 
-3. **Computational Modeling**:
-    - Model comparison and validation
-    - Testing specific hypotheses about predictive processing mechanisms
+We will determine whether mismatch responses represent:
+
+- **Multiplicative novelty**: Stimulus-specific enhancement for novel stimuli (response scales with tuning)
+- **Additive novelty**: A generalized "alert" signal (uniform response regardless of stimulus preference)
+- **Subtractive novelty**: Difference between expected vs. actual stimulus (activity reflects prediction error)
+
+This analysis will help us understand the computational principles underlying prediction error signals and determine whether the same information coding scheme is used across different paradigms.
+
+### II. Distinguish between two categories of prediction made by neurons
+
+We will distinguish between:
+- A. Detailed predictions about the identity of the upcoming stimulus
+- B. Deviation of stimulus probability from the expected stimulus ensemble, often described in the literature as "adaptation". This empirical outcome could be interpreted as a form of refutation of the hypothesis that predictive computation was involved in the experimental conditions tested.
+
+Our analyses will include:
+- Comparing responses to the same mismatch stimulus across different conditions (closed loop, open loop, control)
+- Calculating decoding performance and mutual information for individual mismatch stimuli versus novelty per se
+- Examining the emergence of prediction signals in both single neurons and neural populations
+- Testing multiple hypotheses including predictive coding vs. static tuning, predictive activity, pattern completion, and changes in population representation structure
+
+### III. Mismatch responses across different types of predictions
+
+We will compare neural responses across our five experimental paradigms to determine:
+
+- Whether common neural ensembles encode different types of prediction errors
+- If specialized circuits exist for different mismatch types (orientation, motion, temporal, omission)
+- How response dynamics differ between passive oddball, sensorimotor, and sequence-based predictions
+- Whether prediction errors rely on common or distinct computational mechanisms
+
+This comparison will help resolve the question of whether there's a unified prediction error mechanism or multiple specialized mechanisms in the brain.
 
 ## Data Sharing and Community Engagement
 
-All data collected through this project will be:
-- Formatted according to community standards (e.g., NWB format)
-- Shared openly without embargo
-- Made available through the Allen Institute or DANDI/NWB archives
-- Accompanied by documentation of experimental details
+All data will be:
+- Formatted according to Neurodata Without Borders (NWB) standards
+- Shared openly through the DANDI archive
+- Accompanied by comprehensive metadata and analysis code
+- Available for community analysis to foster iterative refinement
 
-## Current Status and Progress
+## Current Status and Timeline
 
-For the current status of experiments, please refer to:
-- The [experiment notes](experiments/allen_institute_787727_2025-03-27.md) for details on completed sessions
-- The [project tracking page](project-tracking.md) for overall progress
+For current experimental progress, please refer to:
+- [Experiment notes](experiments/) for details on completed sessions
+- [Project tracking page](project-tracking.md) for overall progress
 
 ## References
 
 1. [Neural mechanisms of predictive processing: a collaborative community experiment through the OpenScope program](https://arxiv.org/abs/2504.09614)
+2. [Visual Behavior 2P Technical Whitepaper](../../data/pdfs/visual_behavior_2p_technical_whitepaper.pdf)
