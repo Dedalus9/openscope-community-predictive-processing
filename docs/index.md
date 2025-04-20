@@ -12,8 +12,8 @@ Welcome to the **OpenScope Community Predictive Processing** repository! This we
 | If you are a... | Start here |
 |-----------------|------------|
 | **New Contributor** | [How to Contribute](how_to_contribute.md) and [Collaboration Policy](collaboration-policy.md) |
-| **Researcher** | [Experimental Plan](experimental-plan.md) and [Hardware Overview](hardware-overview.md) |
-| **Data Analyst** | [Analysis Plan](analysis-plan.md) and [Experiment Summary](experiment-summary.md) |
+| **Experimental Scientist** | [Experimental Plan](experimental-plan.md) and [Hardware Overview](hardware-overview.md) |
+| **Data Scientist** | [Analysis Plan](analysis-plan.md) and [Experiment Summary](experiment-summary.md) |
 | **Curious Visitor** | [FAQ](faq.md) and [Project Overview](#scientific-context) below |
 
 ---
