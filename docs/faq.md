@@ -12,9 +12,9 @@ The project involves researchers from multiple institutions, including the Allen
 
 ### What are the main research questions?
 The project addresses several key questions:
-            1. Do temporal, motor, and omission mismatch stimuli engage shared or distinct neural mechanisms?
-            2. How do these mechanisms differ across species (mice vs. primates)?
-            3. What computational primitives (stimulus adaptation, dendritic computation, E/I balance, hierarchical processing) are central to predictive processing?
+1. Do temporal, motor, and omission mismatch stimuli engage shared or distinct neural mechanisms?
+2. How do these mechanisms differ across species (mice vs. primates)?
+3. What computational primitives (stimulus adaptation, dendritic computation, E/I balance, hierarchical processing) are central to predictive processing?
 
 ## Data and Resources
 
@@ -23,10 +23,10 @@ Specific access instructions and links will be provided on this website as datas
 
 ### What types of data are being collected?
 The project collects several types of data:
-            - Two-photon calcium imaging data from pan-excitatory and pan-inhibitory lines
-            - Neuropixels recordings with SST-optotagging
-            - Voltage imaging recordings of pyramidal cell somata and dendrites
-            - Behavioral data (running speed, eye movements)
+- Two-photon calcium imaging data from pan-excitatory and pan-inhibitory lines
+- Neuropixels recordings with SST-optotagging
+- Voltage imaging recordings of pyramidal cell somata and dendrites
+- Behavioral data (running speed, eye movements)
 
 ### In what format are the data stored?
 Data are standardized in Neurodata Without Borders (NWB) format to ensure interoperability and ease of use across the research community.
@@ -38,10 +38,10 @@ Yes, we will provide example scripts in the [`code/data-access`](https://github.
 
 ### How can I contribute to the project?
 There are several ways to contribute:
-            1. Analyze existing datasets and share your findings
-            2. Develop or validate computational models using our data
-            3. Contribute to the codebase for data analysis or visualization
-            4. Conduct complementary experiments in your own lab
+1. Analyze existing datasets and share your findings
+2. Develop or validate computational models using our data
+3. Contribute to the codebase for data analysis or visualization
+4. Conduct complementary experiments in your own lab
 
 See the [How to Contribute](how_to_contribute.md) page for more details.
 
@@ -55,16 +55,16 @@ Please cite our [arXiv paper](https://arxiv.org/abs/2504.09614) when using data 
 
 ### What stimulus paradigms are used in the experiments?
 Four main experimental paradigms are used:
-            1. **Standard Mismatch**: Drifting gratings with occasional orientation changes
-            2. **Sensorimotor Mismatch**: Closed-loop visuo-motor interactions with occasional mismatches
-            3. **Sequence Mismatch**: Learned sequences with occasional disruptions
-            4. **Temporal Mismatch**: Stimuli with unexpected timing changes
+1. **Standard Mismatch**: Drifting gratings with occasional orientation changes
+2. **Sensorimotor Mismatch**: Closed-loop visuo-motor interactions with occasional mismatches
+3. **Sequence Mismatch**: Learned sequences with occasional disruptions
+4. **Temporal Mismatch**: Stimuli with unexpected timing changes
 
 ### What hardware is used for the recordings?
 The project uses three primary recording systems:
-            1. SLAP2 (Scanned Line Angular Projection) for high-speed subcellular imaging
-            2. Neuropixels probes for high-density electrophysiological recordings
-            3. Mesoscope for wide-field calcium imaging
+1. SLAP2 (Scanned Line Angular Projection) for high-speed subcellular imaging
+2. Neuropixels probes for high-density electrophysiological recordings
+3. Mesoscope for wide-field calcium imaging
 
 See the [Hardware Documentation](hardware-overview.md) for more details.
 
