@@ -6,7 +6,8 @@ This page provides a brief introduction to the specialized hardware systems used
 
 The project employs three advanced neural recording platforms, each offering unique capabilities for studying predictive processing at different scales:
 
-![Hardware Recording Systems](img/hardware_systems_placeholder.png)
+<!-- Image placeholder - will be added when available -->
+<!-- ![Hardware Recording Systems](img/hardware_systems_placeholder.png) -->
 
 ### SLAP2 (Swept Line Active Polarization)
 
