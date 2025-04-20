@@ -8,13 +8,15 @@ This page addresses common questions about the OpenScope Community Predictive Pr
 The OpenScope Community Predictive Processing project is a collaborative effort to investigate the neural mechanisms underlying predictive processing in the brain. Through carefully designed experiments using in-vivo two-photon imaging and electrophysiological recordings, the project aims to test whether mismatch stimuli engage shared or distinct mechanisms. 
 
 For more details, see:
-- [Project Overview](index.md#-scientific-context)
+
+- [Project Overview](index.md#scientific-context)
 - [Our arXiv paper](https://arxiv.org/abs/2504.09614)
 
 ### Who is involved in this project?
 The project involves researchers from multiple institutions, including the Allen Institute and various collaborating laboratories (Bastos lab, Najafi lab, Ruediger lab, and Oweiss lab). We also welcome contributions from the broader research community.
 
 For more information:
+
 - [Project Team](people.md)
 - [How to Contribute](how_to_contribute.md)
 
@@ -26,6 +28,7 @@ The project addresses several key questions:
 * What computational primitives (stimulus adaptation, dendritic computation, E/I balance, hierarchical processing) are central to predictive processing?
 
 Learn more:
+
 - [Experimental Plan](experimental-plan.md)
 - [Analysis Plan](analysis-plan.md)
 
@@ -35,6 +38,7 @@ Learn more:
 Specific access instructions and links will be provided on this website as datasets become available.
 
 Access data here:
+
 - [Experiment Summary](experiment-summary.md)
 - [OpenScope Data Portal](https://portal.brain-map.org/explore/circuits/visual-coding-neuropixels)
 
@@ -47,6 +51,7 @@ The project collects several types of data:
 * Behavioral data (running speed, eye movements)
 
 See our methods:
+
 - [Hardware Overview](hardware-overview.md)
 - [Detailed Methods](detailed-experimental-plan.md)
 
@@ -67,11 +72,12 @@ There are several ways to contribute:
 * Conduct complementary experiments in your own lab
 
 Get started here:
+
 - [How to Contribute](how_to_contribute.md)
 - [Ways to Get Involved](how_to_contribute.md#ways-to-get-involved)
 
 ### How do I report issues or suggest improvements?
-Issues can be reported on our [GitHub Issues page](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/issues). For discussions and suggestions, please use our [GitHub Discussions](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/discussions/21).
+Issues can be reported on our [GitHub Issues page](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/issues). For discussions and suggestions, please use our [GitHub Discussions](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/discussions).
 
 ### How do I cite this project in my publications?
 Please cite our [arXiv paper](https://arxiv.org/abs/2504.09614) when using data or code from this project:
@@ -89,6 +95,7 @@ Four main experimental paradigms are used:
 * **Temporal Mismatch**: Stimuli with unexpected timing changes
 
 Explore our approach:
+
 - [Experimental Plan](experimental-plan.md)
 - [Detailed Methods](detailed-experimental-plan.md)
 

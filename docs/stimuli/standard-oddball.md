@@ -7,7 +7,7 @@ The Standard Oddball stimulus is designed to investigate predictive coding and s
 ## Script Location
 
 The stimulus script is located at:
-- [`/code/stimulus-control/src/Standard_oddball_slap2.bonsai`](https://github.com/allenneuraldynamics/openscope-community-predictive-processing/blob/main/code/stimulus-control/src/Standard_oddball_slap2.bonsai)
+- [`/code/stimulus-control/src/Standard_oddball_slap2.bonsai`](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/blob/main/code/stimulus-control/src/Standard_oddball_slap2.bonsai)
 
 ## Hardware Requirements
 
