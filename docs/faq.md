@@ -62,7 +62,7 @@ Four main experimental paradigms are used:
 
 ### What hardware is used for the recordings?
 The project uses three primary recording systems:
-1. SLAP2 (Swept Line Active Polarization) for high-speed subcellular imaging
+1. SLAP2 (Scanned Line Angular Projection) for high-speed subcellular imaging
 2. Neuropixels probes for high-density electrophysiological recordings
 3. Mesoscope for wide-field calcium imaging
 

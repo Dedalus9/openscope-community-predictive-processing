@@ -92,7 +92,7 @@ This paradigm examines neural responses when an expected stimulus is completely 
 
 We employ three complementary recording approaches to investigate predictive processing at different spatial and temporal scales:
 
-### 1. SLAP2 (Swept Line Active Polarization)
+### 1. SLAP2 (Scanned Line Angular Projection)
 
 - Ultra-fast subcellular imaging (220 Hz)
 - Cellular-level recording with ability to track specific cell types and dendritic compartments

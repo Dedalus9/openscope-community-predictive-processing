@@ -133,7 +133,7 @@ In addition to the three core paradigms, we will conduct specialized sessions to
 
 To evaluate the relative contributions of different mechanisms, we will use three complementary recording approaches:
 
-#### SLAP2 Two-Photon Imaging
+#### SLAP2 (Scanned Line Angular Projection) Two-Photon Imaging
 
 - Ultra-fast subcellular imaging (220 Hz)
 - Targeted recording of dendrites and somata simultaneously
@@ -206,7 +206,7 @@ Each mouse will undergo:
 
 ## Analysis Plan
 
-This document focuses on the experimental design. For our deta  iled analysis approach, please see the [Analysis Plan](analysis-plan.md) document, which covers:
+This document focuses on the experimental design. For our detailed analysis approach, please see the [Analysis Plan](analysis-plan.md) document, which covers:
 
 1. What kind of information is encoded by mismatch responses
 2. Distinguishing between categories of predictions made by neurons

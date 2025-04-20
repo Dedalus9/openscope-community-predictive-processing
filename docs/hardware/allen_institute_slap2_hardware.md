@@ -2,7 +2,7 @@
 
 ## Overview
 
-The SLAP2 (Single-cell Laser-scanning Acquisition with Parallel Paths) microscope is an advanced imaging system developed by the Allen Institute for Neural Dynamics as part of their Single-Cell Computation project. This cutting-edge technology is specifically designed to record neural activity at the synaptic level with unprecedented speed and precision in the living brain.
+The SLAP2 (Scanned Line Angular Projection) microscope is an advanced imaging system developed by the Allen Institute for Neural Dynamics as part of their Single-Cell Computation project. This cutting-edge technology is specifically designed to record neural activity at the synaptic level with unprecedented speed and precision in the living brain.
 
 ## SLAP2 in Action
 

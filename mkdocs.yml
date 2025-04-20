@@ -9,6 +9,7 @@ nav:
   - Detailed Plan: detailed-experimental-plan.md
   - Analysis Plan: analysis-plan.md
 - Project Resources:
+  - Experiment Summary: experiment-summary.md
   - Stimuli:
     - Bonsai Instructions: stimuli/bonsai_instructions.md
     - List of scripts: stimuli/list_scripts.md

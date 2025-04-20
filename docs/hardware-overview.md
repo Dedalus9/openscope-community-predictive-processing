@@ -9,7 +9,7 @@ The project employs three advanced neural recording platforms, each offering uni
 <!-- Image placeholder - will be added when available -->
 <!-- ![Hardware Recording Systems](img/hardware_systems_placeholder.png) -->
 
-### SLAP2 (Swept Line Active Polarization)
+### SLAP2 (Scanned Line Angular Projection)
 
 The SLAP2 microscope is designed for ultra-fast subcellular imaging, capable of recording from arbitrary sets of pixels across multiple sample planes at speeds up to 220 Hz.
 
