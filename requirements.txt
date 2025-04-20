@@ -21,6 +21,9 @@ pathspec
 platformdirs
 Pygments
 pymdown-extensions
+PyMuPDF  # Used for PDF text and image extraction
+Pillow  # For image processing
+pyyaml  # For updating mkdocs.yml
 python-dateutil
 PyYAML
 pyyaml_env_tag
