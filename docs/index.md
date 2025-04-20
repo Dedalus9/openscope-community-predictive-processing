@@ -36,14 +36,14 @@ The resulting datasets are shared via the OpenScope program and from collaborati
     <div style="flex: 1; min-width: 300px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
         <h3>📝 Experimental Design</h3>
         <p>Our experiments investigate neural responses to various prediction violations using carefully designed paradigms.</p>
-        <a href="experimental-plan.md">Experimental Plan →</a><br>
-        <a href="detailed-experimental-plan.md">Detailed Methods →</a>
+        <a href="experimental-plan/">Experimental Plan →</a><br>
+        <a href="detailed-experimental-plan/">Detailed Methods →</a>
     </div>
     <div style="flex: 1; min-width: 300px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
         <h3>📊 Analysis Methods</h3>
         <p>Our analytical approach addresses key questions about information encoding in prediction errors and neural mechanisms.</p>
-        <a href="analysis-plan.md">Analysis Plan →</a><br>
-        <a href="experiment-summary.md">Experiment Summary →</a>
+        <a href="analysis-plan/">Analysis Plan →</a><br>
+        <a href="experiment-summary/">Experiment Summary →</a>
     </div>
 </div>
 
@@ -69,12 +69,12 @@ This project thrives on community involvement and collaborative research. We wel
     <div style="flex: 1; min-width: 300px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
         <h3>How to Contribute</h3>
         <p>Learn how you can participate in this community science project.</p>
-        <a href="how_to_contribute.md">Contribution Guide →</a>
+        <a href="how_to_contribute/">Contribution Guide →</a>
     </div>
     <div style="flex: 1; min-width: 300px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
         <h3>Team & Partners</h3>
         <p>Meet the researchers and institutions involved in this collaborative project.</p>
-        <a href="people.md">Project Team →</a>
+        <a href="people/">Project Team →</a>
     </div>
 </div>
 
