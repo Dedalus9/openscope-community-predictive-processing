@@ -4,7 +4,7 @@
 
 The Allen Institute for Neural Dynamics uses Neuropixels probes as part of their comprehensive brain observatory platform. These high-density electrophysiology devices enable researchers to record the activity of hundreds of neurons simultaneously across multiple brain regions, providing unprecedented insights into neural circuit function.
 
-![Neuropixels recording setup at the Allen Institute](/img/neuropixels/neuropixels_setup.jpg)
+![Neuropixels recording setup at the Allen Institute](../img/neuropixels/neuropixels_setup.jpg)
 *Neuropixels probes mounted on a recording rig at the Allen Institute. The system allows for simultaneous recording from multiple brain regions using up to 6 probes per experiment.*
 
 ## Application at the Allen Institute

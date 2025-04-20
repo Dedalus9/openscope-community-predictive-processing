@@ -6,6 +6,8 @@ This document outlines the experimental plan for investigating neural mechanisms
 
 The OpenScope Community Predictive Processing project involves a series of experiments designed to investigate how the brain processes predictions and prediction errors. The project aims to resolve existing conflicts in the field by systematically testing whether different types of mismatch stimuli engage shared or distinct neural mechanisms across species.
 
+For more extensive details, see our [Detailed Experimental Plan](detailed-experimental-plan.md) document.
+
 ## Scientific Rationale
 
 Predictive processing theories propose that the brain continuously predicts sensory inputs and highlights prediction errors. However, current experimental and theoretical findings show both convergences and divergences:
@@ -126,7 +128,7 @@ We employ three complementary recording approaches to investigate predictive pro
 
 ## Data Analysis Framework
 
-Our analysis plan is structured to address three main scientific questions aligned with our review paper (Neural mechanisms of predictive processing: a collaborative community experiment through the OpenScope program):
+Our analysis plan is structured to address three main scientific questions aligned with our review paper (Neural mechanisms of predictive processing: a collaborative community experiment through the OpenScope program). For complete analysis details, see our separate [Analysis Plan](analysis-plan.md) document.
 
 ### I. What kind of information is encoded by mismatch responses?
 
