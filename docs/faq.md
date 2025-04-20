@@ -12,6 +12,7 @@ The project involves researchers from multiple institutions, including the Allen
 
 ### What are the main research questions?
 The project addresses several key questions:
+
 * Do temporal, motor, and omission mismatch stimuli engage shared or distinct neural mechanisms?
 * How do these mechanisms differ across species (mice vs. primates)?
 * What computational primitives (stimulus adaptation, dendritic computation, E/I balance, hierarchical processing) are central to predictive processing?
@@ -23,6 +24,7 @@ Specific access instructions and links will be provided on this website as datas
 
 ### What types of data are being collected?
 The project collects several types of data:
+
 * Two-photon calcium imaging data from pan-excitatory and pan-inhibitory lines
 * Neuropixels recordings with SST-optotagging
 * Voltage imaging recordings of pyramidal cell somata and dendrites
@@ -38,6 +40,7 @@ Yes, we will provide example scripts in the [`code/data-access`](https://github.
 
 ### How can I contribute to the project?
 There are several ways to contribute:
+
 * Analyze existing datasets and share your findings
 * Develop or validate computational models using our data
 * Contribute to the codebase for data analysis or visualization
@@ -55,6 +58,7 @@ Please cite our [arXiv paper](https://arxiv.org/abs/2504.09614) when using data 
 
 ### What stimulus paradigms are used in the experiments?
 Four main experimental paradigms are used:
+
 * **Standard Mismatch**: Drifting gratings with occasional orientation changes
 * **Sensorimotor Mismatch**: Closed-loop visuo-motor interactions with occasional mismatches
 * **Sequence Mismatch**: Learned sequences with occasional disruptions
@@ -62,6 +66,7 @@ Four main experimental paradigms are used:
 
 ### What hardware is used for the recordings?
 The project uses three primary recording systems:
+
 * SLAP2 (Scanned Line Angular Projection) for high-speed subcellular imaging
 * Neuropixels probes for high-density electrophysiological recordings
 * Mesoscope for wide-field calcium imaging
