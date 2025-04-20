@@ -12,7 +12,7 @@ Our analysis is structured to address three main scientific questions, each focu
 
 These questions are designed to help distinguish between competing hypotheses about whether predictive processing relies on a unified neural mechanism or multiple specialized mechanisms.
 
-## I. What kind of information is encoded by mismatch responses?
+## What Kind of Information Is Encoded by Mismatch Responses?
 
 We will determine whether mismatch responses represent:
 
@@ -36,7 +36,7 @@ We will determine whether mismatch responses represent:
 
 For each of these possibilities, we will compare results across paradigms to test whether the same information coding principles apply consistently to different types of prediction errors.
 
-## II. Distinguish between two categories of prediction made by neurons
+## Distinguish Between Two Categories of Prediction Made by Neurons
 
 We will distinguish between two fundamental categories of neural prediction:
 
@@ -66,7 +66,7 @@ We will distinguish between two fundamental categories of neural prediction:
 
 These analyses will help us determine whether neural activity primarily represents precise stimulus predictions or statistical regularities, and how these mechanisms develop with experience.
 
-## III. Mismatch responses across different types of predictions
+## Mismatch Responses Across Different Types of Predictions
 
 We will compare neural responses across our five experimental paradigms to determine:
 
@@ -120,3 +120,10 @@ These models will provide quantitative predictions about neural activity pattern
 ## References
 
 1. [Neural mechanisms of predictive processing: a collaborative community experiment through the OpenScope program](https://arxiv.org/abs/2504.09614)
+
+## Related Documents
+
+- **[Experimental Plan](experimental-plan.md)**: Overview of experimental paradigms and approaches
+- **[Detailed Experimental Plan](detailed-experimental-plan.md)**: Comprehensive methodology and experimental design details
+- **[Experiment Summary](experiment-summary.md)**: Overview of all conducted and planned experiments
+- **[Project Tracking](project-tracking.md)**: Current progress and status of analysis projects

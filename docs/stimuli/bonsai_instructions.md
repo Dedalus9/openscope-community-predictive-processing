@@ -29,3 +29,12 @@ These are needed to run Bonsai workflows on the Allen Institute rigs with HARP d
 - [Spinnaker SDK 1.29.0.5](https://www.flir.co.uk/support/products/spinnaker-sdk/#Downloads) (device drivers for FLIR cameras)
     - On the FLIR website: `Download > Archive > 1.29.0.5 > SpinnakerSDK_FULL_1.29.0.5_x64.exe`
 - [NI-DAQmx 19.0](https://www.ni.com/en-gb/support/downloads/drivers/download.ni-daq-mx.html#301173) (drivers for NI-DAQ devices)
+
+---
+
+## Related Documents
+
+- **[Experimental Plan](../experimental-plan.md)**: Overview of experimental paradigms using these stimuli
+- **[Standard Oddball Stimulus](standard-oddball.md)**: Details of the standard oddball paradigm implementation
+- **[Sensory-Motor Closed-Loop](sensory-motor-closed-loop.md)**: Information about sensorimotor paradigm implementation
+- **[List of Bonsai Scripts](list_scripts.md)**: Catalog of all available stimulus scripts

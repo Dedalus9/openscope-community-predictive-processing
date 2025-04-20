@@ -39,3 +39,9 @@ For more detailed information about the Allen Institute's Mesoscope technology:
 ## Additional Resources
 
 - [Visual Behavior 2P Technical Whitepaper (Allen Brain Observatory)](https://portal.brain-map.org/explore/circuits/visual-behavior-2p)
+
+## Related Documents
+
+- **[Hardware Overview](../hardware-overview.md)**: Summary of all recording platforms used in the project
+- **[Experimental Plan](../experimental-plan.md)**: How the Mesoscope is used in different experimental paradigms
+- **[Detailed Experimental Plan](../detailed-experimental-plan.md)**: Specific information about Mesoscope recording protocols

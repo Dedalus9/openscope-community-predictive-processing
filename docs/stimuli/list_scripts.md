@@ -39,3 +39,12 @@ If you've created a new script that should be added to this documentation, follo
     - Hardware considerations
 
 4. Update `mkdocs.yml` to include your new markdown file
+
+---
+
+## Related Documents
+
+- **[Bonsai Instructions](bonsai_instructions.md)**: How to set up and run Bonsai scripts
+- **[Standard Oddball](standard-oddball.md)**: Details about the standard oddball paradigm 
+- **[Sensory-Motor Closed Loop](sensory-motor-closed-loop.md)**: Information about the sensory-motor paradigm
+- **[Experimental Plan](../experimental-plan.md)**: Overview of all experimental paradigms

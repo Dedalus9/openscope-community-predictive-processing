@@ -32,3 +32,11 @@ For detailed information about the experimental protocols used in this project, 
 - [Detailed Experimental Plan](detailed-experimental-plan.md): Comprehensive experimental methodology
 - [Analysis Plan](analysis-plan.md): Methods for analyzing the collected data
 - [Stimulus Documentation](stimuli/list_scripts.md): Details about the visual stimuli used in experiments
+
+## Related Documents
+
+- **[Experimental Plan](experimental-plan.md)**: Overview of experimental paradigms and approaches
+- **[Detailed Experimental Plan](detailed-experimental-plan.md)**: Comprehensive methodology and experimental design
+- **[Analysis Plan](analysis-plan.md)**: Methods for analyzing the collected data
+- **[Hardware Overview](hardware-overview.md)**: Information about the recording platforms used
+- **[Project Tracking](project-tracking.md)**: Current progress and status of all project components

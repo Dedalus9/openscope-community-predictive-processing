@@ -38,3 +38,9 @@ SLAP2 microscope kits and software are now being distributed by MBF Biosciences 
 ## References
 
 For more detailed information about SLAP2 and the Single-Cell Computation project, visit the [Allen Neural Dynamics website](https://www.allenneuraldynamics.org/projects/single-cell-computation).
+
+## Related Documents
+
+- **[Hardware Overview](../hardware-overview.md)**: Summary of all recording platforms used in the project
+- **[Experimental Plan](../experimental-plan.md)**: How SLAP2 is used in different experimental paradigms
+- **[Experiment Summary](../experiment-summary.md)**: Overview of experiments conducted with SLAP2

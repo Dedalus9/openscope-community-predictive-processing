@@ -50,7 +50,7 @@ We are testing two alternative hypotheses:
 
 ## Experimental Design
 
-### 1. Comprehensive Stimulus Set Design
+### Comprehensive Stimulus Set Design
 
 To systematically investigate different aspects of predictive processing, we've designed a stimulus set that includes several validated mismatch stimuli capable of engaging different neural mechanisms:
 
@@ -82,7 +82,7 @@ All experiments will feature sequences of drifting gratings with five types of o
     - Deviant: Flow faster/slower than expected based on running speed
     - Implemented during active running periods
 
-### 2. Session Structure and Paradigms
+### Session Structure and Paradigms
 
 These oddball stimuli will be presented in three different paradigms, each designed to engage different prediction mechanisms as described in our review paper "Neural mechanisms of predictive processing: a collaborative community experiment through the OpenScope program":
 
@@ -95,7 +95,7 @@ These oddball stimuli will be presented in three different paradigms, each desig
 - 8 repetitions of each oddball type
 - Tests predictions based on sequential patterns
 
-#### Paradigm 2 – Sensory-Motor Mismatch (Sensorimotor Coupling)
+#### Paradigm 2 – Sensorimotor Mismatch (Sensorimotor Coupling)
 
 - Animals run on wheel with visual flow coupled to movement
 - Closed-loop visuo-motor coupling (running controls visual flow)
@@ -129,7 +129,7 @@ In addition to the three core paradigms, we will conduct specialized sessions to
 - Shorter/longer duration stimuli serve as temporal oddballs
 - Duration: 60 minutes (includes 10-minute habituation per block)
 
-### 3. Recording Approaches
+### Recording Approaches
 
 To evaluate the relative contributions of different mechanisms, we will use three complementary recording approaches:
 
@@ -171,7 +171,7 @@ To evaluate the relative contributions of different mechanisms, we will use thre
     - Determine whether common neural ensembles participate in different prediction paradigms
     - Track changes in prediction signals over multiple sessions
 
-### 4. Experimental Subjects and Brain Regions
+### Experimental Subjects and Brain Regions
 
 #### Mice
 
@@ -194,7 +194,7 @@ To evaluate the relative contributions of different mechanisms, we will use thre
     - MT/MST
     - Prefrontal regions
 
-### 5. Experimental Timeline
+### Experimental Timeline
 
 Each mouse will undergo:
 - Habituation and task training (2-3 weeks)
@@ -229,3 +229,10 @@ The resulting datasets, collected through the OpenScope program, will be shared 
 ## References
 
 1. [Neural mechanisms of predictive processing: a collaborative community experiment through the OpenScope program](https://arxiv.org/abs/2504.09614)
+
+## Related Documents
+
+- **[Experimental Plan](experimental-plan.md)**: Concise overview of experimental paradigms and approaches
+- **[Analysis Plan](analysis-plan.md)**: Detailed methods for analyzing the collected data
+- **[Experiment Summary](experiment-summary.md)**: Overview of all conducted and planned experiments
+- **[Hardware Overview](hardware-overview.md)**: Information about the recording platforms used

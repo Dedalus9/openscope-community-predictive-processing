@@ -80,3 +80,10 @@ This paradigm is designed to elicit predictive coding responses where neurons sh
 1. Adaptation to repeated standard stimuli
 2. Enhanced responses to deviant stimuli (mismatch negativity)
 3. Response magnitudes that correlate with the degree of deviance from the standard
+
+## Related Documents
+
+- **[Bonsai Instructions](bonsai_instructions.md)**: Setup and deployment of Bonsai code
+- **[Experimental Plan](../experimental-plan.md)**: Overview of all experimental paradigms
+- **[SLAP2 Hardware](../hardware/allen_institute_slap2_hardware.md)**: Details about the SLAP2 imaging system used
+- **[Example Experiment](../experiments/allen_institute_794237_2025-04-03.md)**: Session notes from an experiment using this stimulus

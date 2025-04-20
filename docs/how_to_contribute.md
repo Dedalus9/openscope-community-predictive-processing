@@ -23,3 +23,12 @@
     - If you have any questions or need clarification, feel free to post them in our [GitHub Discussions](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/discussions/21).
 
 Thank you for contributing to the project!
+
+---
+
+## Related Documents
+
+- **[Project Tracking](project-tracking.md)**: Overview of ongoing projects and team members
+- **[Collaboration Policy](collaboration-policy.md)**: Guidelines for respectful and productive collaboration
+- **[Experiment Summary](experiment-summary.md)**: Overview of all conducted experiments
+- **[Experiment Template](template-files/mouse_experiment_template.md)**: Template for documenting new experiments

@@ -78,3 +78,10 @@ This paradigm is designed to elicit neural activity patterns related to:
 1. Visuomotor integration
 2. Self-generated vs. externally generated sensory feedback
 3. Predictive coding in sensorimotor loops
+
+## Related Documents
+
+- **[Bonsai Instructions](bonsai_instructions.md)**: Setup and deployment of Bonsai code
+- **[Experimental Plan](../experimental-plan.md)**: Overview of all experimental paradigms
+- **[SLAP2 Hardware](../hardware/allen_institute_slap2_hardware.md)**: Details about the SLAP2 imaging system
+- **[Standard Oddball](standard-oddball.md)**: Information about the related standard oddball paradigm

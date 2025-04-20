@@ -35,7 +35,7 @@ To address these knowledge gaps, our experiments are designed to test specific h
 
 Based on the current literature reviewed in our paper (Neural mechanisms of predictive processing: a collaborative community experiment through the OpenScope program), we will use several complementary paradigms designed to engage different prediction mechanisms:
 
-### 1. Standard Mismatch Paradigm
+### Standard Mismatch Paradigm
 
 This paradigm examines how the brain responds to violations of expectations in stimulus sequences under passive viewing conditions.
 
@@ -46,7 +46,7 @@ This paradigm examines how the brain responds to violations of expectations in s
   - Ratio: 120:1 (standard:deviant)
 - **Duration**: 60 minutes (includes 10-minute habituation)
 
-### 2. Sensorimotor Mismatch Paradigm
+### Sensorimotor Mismatch Paradigm
 
 This paradigm tests how neural responses change when self-generated motor actions lead to unexpected sensory outcomes.
 
@@ -57,7 +57,7 @@ This paradigm tests how neural responses change when self-generated motor action
     - Control: Passive viewing of matched visual flow patterns
 - **Duration**: 60 minutes (includes 10-minute habituation)
 
-### 3. Sequence Mismatch Paradigm
+### Sequence Mismatch Paradigm
 
 This paradigm examines how the brain detects violations in learned sequences of stimuli.
 
@@ -68,7 +68,7 @@ This paradigm examines how the brain detects violations in learned sequences of 
     - Controls for context-dependent prediction
 - **Duration**: 60 minutes (includes 20-minute habituation)
 
-### 4. Temporal Mismatch Paradigm
+### Temporal Mismatch Paradigm
 
 This paradigm investigates how the brain responds to unexpected timing changes in stimulus presentation.
 
@@ -79,7 +79,7 @@ This paradigm investigates how the brain responds to unexpected timing changes i
     - Focus on timing predictability rather than stimulus identity
 - **Duration**: 60 minutes (includes 10-minute habituation per block)
 
-### 5. Omission Paradigm
+### Omission Paradigm
 
 This paradigm examines neural responses when an expected stimulus is completely omitted.
 
@@ -92,20 +92,20 @@ This paradigm examines neural responses when an expected stimulus is completely 
 
 We employ three complementary recording approaches to investigate predictive processing at different spatial and temporal scales:
 
-### 1. SLAP2 (Scanned Line Angular Projection)
+### SLAP2 (Scanned Line Angular Projection)
 
 - Ultra-fast subcellular imaging (220 Hz)
 - Cellular-level recording with ability to track specific cell types and dendritic compartments
 - Allows investigation of apical dendrite roles in integrating top-down and bottom-up signals
 
-### 2. Neuropixels Probes
+### Neuropixels Probes
 
 - High-density electrophysiological recordings (>380 channels)
 - Millisecond-precision spike timing across hundreds of neurons
 - Simultaneous recording from multiple brain regions and layers
 - Captures both spiking activity and local field potentials
 
-### 3. Mesoscope
+### Mesoscope
 
 - Wide-field calcium imaging across multiple cortical regions
 - Simultaneous multi-plane imaging (4 depths across 2 areas)
@@ -140,7 +140,7 @@ We will determine whether mismatch responses represent:
 
 This analysis will help us understand the computational principles underlying prediction error signals and determine whether the same information coding scheme is used across different paradigms.
 
-### II. Distinguish between two categories of prediction made by neurons
+### Distinguish Between Two Categories of Prediction Made by Neurons
 
 We will distinguish between:
 - A. Detailed predictions about the identity of the upcoming stimulus
@@ -152,7 +152,7 @@ Our analyses will include:
 - Examining the emergence of prediction signals in both single neurons and neural populations
 - Testing multiple hypotheses including predictive coding vs. static tuning, predictive activity, pattern completion, and changes in population representation structure
 
-### III. Mismatch responses across different types of predictions
+### Mismatch Responses Across Different Types of Predictions
 
 We will compare neural responses across our five experimental paradigms to determine:
 
@@ -180,3 +180,11 @@ For current experimental progress, please refer to:
 ## References
 
 1. [Neural mechanisms of predictive processing: a collaborative community experiment through the OpenScope program](https://arxiv.org/abs/2504.09614)
+
+## Related Documents
+
+- **[Detailed Experimental Plan](detailed-experimental-plan.md)**: Comprehensive methodology and experimental design details
+- **[Analysis Plan](analysis-plan.md)**: Methods for analyzing the collected data
+- **[Experiment Summary](experiment-summary.md)**: Overview of all conducted and planned experiments
+- **[Hardware Overview](hardware-overview.md)**: Information about the recording platforms used
+- **[Project Tracking](project-tracking.md)**: Current progress and status of project components

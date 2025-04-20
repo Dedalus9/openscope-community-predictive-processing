@@ -230,3 +230,12 @@ This project focuses on creating and testing computational models that simulate 
 ## Questions and Feedback
 
 If you have any questions or need clarification about the project tracking workflow or tasks, feel free to post them in our [GitHub Discussions](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/discussions/21).
+
+---
+
+## Related Documents
+
+- **[Experimental Plan](experimental-plan.md)**: Overview of experimental paradigms and approaches
+- **[Analysis Plan](analysis-plan.md)**: Detailed methods for analyzing the collected data 
+- **[Experiment Summary](experiment-summary.md)**: Overview of all conducted and planned experiments
+- **[Hardware Overview](hardware-overview.md)**: Information about the recording platforms used

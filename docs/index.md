@@ -71,3 +71,13 @@ The repository includes the following key documents:
 ---
 
 Thank you for being part of the OpenScope Community Predictive Processing project!
+
+---
+
+## Related Documents
+
+- **[Experimental Plan](experimental-plan.md)**: Overview of experimental paradigms and approaches
+- **[Detailed Experimental Plan](detailed-experimental-plan.md)**: Comprehensive methodology and experimental design
+- **[Analysis Plan](analysis-plan.md)**: Methods for analyzing the collected data
+- **[Experiment Summary](experiment-summary.md)**: Overview of all conducted and planned experiments
+- **[Hardware Overview](hardware-overview.md)**: Information about the recording platforms used

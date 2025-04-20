@@ -55,3 +55,9 @@ The resulting dataset serves as a valuable resource for exploring sensory coding
 ## Additional Resources
 
 - [Download the full Neuropixels Visual Coding White Paper (PDF)](https://brainmapportal-live-4cc80a57cd6e4715-4cc80a57cd6e4715.divio-media.org/filer_public/53/06/5306b531-019d-4e1b-9b48-3b189d537686/neuropixels_visual_coding_-_white_paper_v10.pdf)
+
+## Related Documents
+
+- **[Hardware Overview](../hardware-overview.md)**: Summary of all recording platforms used in the project
+- **[Experimental Plan](../experimental-plan.md)**: How Neuropixels is used in different experimental paradigms
+- **[Detailed Experimental Plan](../detailed-experimental-plan.md)**: Specific information about Neuropixels recording protocols

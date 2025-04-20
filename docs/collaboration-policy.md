@@ -104,3 +104,12 @@ To be determined.
 ### 4.3 Conflict Resolution
 
 Disputes are resolved by a majority vote.
+
+---
+
+## Related Documents
+
+- **[How to Contribute](how_to_contribute.md)**: Practical guide for contributing to the project
+- **[Project Tracking](project-tracking.md)**: Overview of ongoing projects and team members
+- **[People](people.md)**: Information about project participants and their roles
+- **[FAQ](faq.md)**: Answers to common questions about the project

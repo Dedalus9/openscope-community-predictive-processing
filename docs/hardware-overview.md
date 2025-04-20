@@ -40,3 +40,10 @@ These three recording systems provide complementary information about neural act
 ## Integration with Experimental Design
 
 All hardware platforms are integrated with standardized stimulus delivery systems to ensure comparability across experiments. For details on stimulus implementation, see the [Bonsai Instructions](stimuli/bonsai_instructions.md).
+
+## Related Documents
+
+- **[Experimental Plan](experimental-plan.md)**: Overview of experimental paradigms using these hardware systems
+- **[Detailed Experimental Plan](detailed-experimental-plan.md)**: Comprehensive methodology including hardware-specific protocols
+- **[Experiment Summary](experiment-summary.md)**: Overview of experiments conducted with each hardware platform
+- **[Stimulus Documentation](stimuli/bonsai_instructions.md)**: Details about stimulus delivery systems integrated with the hardware
