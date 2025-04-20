@@ -4,9 +4,9 @@ use_directory_urls: true
 
 nav:
 - Home: index.md
-- Experimental Plan:
+- Project Plan:
   - Overview: experimental-plan.md
-  - Detailed Plan: detailed-experimental-plan.md
+  - Experimental Plan: detailed-experimental-plan.md
   - Analysis Plan: analysis-plan.md
 - Project Resources:
   - Experiment Summary: experiment-summary.md
