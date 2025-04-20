@@ -37,5 +37,7 @@ The Dual-Beam Mesoscope consists of three key components:
 For more detailed information about the Allen Institute's Mesoscope technology:
 
 - [Allen Neural Dynamics website](https://www.allenneuraldynamics.org/)
-- [Visual Behavior 2P Technical Whitepaper (PDF)](../../data/pdfs/visual_behavior_2p_technical_whitepaper.pdf)
-- Orlova, Tsyboulski, Najafi et al., 2020. "Multiplane Mesoscope reveals distinct cortical interactions following expectation violations."
+
+## Additional Resources
+
+- [Visual Behavior 2P Technical Whitepaper (Allen Brain Observatory)](https://portal.brain-map.org/explore/circuits/visual-behavior-2p)

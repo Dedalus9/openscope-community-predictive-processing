@@ -172,10 +172,9 @@ All data will be:
 ## Current Status and Timeline
 
 For current experimental progress, please refer to:
-- [Experiment notes](experiments/) for details on completed sessions
+- [Experiment notes](/experiments/) for details on completed sessions
 - [Project tracking page](project-tracking.md) for overall progress
 
 ## References
 
 1. [Neural mechanisms of predictive processing: a collaborative community experiment through the OpenScope program](https://arxiv.org/abs/2504.09614)
-2. [Visual Behavior 2P Technical Whitepaper](../../data/pdfs/visual_behavior_2p_technical_whitepaper.pdf)

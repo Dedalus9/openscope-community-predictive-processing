@@ -52,10 +52,6 @@ The Allen Institute processes Neuropixels data through a standardized pipeline:
 
 The resulting dataset serves as a valuable resource for exploring sensory coding at both single-cell and population levels, as well as studying neural interactions within and between brain regions.
 
-## References
+## Additional Resources
 
-For more detailed information about how the Allen Institute uses Neuropixels technology:
-
-- [Download the full Neuropixels Visual Coding White Paper (PDF)](../../data/pdfs/neuropixels_visual_coding_-_white_paper_v10.pdf)
-- Visit the [Allen Brain Observatory](https://portal.brain-map.org/explore/circuits) data portal to access the full dataset
-- Explore the [Allen Institute for Neural Dynamics](https://www.allenneuraldynamics.org/) website
+- [Download the full Neuropixels Visual Coding White Paper (PDF)](https://brainmapportal-live-4cc80a57cd6e4715-4cc80a57cd6e4715.divio-media.org/filer_public/53/06/5306b531-019d-4e1b-9b48-3b189d537686/neuropixels_visual_coding_-_white_paper_v10.pdf)
