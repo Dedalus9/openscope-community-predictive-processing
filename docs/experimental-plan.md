@@ -174,7 +174,7 @@ All data will be:
 ## Current Status and Timeline
 
 For current experimental progress, please refer to:
-- [Experiment notes](/experiments/) for details on completed sessions
+- [Experiment notes](experiments/) for details on completed sessions
 - [Project tracking page](project-tracking.md) for overall progress
 
 ## References
