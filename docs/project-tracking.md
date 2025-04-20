@@ -37,7 +37,9 @@ We use a [GitHub Kanban board](https://github.com/orgs/AllenNeuralDynamics/proje
 
 ---
 
-## A. Data Collection and Stimulus Design
+## Data Collection and Management Projects
+
+### Project 1: Data Collection and Stimulus Design
 
 **🎯 Title & Goal:**  
 *Design and implement stimuli for investigating predictive processing mechanisms across multiple experimental paradigms.*
@@ -60,9 +62,7 @@ Each stimulus paradigm is implemented in Bonsai and includes appropriate control
 - ✅ Initial SLAP2 recordings completed with mouse #794237 and #787727
 - 🔄 Ongoing refinement of temporal mismatch stimuli
 
----
-
-## B. Data Curation and Sharing
+### Project 2: Data Curation and Sharing
 
 **🎯 Title & Goal:**  
 *Ensure all data and metadata are properly curated, formatted, and shared through public repositories.*
@@ -74,80 +74,126 @@ Each stimulus paradigm is implemented in Bonsai and includes appropriate control
 This project focuses on the critical task of data management, ensuring that all datasets are released without embargo, following the community policy.  
 This includes standardizing data in NWB format, uploading datasets to the Allen Institute or DANDI/NWB archives, and providing comprehensive documentation.
 
- Key data types include:
- - Two-photon calcium imaging data from pan-excitatory and pan-inhibitory lines
- - Neuropixels recordings with SST-optotagging
- - Voltage imaging recordings of pyramidal cell somata and dendrites
+Key data types include:
+- Two-photon calcium imaging data from pan-excitatory and pan-inhibitory lines
+- Neuropixels recordings with SST-optotagging
+- Voltage imaging recordings of pyramidal cell somata and dendrites
+
+**Progress:**
+- 🔄 Initial data curation pipeline established
+- 🔄 Working on metadata standardization for SLAP2 experiments
 
 ---
 
-## C. Single Neuron Analysis
+## Analysis Projects (Aligned with Analysis Plan)
+
+### Project 3: Information Encoding in Mismatch Responses
 
 **🎯 Title & Goal:**  
-*Analyze how individual neurons encode prediction errors across different mismatch paradigms.*
+*Determine what kind of information is encoded by mismatch responses across different experimental paradigms.*
 
 **👥 Contributors:**  
 *Seeking contributors*
 
 **📝 Description:**  
-This project investigates how individual neurons respond to expected versus unexpected stimuli across different prediction paradigms. The analysis will determine:
- 
-1. **Information Encoded by Mismatch Responses**:
-    - Multiplicative novelty (stimulus-specific enhancement)
-    - Additive novelty (generalized "alert" signal)
-    - Subtractive novelty (difference between expected vs. actual stimulus)
+This project addresses the first main question in our analysis plan: "What kind of information is encoded by mismatch responses?" We will analyze how neurons represent prediction errors by distinguishing between:
 
-2. **Response Characteristics**:
-    - Response amplitude, latency, and duration
-    - Comparison across cell types (excitatory vs. inhibitory populations)
-    - Layer-specific differences in response properties
+1. **Multiplicative Novelty**:
+   - Analyze whether mismatch responses scale with tuning curve preference
+   - Fit tuning curves with multiplicative gain parameters
+   - Test if neurons with strong preference for standard stimuli show larger mismatch responses
 
-3. **Predictive Timing Analysis**:
-    - Characterizing responses to temporal mismatch stimuli
-    - Evaluating how neurons encode specific temporal predictions
+2. **Additive Novelty**:
+   - Test if mismatch responses reflect a generalized "alert" signal
+   - Evaluate whether responses increase uniformly across all stimulus conditions
+   - Fit tuning curves with additive offset parameters
+
+3. **Subtractive Novelty (True Prediction Error)**:
+   - Quantify if responses represent the difference between expected and actual stimuli
+   - Build predictive models of expected neural activity and compare with actual activity
+   - Test if response magnitude correlates with feature distance between expected and actual stimuli
 
 **Analysis Methods:**
 - Event-triggered averaging for calcium imaging data
 - Peri-stimulus time histograms for Neuropixels data
+- Tuning curve analysis with parametric models
 - Bootstrap resampling for statistical validation
-- Comparative analysis across multiple mismatch paradigms
 
----
-
-## D. Population Dynamics and Decoding
+### Project 4: Categories of Neural Predictions
 
 **🎯 Title & Goal:**  
-*Investigate population-level encoding of predictions and prediction errors.*
+*Distinguish between detailed stimulus predictions and statistical ensemble deviations in neural responses.*
 
 **👥 Contributors:**  
 *Seeking contributors*
 
 **📝 Description:**  
-This project aims to understand how populations of neurons collectively represent and process predictions.
+This project addresses the second main question in our analysis plan: "What categories of predictions are made by neurons?" We will investigate whether neural activity reflects:
 
-1. **Decoding Analysis**:
-    - Quantify information encoded about novelty per se versus specific stimulus identity
-    - Compare decoding performance across different brain regions and layers
-    - Evaluate the temporal evolution of population codes during prediction formation
+1. **Detailed Stimulus Predictions**:
+   - Compare responses in closed-loop vs. open-loop conditions
+   - Analyze whether neurons encode precise expectations about upcoming stimuli
+   - Test if predictive signals differ across visual features (orientation, motion)
 
-2. **Dimensionality Reduction**:
-    - Apply techniques like PCA, t-SNE, and UMAP to visualize population activity
-    - Identify latent variables corresponding to predictions and prediction errors
-    - Track changes in neural manifold structure over repeated presentations
+2. **Ensemble Probability Deviations**:
+   - Apply population decoding and mutual information analyses
+   - Calculate how well neural activity encodes individual mismatch stimuli vs. general novelty
+   - Compare information content across experimental conditions
 
-3. **Cross-Paradigm Comparison**:
-    - Compare population responses across standard, sensorimotor, and sequence mismatch paradigms
-    - Determine whether distinct or overlapping neural populations encode different types of predictions
+3. **Predictive Learning Dynamics**:
+   - Track response changes to repeated oddball stimuli over time
+   - Apply decay models to quantify adaptation rates
+   - Use tensor component analysis to identify population-level learning patterns
+
+4. **Pattern Completion Mechanisms**:
+   - Analyze neural activity during stimulus omission periods
+   - Test if omission responses depend on preceding stimulus patterns
+   - Evaluate evidence for predictive filling-in of expected stimuli
 
 **Analysis Methods:**
-- Linear and nonlinear decoding algorithms (SVMs, neural networks)
-- Tensor Component Analysis (TCA) for extracting trial-dependent dynamics
-- Mutual information calculations
-- Visualization of geometric structure of population activity
+- Cross-condition comparisons (closed-loop vs. open-loop)
+- Information-theoretic measures (mutual information, entropy)
+- Machine learning decoders (SVMs, neural networks)
+- Time series analysis of learning dynamics
 
----
+### Project 5: Cross-Paradigm Comparison of Mismatch Responses
 
-## E. Computational Modeling of Predictive Processing
+**🎯 Title & Goal:**  
+*Compare neural responses across different prediction paradigms to determine if they engage shared or distinct mechanisms.*
+
+**👥 Contributors:**  
+*Seeking contributors*
+
+**📝 Description:**  
+This project addresses the third main question in our analysis plan: "How do mismatch responses differ across prediction types?" We will perform comprehensive comparisons across our experimental paradigms to determine:
+
+1. **Shared vs. Distinct Neural Ensembles**:
+   - Track the same neurons across multiple paradigms
+   - Apply dimensionality reduction to identify shared response subspaces
+   - Test if the same neurons encode different types of prediction errors
+
+2. **Mismatch Type Specificity**:
+   - Compare responses to different mismatch types (orientation, motion, temporal, omission)
+   - Analyze population response patterns across mismatch types
+   - Test if responses are feature-specific or generalize across mismatch types
+
+3. **Passive vs. Active Prediction Differences**:
+   - Directly compare oddball vs. sensorimotor mismatch responses
+   - Analyze differences in response magnitude, timing, and cell-type specificity
+   - Evaluate if motor-based predictions use different mechanisms than passive predictions
+
+4. **Temporal Dynamics Analysis**:
+   - Compare response onset, duration, and oscillatory patterns across paradigms
+   - Perform time-frequency analysis of response dynamics
+   - Test if different prediction types share temporal signatures
+
+**Analysis Methods:**
+- Multi-session registration of neural populations
+- Dimensionality reduction techniques (PCA, t-SNE, UMAP)
+- Response similarity metrics across paradigms
+- Time-frequency analysis of neural dynamics
+
+### Project 6: Computational Modeling of Predictive Processing
 
 **🎯 Title & Goal:**  
 *Develop and validate computational models that integrate multiple predictive mechanisms.*
@@ -156,31 +202,28 @@ This project aims to understand how populations of neurons collectively represen
 *Seeking contributors*
 
 **📝 Description:**  
-This project involves creating and testing computational models that simulate and explain the neural processes underlying predictive processing.
+This project focuses on creating and testing computational models that simulate and explain the neural processes underlying predictive processing:
 
-1. **Model Development**:
-    - Integrate key computational primitives:
-      - Stimulus adaptation
-      - Dendritic computation
-      - Excitatory/inhibitory balance
-      - Hierarchical processing
-    - Implement models that can account for responses across different mismatch paradigms
+1. **Predictive Coding Models**:
+   - Implement hierarchical prediction networks with explicit error computation
+   - Model distinct error channels for different types of prediction violations
+   - Compare model predictions with neural response patterns
 
-2. **Model Validation**:
-    - Fit models to experimental data from multiple mismatch paradigms
-    - Quantitatively compare models in terms of their ability to account for the patterns of neuronal activity
-    - Test model predictions on held-out data
+2. **Reinforcement Learning Models**:
+   - Implement models with prediction error as a teaching signal
+   - Focus on learning dynamics during repeated exposure to prediction violations
+   - Test whether learning rates differ across prediction types
 
- 3. **Mechanistic Studies**:
-    - Use models to determine the relative contributions of different predictive mechanisms
-    - Simulate the effects of manipulating specific circuit components
-    - Explore how predictions at different timescales interact
+3. **Dynamical Systems Models**:
+   - Create recurrent network models capable of generating predictions
+   - Model connectivity structures between excitatory and inhibitory neurons
+   - Determine minimal circuit requirements for different types of prediction errors
 
 **Analysis Methods:**
-- Deep learning models using self-supervised learning
-- Information theory criteria and cross-validation techniques
-- Parameter fitting and model comparison
+- Parameter fitting and cross-validation
+- Model comparison using information-theoretic criteria (AIC, BIC)
 - Simulations of neural network dynamics
+- Testing model predictions against experimental data
 
 ---
 
