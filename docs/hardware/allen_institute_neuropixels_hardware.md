@@ -54,7 +54,7 @@ The resulting dataset serves as a valuable resource for exploring sensory coding
 
 ## Additional Resources
 
-- [Download the full Neuropixels Visual Coding White Paper (PDF)](https://brainmapportal-live-4cc80a57cd6e4715-4cc80a57cd6e4715.divio-media.org/filer_public/53/06/5306b531-019d-4e1b-9b48-3b189d537686/neuropixels_visual_coding_-_white_paper_v10.pdf)
+- [Download the full Neuropixels Visual Coding White Paper (PDF)](https://brainmapportal-live-4cc80a57cd6e400d854-f7fdcae.divio-media.net/filer_public/80/75/8075a100-ca64-429a-b39a-569121b612b2/neuropixels_visual_coding_-_white_paper_v10.pdf)
 
 ## Related Documents
 
