@@ -99,19 +99,19 @@ Key data types include:
 This project addresses the first main question in our analysis plan: "What kind of information is encoded by mismatch responses?" We will analyze how neurons represent prediction errors by distinguishing between:
 
 1. **Multiplicative Novelty**:
-   - Analyze whether mismatch responses scale with tuning curve preference
-   - Fit tuning curves with multiplicative gain parameters
-   - Test if neurons with strong preference for standard stimuli show larger mismatch responses
+    - Analyze whether mismatch responses scale with tuning curve preference
+    - Fit tuning curves with multiplicative gain parameters
+    - Test if neurons with strong preference for standard stimuli show larger mismatch responses
 
 2. **Additive Novelty**:
-   - Test if mismatch responses reflect a generalized "alert" signal
-   - Evaluate whether responses increase uniformly across all stimulus conditions
-   - Fit tuning curves with additive offset parameters
+    - Test if mismatch responses reflect a generalized "alert" signal
+    - Evaluate whether responses increase uniformly across all stimulus conditions
+    - Fit tuning curves with additive offset parameters
 
 3. **Subtractive Novelty (True Prediction Error)**:
-   - Quantify if responses represent the difference between expected and actual stimuli
-   - Build predictive models of expected neural activity and compare with actual activity
-   - Test if response magnitude correlates with feature distance between expected and actual stimuli
+    - Quantify if responses represent the difference between expected and actual stimuli
+    - Build predictive models of expected neural activity and compare with actual activity
+    - Test if response magnitude correlates with feature distance between expected and actual stimuli
 
 **Analysis Methods:**
 - Event-triggered averaging for calcium imaging data
@@ -131,24 +131,24 @@ This project addresses the first main question in our analysis plan: "What kind 
 This project addresses the second main question in our analysis plan: "What categories of predictions are made by neurons?" We will investigate whether neural activity reflects:
 
 1. **Detailed Stimulus Predictions**:
-   - Compare responses in closed-loop vs. open-loop conditions
-   - Analyze whether neurons encode precise expectations about upcoming stimuli
-   - Test if predictive signals differ across visual features (orientation, motion)
+    - Compare responses in closed-loop vs. open-loop conditions
+    - Analyze whether neurons encode precise expectations about upcoming stimuli
+    - Test if predictive signals differ across visual features (orientation, motion)
 
 2. **Ensemble Probability Deviations**:
-   - Apply population decoding and mutual information analyses
-   - Calculate how well neural activity encodes individual mismatch stimuli vs. general novelty
-   - Compare information content across experimental conditions
+    - Apply population decoding and mutual information analyses
+    - Calculate how well neural activity encodes individual mismatch stimuli vs. general novelty
+    - Compare information content across experimental conditions
 
 3. **Predictive Learning Dynamics**:
-   - Track response changes to repeated oddball stimuli over time
-   - Apply decay models to quantify adaptation rates
-   - Use tensor component analysis to identify population-level learning patterns
+    - Track response changes to repeated oddball stimuli over time
+    - Apply decay models to quantify adaptation rates
+    - Use tensor component analysis to identify population-level learning patterns
 
 4. **Pattern Completion Mechanisms**:
-   - Analyze neural activity during stimulus omission periods
-   - Test if omission responses depend on preceding stimulus patterns
-   - Evaluate evidence for predictive filling-in of expected stimuli
+    - Analyze neural activity during stimulus omission periods
+    - Test if omission responses depend on preceding stimulus patterns
+    - Evaluate evidence for predictive filling-in of expected stimuli
 
 **Analysis Methods:**
 - Cross-condition comparisons (closed-loop vs. open-loop)
@@ -168,24 +168,24 @@ This project addresses the second main question in our analysis plan: "What cate
 This project addresses the third main question in our analysis plan: "How do mismatch responses differ across prediction types?" We will perform comprehensive comparisons across our experimental paradigms to determine:
 
 1. **Shared vs. Distinct Neural Ensembles**:
-   - Track the same neurons across multiple paradigms
-   - Apply dimensionality reduction to identify shared response subspaces
-   - Test if the same neurons encode different types of prediction errors
+    - Track the same neurons across multiple paradigms
+    - Apply dimensionality reduction to identify shared response subspaces
+    - Test if the same neurons encode different types of prediction errors
 
 2. **Mismatch Type Specificity**:
-   - Compare responses to different mismatch types (orientation, motion, temporal, omission)
-   - Analyze population response patterns across mismatch types
-   - Test if responses are feature-specific or generalize across mismatch types
+    - Compare responses to different mismatch types (orientation, motion, temporal, omission)
+    - Analyze population response patterns across mismatch types
+    - Test if responses are feature-specific or generalize across mismatch types
 
 3. **Passive vs. Active Prediction Differences**:
-   - Directly compare oddball vs. sensorimotor mismatch responses
-   - Analyze differences in response magnitude, timing, and cell-type specificity
-   - Evaluate if motor-based predictions use different mechanisms than passive predictions
+    - Directly compare oddball vs. sensorimotor mismatch responses
+    - Analyze differences in response magnitude, timing, and cell-type specificity
+    - Evaluate if motor-based predictions use different mechanisms than passive predictions
 
 4. **Temporal Dynamics Analysis**:
-   - Compare response onset, duration, and oscillatory patterns across paradigms
-   - Perform time-frequency analysis of response dynamics
-   - Test if different prediction types share temporal signatures
+    - Compare response onset, duration, and oscillatory patterns across paradigms
+    - Perform time-frequency analysis of response dynamics
+    - Test if different prediction types share temporal signatures
 
 **Analysis Methods:**
 - Multi-session registration of neural populations
@@ -205,19 +205,19 @@ This project addresses the third main question in our analysis plan: "How do mis
 This project focuses on creating and testing computational models that simulate and explain the neural processes underlying predictive processing:
 
 1. **Predictive Coding Models**:
-   - Implement hierarchical prediction networks with explicit error computation
-   - Model distinct error channels for different types of prediction violations
-   - Compare model predictions with neural response patterns
+    - Implement hierarchical prediction networks with explicit error computation
+    - Model distinct error channels for different types of prediction violations
+    - Compare model predictions with neural response patterns
 
 2. **Reinforcement Learning Models**:
-   - Implement models with prediction error as a teaching signal
-   - Focus on learning dynamics during repeated exposure to prediction violations
-   - Test whether learning rates differ across prediction types
+    - Implement models with prediction error as a teaching signal
+    - Focus on learning dynamics during repeated exposure to prediction violations
+    - Test whether learning rates differ across prediction types
 
 3. **Dynamical Systems Models**:
-   - Create recurrent network models capable of generating predictions
-   - Model connectivity structures between excitatory and inhibitory neurons
-   - Determine minimal circuit requirements for different types of prediction errors
+    - Create recurrent network models capable of generating predictions
+    - Model connectivity structures between excitatory and inhibitory neurons
+    - Determine minimal circuit requirements for different types of prediction errors
 
 **Analysis Methods:**
 - Parameter fitting and cross-validation

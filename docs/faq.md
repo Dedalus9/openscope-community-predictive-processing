@@ -70,12 +70,3 @@ See the [Hardware Documentation](hardware-overview.md) for more details.
 
 ### How are the stimuli implemented?
 All stimuli are implemented using the Bonsai framework. The stimulus code is available in the [`code/stimulus-control/src`](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/tree/main/code/stimulus-control/src) directory of our GitHub repository. See the [Bonsai Instructions](stimuli/bonsai_instructions.md) for more information.
-
----
-
-## Related Documents
-
-- **[Experimental Plan](experimental-plan.md)**: Overview of experimental paradigms and approaches
-- **[How to Contribute](how_to_contribute.md)**: Guide for contributing to the project
-- **[Hardware Overview](hardware-overview.md)**: Information about the recording platforms used
-- **[Stimuli Instructions](stimuli/bonsai_instructions.md)**: Documentation for experimental stimuli

@@ -24,15 +24,6 @@ The project utilizes three complementary neural recording platforms, each offeri
 
 *No Mesoscope experiments have been conducted yet.*
 
-## Experiment Protocol Documentation
-
-For detailed information about the experimental protocols used in this project, please refer to:
-
-- [Experimental Plan](experimental-plan.md): Overview of all experimental paradigms
-- [Detailed Experimental Plan](detailed-experimental-plan.md): Comprehensive experimental methodology
-- [Analysis Plan](analysis-plan.md): Methods for analyzing the collected data
-- [Stimulus Documentation](stimuli/list_scripts.md): Details about the visual stimuli used in experiments
-
 ## Related Documents
 
 - **[Experimental Plan](experimental-plan.md)**: Overview of experimental paradigms and approaches
