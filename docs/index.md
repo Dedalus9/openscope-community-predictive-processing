@@ -18,14 +18,6 @@ Welcome to the **OpenScope Community Predictive Processing** repository! This we
 
 ---
 
-## 📊 Recent Updates
-
-- **April 2025**: New experiment completed with Mouse #794237 - [See results](experiments/allen_institute_794237_2025-04-03.md)
-- **March 2025**: Completed SLAP2 recordings with initial dataset now available
-- **March 2025**: Project meeting - [Meeting notes](meetings/2024-04-21.md)
-
----
-
 ## 🧠 Scientific Context
 
 This project is described in our paper [Neural mechanisms of predictive processing: a collaborative community experiment through the OpenScope program](https://arxiv.org/abs/2504.09614).
