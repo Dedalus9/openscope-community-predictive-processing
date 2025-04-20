@@ -1,6 +1,6 @@
-# Experimental Plan
+# Project Plan
 
-This document outlines the experimental plan for investigating neural mechanisms of predictive processing as part of the OpenScope community project.
+This document outlines the project plan for investigating neural mechanisms of predictive processing as part of the OpenScope community project.
 
 ## Overview
 
