@@ -39,7 +39,7 @@ We welcome contributions from students, postdocs, labs, and researchers at all l
         <h3>💻 Contribute Code or Analysis</h3>
         <p>Help develop analysis pipelines, tools, or analyze data.</p>
         <ol>
-            <li>Find/Create an <a href="https://github.com/AllenInstitute/openscope-community-predictive-processing/issues">Issue</a>.</li>
+            <li>Find/Create an <a href="https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/issues">Issue</a>.</li>
             <li>Fork, Branch, Develop.</li>
             <li>Submit a Pull Request.</li>
             <li>Participate in code review.</li>
@@ -51,7 +51,7 @@ We welcome contributions from students, postdocs, labs, and researchers at all l
         <ul>
             <li>Fix typos or unclear text.</li>
             <li>Add missing information.</li>
-            <li>Submit an <a href="https://github.com/AllenInstitute/openscope-community-predictive-processing/issues">Issue</a> or Pull Request.</li>
+            <li>Submit an <a href="https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/issues">Issue</a> or Pull Request.</li>
         </ul>
     </div>
 </div>
