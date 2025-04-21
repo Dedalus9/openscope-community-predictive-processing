@@ -23,12 +23,9 @@ The Dual-Beam Mesoscope consists of three key components:
 ### Key Features:
 
 - **Laser Source**: Ti:Sapphire ultrafast laser (Chameleon Ultra II, Coherent)
-- **Pulse Compensation**: Custom-built external pulse compensation module based on a single-prism four-path design
 - **Control Software**: Customized ScanImage software (VidrioTech) with an in-house developed Workflow Sequencing Engine
-- **Data Acquisition**: National Instruments hardware (PXI chassis, PXIe6363 DAQ boards)
-- **Imaging Rate**: 11 Hz per plane (compared to 30 Hz for single-plane systems)
+- **Imaging Rate**: 11 Hz per plane
 - **Field of View**: Full 5mm field of view for targeting, 400-512 μm for recording
-- **Temporal Demultiplexing**: Fluorescence from two planes separated using analog demultiplexing circuit with 6.25 ns integration window
 
 ## Data Analysis
 
