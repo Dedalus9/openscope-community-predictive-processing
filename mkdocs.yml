@@ -2,6 +2,11 @@ site_name: OpenScope Community Predictive Processing
 site_url: https://allenneuraldynamics.github.io/openscope-community-predictive-processing/
 use_directory_urls: true
 
+# Google Analytics configuration
+google_analytics:
+  - 'G-XXXXXXXXXX'  # Replace with your actual measurement ID
+  - 'auto'
+
 nav:
 - Home: index.md
 - Project Plan:
@@ -48,6 +53,8 @@ extra_css:
 extra_javascript:
 - js/discussion-links.js
 - js/github-profiles.js
+- js/analytics.js
+- https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX
 
 # Config to ensure all files are included
 strict: true
