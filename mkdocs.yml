@@ -17,6 +17,7 @@ nav:
     - Sensory-Motor Closed-Loop: stimuli/sensory-motor-closed-loop.md
   - Hardware:
     - Hardware Overview: hardware-overview.md
+    - Behavioral: hardware/behavior_training.md
     - SLAP2: hardware/allen_institute_slap2_hardware.md
     - Neuropixels: hardware/allen_institute_neuropixels_hardware.md
     - Mesoscope: hardware/allen_institute_mesoscope_hardware.md
