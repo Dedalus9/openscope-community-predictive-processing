@@ -12,7 +12,6 @@ For detailed information about the project, including how to contribute, experim
 
 - [How to Contribute](https://allenneuraldynamics.github.io/openscope-community-predictive-processing/how_to_contribute/)
 - [Collaboration Policy](https://allenneuraldynamics.github.io/openscope-community-predictive-processing/collaboration-policy/)
-- [Experimental Notes](https://allenneuraldynamics.github.io/openscope-community-predictive-processing/experiments/)
 
 ## Repository Overview
 
