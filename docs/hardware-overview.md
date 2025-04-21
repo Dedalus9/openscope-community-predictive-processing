@@ -37,6 +37,17 @@ These three recording systems provide complementary information about neural act
 | Neuropixels | Single-cell | Highest (<1ms) | Multiple areas, depth spanning | Low |
 | Mesoscope | Cellular | Moderate (~90ms) | Multiple areas, multiple depths | High |
 
+## Behavior Platform
+
+All experiments in this project utilize a standardized behavior platform that enables:
+
+- Head-fixed running on a wheel while viewing visual stimuli
+- Closed-loop coupling between running and visual flow (for sensorimotor paradigms)
+- Measurement of eye position, pupil dilation, and running speed
+- Precise synchronization of behavioral and neural data
+
+[→ Learn more about the Behavior Platform](hardware/behavior_training.md)
+
 ## Integration with Experimental Design
 
 All hardware platforms are integrated with standardized stimulus delivery systems to ensure comparability across experiments. For details on stimulus implementation, see the [Bonsai Instructions](stimuli/bonsai_instructions.md).

@@ -31,6 +31,20 @@ The SLAP2 microscope uses:
 - A novel laser scanning system optimized for imaging large numbers of synapses in the living, moving brain
 - Specialized genetically encoded indicators (like iGluSnFR3) to measure synaptic activity
 
+## Synchronization with Other Hardware
+
+The SLAP2 system is fully synchronized with:
+
+- Running wheel and behavioral measurements
+- Visual stimulus presentation through the Bonsai framework
+- Data acquisition systems for behavioral tracking
+
+## Related Hardware
+
+- [Behavior Platform](behavior_training.md)
+- [Mesoscope Hardware](allen_institute_mesoscope_hardware.md)
+- [Neuropixels Hardware](allen_institute_neuropixels_hardware.md)
+
 ## Availability
 
 SLAP2 microscope kits and software are now being distributed by MBF Biosciences for wider research use.

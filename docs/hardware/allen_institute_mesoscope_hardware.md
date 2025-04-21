@@ -30,6 +30,22 @@ The Dual-Beam Mesoscope consists of three key components:
 - **Field of View**: Full 5mm field of view for targeting, 400-512 μm for recording
 - **Temporal Demultiplexing**: Fluorescence from two planes separated using analog demultiplexing circuit with 6.25 ns integration window
 
+## Data Analysis
+
+Data from the Mesoscope is processed through standardized pipelines that include:
+
+- Motion correction
+- ROI extraction
+- Fluorescence trace extraction
+- Deconvolution for estimating neural activity
+- Registration to common coordinate frameworks
+
+## Related Hardware
+
+- [Behavior Platform](behavior_training.md)
+- [SLAP2 Hardware](allen_institute_slap2_hardware.md)
+- [Neuropixels Hardware](allen_institute_neuropixels_hardware.md)
+
 ## References
 
 For more detailed information about the Allen Institute's Mesoscope technology:

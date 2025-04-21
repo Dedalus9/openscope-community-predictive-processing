@@ -52,6 +52,21 @@ The Allen Institute processes Neuropixels data through a standardized pipeline:
 
 The resulting dataset serves as a valuable resource for exploring sensory coding at both single-cell and population levels, as well as studying neural interactions within and between brain regions.
 
+## Integration with Experimental Setup
+
+The Neuropixels system is integrated with:
+
+- Visual stimulus presentation using the Bonsai framework
+- Running wheel for measuring locomotion
+- Eye tracking for pupil measurements
+- Precise synchronization hardware for alignment of neural, behavioral, and stimulus data
+
+## Related Hardware
+
+- [Behavior Platform](behavior_training.md)
+- [SLAP2 Hardware](allen_institute_slap2_hardware.md)
+- [Mesoscope Hardware](allen_institute_mesoscope_hardware.md)
+
 ## Additional Resources
 
 - [Download the full Neuropixels Visual Coding White Paper (PDF)](https://brainmapportal-live-4cc80a57cd6e400d854-f7fdcae.divio-media.net/filer_public/80/75/8075a100-ca64-429a-b39a-569121b612b2/neuropixels_visual_coding_-_white_paper_v10.pdf)
