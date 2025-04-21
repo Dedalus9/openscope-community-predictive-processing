@@ -35,6 +35,11 @@ To address these knowledge gaps, our experiments are designed to test specific h
 
 Based on the current literature reviewed in our paper (Neural mechanisms of predictive processing: a collaborative community experiment through the OpenScope program), we will use several complementary paradigms designed to engage different prediction mechanisms:
 
+<figure>
+  <img src="../img/paper/arXiv_ Neural mechanisms of predictive processing_figure10.png" alt="Figure 10: Stimulus design">
+  <figcaption>Figure 10: Stimulus design. Our experimental design includes four different session contexts (standard mismatch, sensorimotor mismatch, sequence mismatch, and temporal mismatch) with five types of oddballs: drifting grating halt, two alternative drifting orientations, an omission, and temporal jittered oddballs.</figcaption>
+</figure>
+
 ### Standard Mismatch Paradigm
 
 This paradigm examines how the brain responds to violations of expectations in stimulus sequences under passive viewing conditions.

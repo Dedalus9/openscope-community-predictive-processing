@@ -96,6 +96,13 @@ We will compare neural responses across our five experimental paradigms to deter
 
 This comprehensive comparison across paradigms will provide critical evidence for evaluating whether the brain implements a unified prediction error mechanism that operates across contexts or employs multiple specialized mechanisms for different types of predictions.
 
+## Shared Analysis Metrics
+
+<figure>
+  <img src="../img/paper/2504.09614v1-3_page074_img010_1280x480.png" alt="Figure 13: Shared analysis metrics">
+  <figcaption>Figure 13: Shared analysis metrics. Throughout all hypotheses, we will leverage a shared set of metrics computed on all datasets. Encoding metrics include measures for deterministic models (linear/logistic regression) such as accuracy, mean square error, and R² coefficient of determination, as well as measures for probabilistic models like generalized linear models (GLMs). Decoding metrics include measures from pattern clustering and classification such as Mahalanobis distance, confusion matrices, F1 score, mutual information, and bit rate/latency. Additionally, analyses of response distribution across anatomical locations and cell types will be used to test all hypotheses.</figcaption>
+</figure>
+
 ## Computational Modeling
 
 We will develop computational models to formalize hypotheses about predictive processing mechanisms:
