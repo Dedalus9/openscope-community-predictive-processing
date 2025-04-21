@@ -3,8 +3,8 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-// Replace G-XXXXXXXXXX with your actual GA4 measurement ID
-gtag('config', 'G-XXXXXXXXXX');
+// GA4 measurement ID
+gtag('config', 'G-DT93KEXV5Q');
 
 // Track page views when navigating between pages without full page reload
 document.addEventListener('DOMContentLoaded', function() {
