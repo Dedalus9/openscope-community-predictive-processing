@@ -179,7 +179,7 @@ All data will be:
 ## Current Status and Timeline
 
 For current experimental progress, please refer to:
-- [Experiment summaries](experiments-summary.md) for details on completed sessions
+- [Experiment summaries](experiment-summary.md) for details on completed sessions
 - [Project tracking page](project-tracking.md) for overall progress
 
 ## References
