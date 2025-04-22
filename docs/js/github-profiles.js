@@ -12,8 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const text = element.innerHTML;
             if (!text) return;
             
-            // Pattern to find GitHub handles
-            const pattern = /@([a-zA-Z0-9-]+)\b/g;
+            // Pattern to find GitHub handles but NOT email addresses
+            // This matches @ only when it's either at the start of text or preceded by whitespace
+            // And not when it's part of an email address
+            const pattern = /(?:^|\s)@([a-zA-Z0-9-]+)\b/g;
             let match;
             const handles = [];
             
