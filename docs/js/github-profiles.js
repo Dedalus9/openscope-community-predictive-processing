@@ -1,4 +1,4 @@
-// GitHub Profile Renderer - Clean implementation
+// GitHub Profile Renderer - With direct avatar image loading
 document.addEventListener('DOMContentLoaded', function() {
     // Track already processed usernames to avoid duplicates
     const processedHandles = new Set();
@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const card = document.createElement('div');
                 card.className = 'github-profile-card';
                 
-                // Display profile
-                displayProfile(handle.username, card);
+                // Display profile with direct avatar loading
+                displayProfileWithAvatar(handle.username, card);
                 
                 profilesRow.appendChild(card);
             });
@@ -53,14 +53,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Display a profile without API calls
-    function displayProfile(username, cardContainer) {
-        // Create profile card with placeholder avatar
+    // Display a profile with direct avatar loading
+    function displayProfileWithAvatar(username, cardContainer) {
+        // Create profile card with avatar loading
         cardContainer.innerHTML = `
             <div class="profile-card">
                 <div class="profile-image">
                     <a href="https://github.com/${username}" target="_blank">
-                        <div class="profile-avatar-placeholder">${username.charAt(0).toUpperCase()}</div>
+                        <img src="https://github.com/${username}.png" 
+                             alt="${username}'s avatar"
+                             onerror="this.onerror=null; this.parentNode.innerHTML='<div class=\\'profile-avatar-placeholder\\'>${username.charAt(0).toUpperCase()}</div>';">
                     </a>
                 </div>
                 <div class="profile-info">
@@ -92,6 +94,13 @@ document.addEventListener('DOMContentLoaded', function() {
             border-radius: 6px;
             padding: 10px;
             background-color: #f6f8fa;
+        }
+        .profile-image img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
         }
         .profile-avatar-placeholder {
             width: 50px;
