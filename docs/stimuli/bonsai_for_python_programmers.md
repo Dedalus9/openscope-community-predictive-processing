@@ -1,8 +1,6 @@
-# Bonsai for Python Programmers
-
-> Guide originally created by @jsiegle.
-
 # Bonsai: A Guide for Python Programmers
+
+> Guide originally created by @jsiegle
 
 Bonsai is a "visual reactive programming language," which, at its core, is a wrapper around the [ReactiveX](http://reactivex.io/) library with interfaces to many common I/O devices used for behavioral neuroscience experiments. ReactiveX is based on concepts from *functional programming*, which may be unfamiliar to those of us who spend the vast majority of our time writing *procedural* code in languages such as Python. This can make it difficult to follow the logic behind more complex Bonsai workflows, and can be a major impediment to constructing novel workflows. 
 

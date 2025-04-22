@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'experiment':
                 processExperimentPage();
                 break;
+            case 'bonsai-guide':
+                processBonsaiGuidePage();
+                break;
             default:
                 processDefaultPage();
                 break;
@@ -45,6 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Check for experiment page
         if (document.querySelector('h1') && document.querySelector('h1').textContent.includes('Experiment Session Notes')) {
             return 'experiment';
+        }
+        
+        // Check for Bonsai guide page
+        if (document.querySelector('h1') && document.querySelector('h1').textContent.includes('Bonsai for Python Programmers')) {
+            return 'bonsai-guide';
         }
         
         // Default handling
@@ -176,6 +184,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
     
+    // Process Bonsai guide page
+    const processBonsaiGuidePage = function() {
+        // Find the blockquote that contains the author credit
+        const blockquote = document.querySelector('blockquote');
+        
+        if (blockquote && blockquote.textContent.includes('@jsiegle')) {
+            // Special handling for the Bonsai guide author
+            const text = blockquote.innerHTML;
+            
+            // Extract the username
+            const match = /@([a-zA-Z0-9-]+)/.exec(text);
+            if (match && match[1]) {
+                const username = match[1];
+                
+                // Create a profile card directly after the blockquote
+                const card = document.createElement('div');
+                card.className = 'github-profile-card';
+                card.style.maxWidth = '300px';
+                card.style.margin = '20px 0';
+                card.innerHTML = `<div class="loading">Loading GitHub profile...</div>`;
+                
+                // Insert the card after the blockquote
+                blockquote.parentNode.insertBefore(card, blockquote.nextSibling);
+                
+                // Fetch and display profile
+                fetchAndDisplayProfile(username, card);
+            }
+        }
+        
+        // Process any other GitHub handles in the document
+        processDefaultPage();
+    };
+
     // Default page processing (generic handling)
     const processDefaultPage = function() {
         // Find all elements that might contain GitHub handles
