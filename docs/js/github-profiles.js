@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Process all GitHub handles in the document
     function processGitHubHandles() {
         // Find all elements that might contain GitHub handles
-        const elements = document.querySelectorAll('p, li, h1, h2, h3, h4, h5, h6, blockquote');
+        const elements = document.querySelectorAll('p, li, h1, h2, h3, h4, h5, h6, blockquote, td');
         
         elements.forEach(function(element) {
             const text = element.innerHTML;
