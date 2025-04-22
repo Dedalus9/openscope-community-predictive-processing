@@ -1,4 +1,4 @@
-// GitHub Profile Renderer - Site-wide version
+// GitHub Profile Renderer - Client-side only version
 document.addEventListener('DOMContentLoaded', function() {
     // Process all GitHub handles in the document
     function processGitHubHandles() {
@@ -35,13 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.className = 'github-profile-card';
                 card.style.maxWidth = '300px';
                 card.style.margin = '20px 0';
-                card.innerHTML = `<div class="loading">Loading GitHub profile...</div>`;
+                
+                // Display a static profile card without API call
+                displayStaticProfile(username, card);
                 
                 // Insert the card after the blockquote
                 element.parentNode.insertBefore(card, element.nextSibling);
-                
-                // Fetch and display profile
-                fetchAndDisplayProfile(username, card);
                 return; // Skip regular processing for this element
             }
             
@@ -53,11 +52,11 @@ document.addEventListener('DOMContentLoaded', function() {
             handles.forEach(function(handle) {
                 const card = document.createElement('div');
                 card.className = 'github-profile-card';
-                card.innerHTML = `<div class="loading">Loading GitHub profile...</div>`;
-                profilesRow.appendChild(card);
                 
-                // Fetch and display profile
-                fetchAndDisplayProfile(handle.username, card);
+                // Display a static profile without API call
+                displayStaticProfile(handle.username, card);
+                
+                profilesRow.appendChild(card);
             });
             
             // Insert the profiles row after the element
@@ -65,7 +64,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Fetch and display a GitHub profile
+    // Display a static profile without API calls
+    function displayStaticProfile(username, cardContainer) {
+        // Create profile card without GitHub API data
+        cardContainer.innerHTML = `
+            <div class="profile-card">
+                <div class="profile-image">
+                    <a href="https://github.com/${username}" target="_blank">
+                        <div class="profile-avatar-placeholder">${username.charAt(0).toUpperCase()}</div>
+                    </a>
+                </div>
+                <div class="profile-info">
+                    <h4><a href="https://github.com/${username}" target="_blank">${username}</a></h4>
+                    <p class="username">@${username}</p>
+                </div>
+            </div>
+        `;
+    }
+    
+    // Fetch and display a GitHub profile - Not currently used due to API limitations
     function fetchAndDisplayProfile(username, cardContainer) {
         const headers = {
             'Accept': 'application/vnd.github.v3+json'
@@ -73,6 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         fetch(`https://api.github.com/users/${username}`, { headers })
             .then(response => {
+                if (response.status === 403) {
+                    console.warn('GitHub API rate limit exceeded - falling back to static display');
+                    throw new Error('GitHub API rate limit exceeded');
+                }
                 if (!response.ok) {
                     throw new Error('GitHub profile not found');
                 }
@@ -98,8 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
             })
             .catch(error => {
-                // If fetching fails, just show a simple link
-                cardContainer.innerHTML = `<a href="https://github.com/${username}" target="_blank">@${username}</a>`;
+                // If fetching fails, display static profile
+                displayStaticProfile(username, cardContainer);
                 console.error('Error fetching GitHub profile:', error);
             });
     }
@@ -131,6 +152,19 @@ document.addEventListener('DOMContentLoaded', function() {
             height: 50px;
             border-radius: 50%;
             margin-right: 10px;
+        }
+        .profile-avatar-placeholder {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: #0366d6;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
         }
         .profile-info h4 {
             margin: 0 0 5px 0;
