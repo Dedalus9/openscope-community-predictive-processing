@@ -12,6 +12,7 @@ nav:
   - Experiment Summary: experiment-summary.md
   - Stimuli:
     - Bonsai Instructions: stimuli/bonsai_instructions.md
+    - Bonsai for Python Programmers: stimuli/bonsai_for_python_programmers.md
     - List of scripts: stimuli/list_scripts.md
     - Standard Oddball: stimuli/standard-oddball.md
     - Sensory-Motor Closed-Loop: stimuli/sensory-motor-closed-loop.md
