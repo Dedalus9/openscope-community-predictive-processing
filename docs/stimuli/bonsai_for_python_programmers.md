@@ -1,6 +1,6 @@
 # Bonsai for Python Programmers
 
-> Guide originally created by [@jsiegle](https://github.com/jsiegle).
+> Guide originally created by @jsiegle.
 
 # Bonsai: A Guide for Python Programmers
 
@@ -75,7 +75,7 @@ Although the syntax is similar, there are some subtle differences worth nothing.
 <class 'list'>
 ```
 
-There is yet another way that we can express the same actions: by using the `map` function. `map` is a built-in *higher-order function* that takes another function as input. This will allow us to do some functional programming within Python, by passing the `Grayscale` function into `map`:
+There is yet another way that we can express the same actions: by using the `map` function. `map` is a built-in *higher-order function* that takes another function as input. Thgitis will allow us to do some functional programming within Python, by passing the `Grayscale` function into `map`:
 
 ```python
 grayscale_frames = map(Grayscale, camera.getFrames())
