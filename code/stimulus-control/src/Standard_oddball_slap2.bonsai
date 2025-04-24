@@ -109,7 +109,7 @@
         <Angle>0</Angle>
         <ColorR>0</ColorR>
         <ColorG>0</ColorG>
-        <ColorB>0</ColorB>
+        <ColorB>1</ColorB>
         <ColorA>1</ColorA>
       </Expression>
       <Expression xsi:type="SubscribeSubject">
@@ -1189,7 +1189,7 @@ double.Parse(it[2]) as Y)</scr:Expression>
                     <SpatialFrequency>0.04</SpatialFrequency>
                     <TemporalFrequency>2</TemporalFrequency>
                     <Phase>0</Phase>
-                    <Angle>292.5</Angle>
+                    <Angle>135</Angle>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <DutyCycle xsi:nil="true" />
@@ -1214,7 +1214,7 @@ double.Parse(it[2]) as Y)</scr:Expression>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="gl:Timer">
-                      <gl:DueTime>PT0.25S</gl:DueTime>
+                      <gl:DueTime>PT0.343S</gl:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -1241,7 +1241,7 @@ double.Parse(it[2]) as Y)</scr:Expression>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="gl:Timer">
-                      <gl:DueTime>PT1S</gl:DueTime>
+                      <gl:DueTime>PT0.343S</gl:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Logging.LogEvent.bonsai">
@@ -1391,7 +1391,7 @@ double.Parse(it[2]) as Y)</scr:Expression>
         <Append>false</Append>
         <Overwrite>true</Overwrite>
         <Suffix>None</Suffix>
-        <FileName>C:/BonsaiDataPredictiveProcessing/769904/769904_20250407T171935/orientations_logger.csv</FileName>
+        <FileName>C:/BonsaiDataPredictiveProcessing/769904/769904_20250424T002219/orientations_logger.csv</FileName>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="BonVision:Logging.LogEvent.bonsai">
         <Format>Frame</Format>
@@ -1429,7 +1429,7 @@ double.Parse(it[2]) as Y)</scr:Expression>
         <Text><![CDATA[]]></Text>
       </Expression>
       <Expression xsi:type="io:CsvWriter">
-        <io:FileName>C:/BonsaiDataPredictiveProcessing/769904/769904_20250407T171935/orientations_orientations.csv</io:FileName>
+        <io:FileName>C:/BonsaiDataPredictiveProcessing/769904/769904_20250424T002219/orientations_orientations.csv</io:FileName>
         <io:Append>true</io:Append>
         <io:Overwrite>false</io:Overwrite>
         <io:Suffix>FileCount</io:Suffix>
