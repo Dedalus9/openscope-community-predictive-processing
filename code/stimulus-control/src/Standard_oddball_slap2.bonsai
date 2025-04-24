@@ -1457,56 +1457,58 @@ double.Parse(it[2]) as Y)</scr:Expression>
       <Expression xsi:type="rx:PublishSubject">
         <Name>StartGratings</Name>
       </Expression>
-      <Expression xsi:type="GroupWorkflow">
-        <Name>FaceCamera</Name>
-        <Workflow>
-          <Nodes>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="avt:VimbaCapture">
-                <avt:Index xsi:nil="true" />
-                <avt:FrameCount xsi:nil="true" />
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="MemberSelector">
-              <Selector>Image</Selector>
-            </Expression>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>LoggingRootPath</Name>
-            </Expression>
-            <Expression xsi:type="Format">
-              <Format>{0}/face_video.avi</Format>
-              <Selector>it</Selector>
-            </Expression>
-            <Expression xsi:type="PropertyMapping">
-              <PropertyMappings>
-                <Property Name="FileName" />
-              </PropertyMappings>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="cv:VideoWriter">
-                <cv:Suffix>None</cv:Suffix>
-                <cv:Buffered>true</cv:Buffered>
-                <cv:Overwrite>false</cv:Overwrite>
-                <cv:FourCC>FMP4</cv:FourCC>
-                <cv:FrameRate>30</cv:FrameRate>
-                <cv:FrameSize>
-                  <cv:Width>512</cv:Width>
-                  <cv:Height>512</cv:Height>
-                </cv:FrameSize>
-                <cv:ResizeInterpolation>NearestNeighbor</cv:ResizeInterpolation>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="WorkflowOutput" />
-          </Nodes>
-          <Edges>
-            <Edge From="0" To="1" Label="Source1" />
-            <Edge From="1" To="5" Label="Source1" />
-            <Edge From="2" To="3" Label="Source1" />
-            <Edge From="3" To="4" Label="Source1" />
-            <Edge From="4" To="5" Label="Source2" />
-            <Edge From="5" To="6" Label="Source1" />
-          </Edges>
-        </Workflow>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="GroupWorkflow">
+          <Name>FaceCamera</Name>
+          <Workflow>
+            <Nodes>
+              <Expression xsi:type="Combinator">
+                <Combinator xsi:type="avt:VimbaCapture">
+                  <avt:Index xsi:nil="true" />
+                  <avt:FrameCount xsi:nil="true" />
+                </Combinator>
+              </Expression>
+              <Expression xsi:type="MemberSelector">
+                <Selector>Image</Selector>
+              </Expression>
+              <Expression xsi:type="SubscribeSubject">
+                <Name>LoggingRootPath</Name>
+              </Expression>
+              <Expression xsi:type="Format">
+                <Format>{0}/face_video.avi</Format>
+                <Selector>it</Selector>
+              </Expression>
+              <Expression xsi:type="PropertyMapping">
+                <PropertyMappings>
+                  <Property Name="FileName" />
+                </PropertyMappings>
+              </Expression>
+              <Expression xsi:type="Combinator">
+                <Combinator xsi:type="cv:VideoWriter">
+                  <cv:Suffix>None</cv:Suffix>
+                  <cv:Buffered>true</cv:Buffered>
+                  <cv:Overwrite>false</cv:Overwrite>
+                  <cv:FourCC>FMP4</cv:FourCC>
+                  <cv:FrameRate>30</cv:FrameRate>
+                  <cv:FrameSize>
+                    <cv:Width>512</cv:Width>
+                    <cv:Height>512</cv:Height>
+                  </cv:FrameSize>
+                  <cv:ResizeInterpolation>NearestNeighbor</cv:ResizeInterpolation>
+                </Combinator>
+              </Expression>
+              <Expression xsi:type="WorkflowOutput" />
+            </Nodes>
+            <Edges>
+              <Edge From="0" To="1" Label="Source1" />
+              <Edge From="1" To="5" Label="Source1" />
+              <Edge From="2" To="3" Label="Source1" />
+              <Edge From="3" To="4" Label="Source1" />
+              <Edge From="4" To="5" Label="Source2" />
+              <Edge From="5" To="6" Label="Source1" />
+            </Edges>
+          </Workflow>
+        </Builder>
       </Expression>
     </Nodes>
     <Edges>
