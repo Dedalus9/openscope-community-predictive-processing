@@ -12,6 +12,8 @@
                  xmlns:num="clr-namespace:Bonsai.Numerics;assembly=Bonsai.Numerics"
                  xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
                  xmlns:scr="clr-namespace:Bonsai.Scripting.Expressions;assembly=Bonsai.Scripting.Expressions"
+                 xmlns:avt="clr-namespace:Bonsai.Vimba;assembly=Bonsai.Vimba"
+                 xmlns:cv="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
@@ -895,8 +897,8 @@ groupMasks:
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p2:CreateGratingTrial">
-          <p2:Delay>1</p2:Delay>
-          <p2:Duration>0.25</p2:Duration>
+          <p2:Delay>0.343</p2:Delay>
+          <p2:Duration>0.343</p2:Duration>
           <p2:Diameter>360</p2:Diameter>
           <p2:X>0</p2:X>
           <p2:Y>0</p2:Y>
@@ -981,8 +983,8 @@ groupMasks:
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p2:CreateGratingTrial">
-          <p2:Delay>1</p2:Delay>
-          <p2:Duration>0.25</p2:Duration>
+          <p2:Delay>0.343</p2:Delay>
+          <p2:Duration>0.343</p2:Duration>
           <p2:Diameter>360</p2:Diameter>
           <p2:X>0</p2:X>
           <p2:Y>0</p2:Y>
@@ -1058,8 +1060,8 @@ groupMasks:
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p2:CreateGratingTrial">
-          <p2:Delay>1</p2:Delay>
-          <p2:Duration>0.25</p2:Duration>
+          <p2:Delay>0.343</p2:Delay>
+          <p2:Duration>0.343</p2:Duration>
           <p2:Diameter>360</p2:Diameter>
           <p2:X>0</p2:X>
           <p2:Y>0</p2:Y>
@@ -1097,7 +1099,7 @@ double.Parse(it[2]) as Y)</scr:Expression>
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p2:CreateGratingTrial">
-          <p2:Delay>0.25</p2:Delay>
+          <p2:Delay>0</p2:Delay>
           <p2:Duration>0.25</p2:Duration>
           <p2:Diameter>20</p2:Diameter>
           <p2:X>30</p2:X>
@@ -1454,6 +1456,57 @@ double.Parse(it[2]) as Y)</scr:Expression>
       </Expression>
       <Expression xsi:type="rx:PublishSubject">
         <Name>StartGratings</Name>
+      </Expression>
+      <Expression xsi:type="GroupWorkflow">
+        <Name>FaceCamera</Name>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="avt:VimbaCapture">
+                <avt:Index xsi:nil="true" />
+                <avt:FrameCount xsi:nil="true" />
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>Image</Selector>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>LoggingRootPath</Name>
+            </Expression>
+            <Expression xsi:type="Format">
+              <Format>{0}/face_video.avi</Format>
+              <Selector>it</Selector>
+            </Expression>
+            <Expression xsi:type="PropertyMapping">
+              <PropertyMappings>
+                <Property Name="FileName" />
+              </PropertyMappings>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="cv:VideoWriter">
+                <cv:Suffix>None</cv:Suffix>
+                <cv:Buffered>true</cv:Buffered>
+                <cv:Overwrite>false</cv:Overwrite>
+                <cv:FourCC>FMP4</cv:FourCC>
+                <cv:FrameRate>30</cv:FrameRate>
+                <cv:FrameSize>
+                  <cv:Width>512</cv:Width>
+                  <cv:Height>512</cv:Height>
+                </cv:FrameSize>
+                <cv:ResizeInterpolation>NearestNeighbor</cv:ResizeInterpolation>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+          </Nodes>
+          <Edges>
+            <Edge From="0" To="1" Label="Source1" />
+            <Edge From="1" To="5" Label="Source1" />
+            <Edge From="2" To="3" Label="Source1" />
+            <Edge From="3" To="4" Label="Source1" />
+            <Edge From="4" To="5" Label="Source2" />
+            <Edge From="5" To="6" Label="Source1" />
+          </Edges>
+        </Workflow>
       </Expression>
     </Nodes>
     <Edges>
