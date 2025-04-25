@@ -27,7 +27,7 @@ All ongoing projects should be listed in the [Project Tracking document](project
 
 Data are the foundation of our collaboration. To drive scientific progress and ensure reproducibility, we commit to:
 
-### 1.1 Immediate Public Release
+Creci### 1.1 Immediate Public Release
 
 All datasets are released without embargo via the Allen Institute or the DANDI/NWB archives.
 
@@ -79,7 +79,7 @@ All participants are encouraged to update this document regularly.
 
 - **Lead Author:** A designated lead coordinates writing and revisions.
 - **Ordering:** The lead author proposes an order reflecting contributions. For large teams (>20 contributors), alphabetical listing is encouraged.
-- **Author Contributions Statement:** All papers include a CRediT-style contributions section detailing each author's role.
+- **Author Contributions Statement:** All papers include a [CRediT-style contributions section](https://credit.niso.org) detailing each author's role.
 
 ---
 
