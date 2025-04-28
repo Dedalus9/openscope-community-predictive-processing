@@ -34,7 +34,7 @@ All datasets are released without embargo via the Allen Institute or the DANDI/N
 ### 1.2 Dataset Authorship Rights
 
 - **Co‑authorship option:** Dataset creators may opt in as co-authors on any manuscript using their data.
-- **First publication claim:** Dataset creators are entitled to authorship on the first two papers that analyzes or validates their dataset. Our intent is to encourage data sharing. 
+- **First publication claim:** Dataset creators are entitled to authorship on the first two papers that analyzes or validates their dataset, including any publication from the data creator. Our intent is to encourage data sharing. 
 - **Opt‑in process:** Whenever a dataset is proposed for manuscript use, its creators will be invited to opt in as authors.
 
 ---
