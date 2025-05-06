@@ -2,12 +2,12 @@
 
 ## Overview
 
-The Sensory-Motor Closed-Loop stimulus provides a visual environment where the movement of the mouse (via a running wheel) directly controls the phase of drifting gratings. This creates a closed sensorimotor loop that allows investigation of how neural responses are modulated by self-generated visual feedback. **Note: While the script is named "Sensory_motor_oddball_slap2.bonsai", the oddball paradigm has not yet been implemented - this is currently only a closed-loop script.**
+The Sensory-Motor Closed-Loop stimulus provides a visual environment where the movement of the mouse (via a running wheel) directly controls the phase of drifting gratings. This creates a closed sensorimotor loop that allows investigation of how neural responses are modulated by self-generated visual feedback. In the oddball variant, the relationship between wheel movement and visual feedback is occasionally broken, creating sensorimotor prediction errors.
 
 ## Script Location
 
 The stimulus script is located at:
-- [`/code/stimulus-control/src/Sensory_motor_oddball_slap2.bonsai`](https://github.com/allenneuraldynamics/openscope-community-predictive-processing/blob/main/code/stimulus-control/src/Sensory_motor_oddball_slap2.bonsai)
+- [`/code/stimulus-control/src/Sensory_motor_oddball_slap2.bonsai`](https://github.com/allenneuraldynamics/openscope-community-predictive-processing/blob/main/code/stimulus-control/src/Sensory_motor_oddball_slap2.bonsai) - Closed-loop implementation with oddball functionality
 
 ## Hardware Requirements
 
@@ -25,6 +25,12 @@ The stimulus script is located at:
 - **Size**: 90° (covering a large portion of the visual field)
 - **Aperture**: 90°
 - **Angle**: 0° (horizontal grating)
+
+### Oddball Parameters
+- **Oddball Frequency**: Random intervals, controlled by experiment duration and number of oddballs
+- **Oddball Duration**: Configurable, default is ~1 second per event
+- **Total Oddballs**: Configurable, default is 5 per session
+- **Oddball Type**: Orientation change (0° → 45° during oddball events)
 
 ## Experimental Design
 
@@ -45,23 +51,27 @@ The script implements this coupling by:
 - Using the modulus of 360 to convert the wheel position to grating phase
 - Applying this calculated phase to the gratings in real-time
 
-### Technical Implementation
+### Oddball Implementation
+
+The oddball implementation introduces brief violations of the sensorimotor contingency:
+
+1. **Random Timing**: Oddballs occur at unpredictable intervals throughout the session
+2. **Brief Duration**: Each oddball lasts for a configurable duration (default ~1 second)
+3. **Orientation Change**: During an oddball, the grating orientation changes from 0° to 45°
+4. **Limited Quantity**: A configurable number of oddballs (default 5) occur per session
+5. **Layer Priority**: Oddball gratings are displayed on a higher layer (Layer 1) than the standard gratings (Layer 0)
+
+The oddball generator uses frame permutation for randomization and implements a detection system to display the oddball stimulus when the current frame matches one of the predefined oddball frames.
+
+## Technical Implementation
 - Encoder values are acquired at high frequency and published to a subject called "Encoder"
 - The DrawGratings workflow subscribes to this encoder data
 - Real-time mapping applies encoder position to grating phase
 - The temporal frequency parameter is set to 0 Hz as the movement is controlled by the wheel
 
-## Future Development
-
-This script is designed as a foundation for a future Sensory-Motor Oddball paradigm, where occasional violations of the predictable sensorimotor contingency will be introduced. However, the oddball component has not yet been implemented in this version.
-
-Planned future additions include:
-- Introducing mismatches between wheel movement and visual feedback
-- Adding different types of sensory-motor contingency violations
-
 ## Data Collection
 
-Running data is collected via an encoder on Port 2 of the behavior device.
+- Running data is collected via an encoder on Port 2 of the behavior device
 
 ## Synchronization
 - SLAP2 recording is automatically started and stopped during the experiment
@@ -71,13 +81,15 @@ Running data is collected via an encoder on Port 2 of the behavior device.
 1. Start the Bonsai workflow
 2. Press the spacebar to begin the experiment
 3. The mouse can then control the gratings by running on the wheel
-4. The experiment can be terminated with the End key
+4. In the oddball variant, brief sensorimotor mismatches will occur automatically
+5. The experiment can be terminated with the End key
 
 ## Expected Neural Responses
 This paradigm is designed to elicit neural activity patterns related to:
 1. Visuomotor integration
 2. Self-generated vs. externally generated sensory feedback
 3. Predictive coding in sensorimotor loops
+4. In the oddball variant: prediction error signals when sensorimotor expectations are violated
 
 ## Related Documents
 
