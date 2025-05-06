@@ -23,14 +23,14 @@ The stimulus script is located at:
 - **Temporal Frequency**: 2 Hz (standard)
 - **Contrast**: 1.0 (full contrast)
 - **Size**: 360° (full-field gratings)
-- **Stimulus Duration**: 250 ms
-- **Inter-stimulus Interval**: 1 second
+- **Stimulus Duration**: 343 ms
+- **Inter-stimulus Interval**: 343 ms (configurable "Delay" parameter)
 
 ### Configurable Parameters
 The script contains several externalized parameters that can be adjusted:
 - `NbBaselineGrating`: Number of standard gratings (default: 20)
-- `NbMismatchPerCondition`: Number of repetitions for each deviant condition
-- `NbReceptiveFieldRepeats`: Number of repetitions for receptive field mapping
+- `NbMismatchPerCondition`: Number of repetitions for each deviant condition (default: 1)
+- `NbReceptiveFieldRepeats`: Number of repetitions for receptive field mapping (default: 1)
 
 ## Experimental Design
 
@@ -56,7 +56,14 @@ Each deviant type violates a different expectation established by the standard s
 - Contrast deviant tests luminance expectation
 
 ### 3. Receptive Field Mapping
-The experiment includes a mapping component with smaller gratings (20° diameter) presented at specific locations defined in `receptive_field.csv`. These gratings have higher spatial frequency (0.08 cpd) and temporal frequency (4 Hz).
+The experiment includes a mapping component with smaller gratings (20° diameter) presented at locations defined in `receptive_field.csv`. These specialized mapping gratings have:
+- Higher spatial frequency (0.08 cpd)
+- Higher temporal frequency (4 Hz)
+- Higher contrast (0.8)
+- Shorter duration (250 ms)
+- No inter-stimulus interval (0 ms delay)
+
+The receptive field mapping coordinates and orientations are loaded from the CSV file and randomized for each presentation sequence.
 
 ## Data Collection
 
