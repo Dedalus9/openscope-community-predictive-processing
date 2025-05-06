@@ -4,6 +4,24 @@
 
 The Standard Oddball stimulus is designed to investigate predictive coding and stimulus-specific adaptation in the visual cortex. The experiment presents a series of visual gratings where a "standard" stimulus is repeatedly shown, establishing sensory expectations, which are occasionally violated by "deviant" stimuli that differ in orientation, contrast, or temporal frequency.
 
+## Stimulus Structure
+
+![Standard Oddball Protocol](../img/stimuli/standard-oddball.png)
+
+The figure above illustrates the three main components of the standard oddball protocol:
+
+1. **Orientation Tuning Component**: 16 different orientations (0°-337.5° in 22.5° steps) presented with regular 1-second intervals between stimuli.
+
+2. **Standard-Oddball Component**: 
+   - Regular presentations of the standard stimulus (0° orientation)
+   - Occasional presentations of deviant stimuli:
+     - Orientation deviants (45° and 90°)
+     - Temporal frequency deviant (0 Hz, stationary)
+     - Contrast deviant (blank screen)
+   - All with fixed, regular intervals between stimuli (creating a predictable rhythmic presentation)
+
+3. **Receptive Field Mapping**: Small, localized gratings presented at positions defined in the receptive field CSV file.
+
 ## Script Location
 
 The stimulus script is located at:

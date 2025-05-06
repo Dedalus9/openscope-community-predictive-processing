@@ -4,6 +4,26 @@
 
 The Standard Oddball Stimulus with Jittered Intervals is an enhanced version of the standard oddball paradigm that introduces predetermined but variable inter-stimulus intervals. 
 
+## Stimulus Structure
+
+![Standard Oddball with Jittered Intervals Protocol](../img/stimuli/standard-oddball-jitter-random.png)
+
+The figure above illustrates the three main components of the standard oddball jitter random protocol:
+
+1. **Orientation Tuning Component**: 16 different orientations (0°-337.5° in 22.5° steps) presented with 4 different inter-stimulus intervals (0.343s, 1s, 1.5s, 2s). The sequence is randomized to prevent predictability.
+
+2. **Standard-Oddball Component**: 
+   - Regular presentations of the standard stimulus (0° orientation)
+   - Occasional presentations of deviant stimuli:
+     - Orientation deviants (45° and 90°)
+     - Temporal frequency deviant (0 Hz, stationary)
+     - Contrast deviant (blank screen)
+   - All with variable intervals between stimuli
+
+3. **Receptive Field Mapping**: Small, localized gratings presented at positions defined in the receptive field CSV file.
+
+The jittered intervals between stimuli help distinguish neural responses to stimulus features from responses to predictable timing.
+
 ## Script Location
 
 The stimulus script is located at:
