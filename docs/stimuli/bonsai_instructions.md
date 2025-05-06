@@ -20,14 +20,12 @@ All Bonsai workflows should go into the [`code/stimulus-control/src`](https://gi
 ### Avoiding Common Issues
 
 - **Version conflicts**: Using multiple versions of Bonsai on the same system can lead to package conflicts. Always use the version downloaded by the setup script.
-- **XML namespace issues**: Errors about undefined namespaces (e.g., `Namespace prefix 'beh' not defined`) typically occur when there's a mismatch between the workflow and installed packages.
-- **Missing references**: If you see errors about missing types or references (e.g., `Bonsai.Windows.Input.KeyDown`), it means the required packages weren't correctly installed.
 
 ### Troubleshooting
 
 If you encounter issues:
 1. Close all instances of Bonsai
-2. Delete the entire `code/stimulus-control/bonsai` folder (except the setup.cmd file)
+2. Delete the file in `code/stimulus-control/bonsai` that are not present on the GitHub repository.
 3. Run the setup.cmd script again to get a fresh installation
 4. Open your workflow using the newly downloaded Bonsai.exe
 
