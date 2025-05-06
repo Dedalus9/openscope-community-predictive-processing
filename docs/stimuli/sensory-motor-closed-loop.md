@@ -84,13 +84,6 @@ The oddball generator uses frame permutation for randomization and implements a 
 4. In the oddball variant, brief sensorimotor mismatches will occur automatically
 5. The experiment can be terminated with the End key
 
-## Expected Neural Responses
-This paradigm is designed to elicit neural activity patterns related to:
-1. Visuomotor integration
-2. Self-generated vs. externally generated sensory feedback
-3. Predictive coding in sensorimotor loops
-4. In the oddball variant: prediction error signals when sensorimotor expectations are violated
-
 ## Related Documents
 
 - **[Bonsai Instructions](bonsai_instructions.md)**: Setup and deployment of Bonsai code

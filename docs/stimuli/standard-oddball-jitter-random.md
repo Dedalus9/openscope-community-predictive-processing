@@ -1,13 +1,13 @@
-# Standard Oddball Stimulus
+# Standard Oddball Stimulus with Jittered Intervals
 
 ## Overview
 
-The Standard Oddball stimulus is designed to investigate predictive coding and stimulus-specific adaptation in the visual cortex. The experiment presents a series of visual gratings where a "standard" stimulus is repeatedly shown, establishing sensory expectations, which are occasionally violated by "deviant" stimuli that differ in orientation, contrast, or temporal frequency.
+The Standard Oddball Stimulus with Jittered Intervals is an enhanced version of the standard oddball paradigm that introduces predetermined but variable inter-stimulus intervals. 
 
 ## Script Location
 
 The stimulus script is located at:
-- [`/code/stimulus-control/src/Standard_oddball_slap2.bonsai`](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/blob/main/code/stimulus-control/src/Standard_oddball_slap2.bonsai)
+- [`/code/stimulus-control/src/Standard_oddball_slap2_jitter_random.bonsai`](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/blob/main/code/stimulus-control/src/Standard_oddball_slap2_jitter_random.bonsai)
 
 ## Hardware Requirements
 
@@ -23,8 +23,8 @@ The stimulus script is located at:
 - **Temporal Frequency**: 2 Hz (standard)
 - **Contrast**: 1.0 (full contrast)
 - **Size**: 360° (full-field gratings)
-- **Stimulus Duration**: 343 ms
-- **Inter-stimulus Interval**: 343 ms (configurable "Delay" parameter)
+- **Stimulus Duration**: 343 ms (fixed)
+- **Inter-stimulus Intervals**: Four predefined values (0.343s, 1s, 1.5s, 2s)
 
 ### Configurable Parameters
 The script contains several externalized parameters that can be adjusted:
@@ -34,12 +34,15 @@ The script contains several externalized parameters that can be adjusted:
 
 ## Experimental Design
 
-### 1. Orientation Tuning Component
-The experiment includes presentation of 16 different orientations:
-- 0°, 22.5°, 45°, 67.5°, 90°, 112.5°, 135°, 157.5°
-- 180°, 202.5°, 225°, 257.5°, 270°, 292.5°, 315°, 337.5°
+### 1. Orientation Tuning Component with Jittered Intervals
+This experiment includes presentation of 16 different orientations (0°, 22.5°, 45°, etc.) with a systematic jitter implementation:
 
-These orientations are presented in randomized order to characterize orientation tuning of neurons.
+- Each orientation is paired with each of the four possible inter-stimulus intervals (0.343s, 1s, 1.5s, 2s)
+- This creates 64 unique orientation-delay pairs (16 orientations × 4 delays)
+- The entire set of these pairs is randomized using a permutation algorithm
+- This ensures each orientation is shown at each possible delay, but the sequence is unpredictable
+
+The jitter is not randomly chosen at runtime; instead, each orientation appears four times in the randomized sequence, each time with a different predefined delay.
 
 ### 2. Standard-Oddball Paradigm
 The core of the experiment consists of:
@@ -50,10 +53,7 @@ The core of the experiment consists of:
     - **Temporal frequency deviant**: 0 Hz (stationary grating at 0° orientation)
     - **Contrast deviant**: 0 contrast (blank screen) with 2 Hz temporal frequency
 
-Each deviant type violates a different expectation established by the standard stimulus:
-- Orientation deviants test orientation-specific adaptation
-- Temporal frequency deviant tests motion expectation
-- Contrast deviant tests luminance expectation
+The jittered intervals break the rhythmic presentation pattern found in the standard oddball paradigm, which helps isolate responses to stimulus features from responses to stimulus timing.
 
 ### 3. Receptive Field Mapping
 The experiment includes a mapping component with smaller gratings (20° diameter) presented at locations defined in `receptive_field.csv`. These specialized mapping gratings have:
@@ -63,13 +63,11 @@ The experiment includes a mapping component with smaller gratings (20° diameter
 - Shorter duration (250 ms)
 - No inter-stimulus interval (0 ms delay)
 
-The receptive field mapping coordinates and orientations are loaded from the CSV file and randomized for each presentation sequence.
-
 ## Data Collection
 
 The script logs all stimulus parameters and timing information to CSV files:
 - `orientations_logger.csv`: Contains timing of stimulus events
-- `orientations_orientations.csv`: Records the parameters of each stimulus presentation
+- `vstimLog.csv`: Records the detailed parameters of each stimulus presentation, including the specific delay used for each stimulus
 
 Animal running data is collected via an encoder on Port 2 of the behavior device.
 
@@ -84,7 +82,7 @@ Animal running data is collected via an encoder on Port 2 of the behavior device
 
 ## Related Documents
 
+- **[Standard Oddball](standard-oddball.md)**: Information about the standard oddball paradigm with fixed intervals
 - **[Bonsai Instructions](bonsai_instructions.md)**: Setup and deployment of Bonsai code
 - **[Experimental Plan](../experimental-plan.md)**: Overview of all experimental paradigms
 - **[SLAP2 Hardware](../hardware/allen_institute_slap2_hardware.md)**: Details about the SLAP2 imaging system used
-- **[Example Experiment](../experiments/allen_institute_794237_2025-04-03.md)**: Session notes from an experiment using this stimulus
