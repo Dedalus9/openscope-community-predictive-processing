@@ -2,6 +2,7 @@
 """
 Generate a diagram illustrating the sensory-motor closed-loop protocol.
 This script creates a visualization of the different stimulus blocks and their relationship to motor activity.
+Simplified version showing only open and closed loop conditions.
 """
 
 import matplotlib.pyplot as plt
@@ -11,8 +12,8 @@ from matplotlib.patches import Rectangle, Circle, FancyArrowPatch
 from matplotlib.lines import Line2D
 import matplotlib.patheffects as path_effects
 
-# Create figure with multiple subplots
-fig = plt.figure(figsize=(12, 8))
+# Create figure with multiple subplots - now with just 2 rows
+fig = plt.figure(figsize=(12, 7))
 fig.suptitle('Sensory-Motor Closed-Loop Protocol', fontsize=16)
 
 # Define colors for different stimulus types
@@ -28,7 +29,7 @@ colors = {
 }
 
 # 1. Open-Loop Condition
-ax1 = plt.subplot(3, 1, 1)
+ax1 = plt.subplot(2, 1, 1)
 ax1.set_title('Open-Loop Condition: Standard Oddball Independent of Running', fontsize=14)
 ax1.set_xlim(0, 20)
 ax1.set_ylim(0, 6)
@@ -108,7 +109,7 @@ ax1.add_patch(arrow)
 ax1.text(7, 3.7, "×", color='red', fontsize=20, ha='center', va='center')
 
 # 2. Closed Loop: Running-Triggered Oddball
-ax2 = plt.subplot(3, 1, 2)
+ax2 = plt.subplot(2, 1, 2)
 ax2.set_title('Closed Loop: Running State Determines Stimulus Type', fontsize=14)
 ax2.set_xlim(0, 20)
 ax2.set_ylim(0, 6)
@@ -187,89 +188,9 @@ ax2.text(10, 5.5, "Running state triggers deviants, non-running triggers standar
         ha='center', va='center', fontsize=10, 
         bbox=dict(facecolor='white', alpha=0.8, edgecolor='gray', boxstyle='round,pad=0.5'))
 
-# 3. Predictive Relationship
-ax3 = plt.subplot(3, 1, 3)
-ax3.set_title('Sensory-Motor Predictive Relationship', fontsize=14)
-ax3.set_xlim(0, 20)
-ax3.set_ylim(0, 8)
-ax3.set_yticks([])
-ax3.set_xlabel('Time (s)')
-
-# Three conditions: expected, violated, and mismatch
-
-# 1. Expected condition - running leads to orientation change
-expected_time = 2
-rect_running = Rectangle((expected_time, 6), 3, 1, color=colors['running'], alpha=0.6)
-ax3.add_patch(rect_running)
-text = ax3.text(expected_time + 1.5, 6.5, "Running", ha='center', va='center', fontsize=9, color='white')
-text.set_path_effects([path_effects.withStroke(linewidth=1.5, foreground='black')])
-
-# Draw orientation deviant that follows running
-rect_deviant = Rectangle((expected_time + 3, 4), stim_duration, 1.5, color=colors['orientation_deviant'], alpha=0.8)
-ax3.add_patch(rect_deviant)
-text = ax3.text(expected_time + 3 + stim_duration/2, 4.75, "Orientation\nDeviant", 
-                ha='center', va='center', fontsize=8, color='white')
-text.set_path_effects([path_effects.withStroke(linewidth=1.5, foreground='black')])
-
-# Draw arrow connecting running to deviant
-arrow1 = FancyArrowPatch((expected_time + 1.5, 6), (expected_time + 3 + stim_duration/2, 5.5), 
-                       arrowstyle='->', mutation_scale=15, color='green', linewidth=2)
-ax3.add_patch(arrow1)
-# Add labeled text with background for better visibility
-ax3.text(expected_time + 1.5, 5.5, "Expected", ha='center', va='center', fontsize=9, color='green',
-        bbox=dict(facecolor='white', alpha=0.7, edgecolor='green', boxstyle='round,pad=0.2'))
-
-# 2. Violation condition - no running but orientation changes
-violation_time = 7.5
-rect_not_running = Rectangle((violation_time, 6), 3, 1, color=colors['not_running'], alpha=0.5)
-ax3.add_patch(rect_not_running)
-text = ax3.text(violation_time + 1.5, 6.5, "Not Running", ha='center', va='center', fontsize=9)
-text.set_path_effects([path_effects.withStroke(linewidth=1, foreground='gray')])
-
-# Draw orientation deviant that should not follow non-running
-rect_unexpected_deviant = Rectangle((violation_time + 3, 4), stim_duration, 1.5, color=colors['orientation_deviant'], alpha=0.8)
-ax3.add_patch(rect_unexpected_deviant)
-text = ax3.text(violation_time + 3 + stim_duration/2, 4.75, "Unexpected\nDeviant", 
-                ha='center', va='center', fontsize=8, color='white')
-text.set_path_effects([path_effects.withStroke(linewidth=1.5, foreground='black')])
-
-# Draw arrow connecting violation
-arrow2 = FancyArrowPatch((violation_time + 1.5, 6), (violation_time + 3 + stim_duration/2, 5.5), 
-                       arrowstyle='->', mutation_scale=15, color='red', linewidth=2)
-ax3.add_patch(arrow2)
-# Add labeled text with background for better visibility
-ax3.text(violation_time + 1.5, 5.5, "Violation", ha='center', va='center', fontsize=9, color='red',
-        bbox=dict(facecolor='white', alpha=0.7, edgecolor='red', boxstyle='round,pad=0.2'))
-
-# 3. Mismatch condition - running but no orientation change
-mismatch_time = 13
-rect_running2 = Rectangle((mismatch_time, 6), 3, 1, color=colors['running'], alpha=0.6)
-ax3.add_patch(rect_running2)
-text = ax3.text(mismatch_time + 1.5, 6.5, "Running", ha='center', va='center', fontsize=9, color='white')
-text.set_path_effects([path_effects.withStroke(linewidth=1.5, foreground='black')])
-
-# Draw standard that should not follow running
-rect_unexpected_standard = Rectangle((mismatch_time + 3, 4), stim_duration, 1.5, color=colors['standard'], alpha=0.8)
-ax3.add_patch(rect_unexpected_standard)
-text = ax3.text(mismatch_time + 3 + stim_duration/2, 4.75, "Unexpected\nStandard", 
-                ha='center', va='center', fontsize=8, color='white')
-text.set_path_effects([path_effects.withStroke(linewidth=1.5, foreground='black')])
-
-# Draw arrow connecting mismatch
-arrow3 = FancyArrowPatch((mismatch_time + 1.5, 6), (mismatch_time + 3 + stim_duration/2, 5.5), 
-                       arrowstyle='->', mutation_scale=15, color='orange', linewidth=2)
-ax3.add_patch(arrow3)
-# Add labeled text with background for better visibility
-ax3.text(mismatch_time + 1.5, 5.5, "Mismatch", ha='center', va='center', fontsize=9, color='orange',
-        bbox=dict(facecolor='white', alpha=0.7, edgecolor='orange', boxstyle='round,pad=0.2'))
-
-# Add labels for running and stimuli
-ax3.text(-0.5, 6.5, "Animal\nBehavior", ha='center', va='center', fontsize=10)
-ax3.text(-0.5, 4.75, "Stimulus\nType", ha='center', va='center', fontsize=10)
-
-# Add explanatory text for overall paradigm with background box
-ax3.text(10, 2, "The sensory-motor closed-loop paradigm creates predictable\nrelationships between the animal's running state and visual stimuli,\nallowing for analysis of prediction errors and mismatch responses.", 
-        ha='center', va='center', fontsize=10, 
+# Add a simple explanatory box at the bottom
+ax2.text(10, 0.2, "This closed-loop paradigm creates a predictable relationship between the animal's\nrunning behavior and the visual stimuli, allowing for studies of prediction error signals.", 
+        ha='center', va='center', fontsize=10,
         bbox=dict(facecolor='white', alpha=0.8, edgecolor='gray', boxstyle='round,pad=0.5'))
 
 # Adjust layout
