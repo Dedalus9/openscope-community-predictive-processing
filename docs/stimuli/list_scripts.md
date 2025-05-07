@@ -12,11 +12,22 @@ This document provides an overview of the scripts specifically used for oddball 
     - Located in `code/stimulus-control/src/`
     - For detailed information, see [Standard Oddball Protocol](standard-oddball.md)
 
+## Standard Oddball with Jitter Random Protocol
+
+- **Standard_oddball_jitter_random.bonsai** - Standard oddball protocol with jittered timing and randomized presentation
+    - Located in `code/stimulus-control/src/`
+    - For detailed information, see [Standard Oddball Jitter Random Protocol](standard-oddball-jitter-random.md)
+
 ## Sensory-Motor Oddball Protocol
 
 - **Sensory_motor_oddball_slap2.bonsai** - Implements the sensory-motor oddball paradigm for SLAP2 hardware
     - Located in `code/stimulus-control/src/`
     - For detailed information, see [Sensory-Motor Closed Loop Protocol](sensory-motor-closed-loop.md)
+
+## Sequence Mismatch Protocol
+
+- **Sequence Mismatch Protocol** - Implements the sequence mismatch paradigm with learned sequences
+    - For detailed information, see [Sequence Mismatch Protocol](sequence-mismatch.md)
 
 ## Bonsai Instructions
 

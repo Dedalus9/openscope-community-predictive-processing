@@ -4,6 +4,25 @@
 
 The Sensory-Motor Closed-Loop stimulus provides a visual environment where the movement of the mouse (via a running wheel) directly controls the phase of drifting gratings. This creates a closed sensorimotor loop that allows investigation of how neural responses are modulated by self-generated visual feedback. In the oddball variant, the relationship between wheel movement and visual feedback is occasionally broken, creating sensorimotor prediction errors.
 
+## Stimulus Structure
+
+![Sensory-Motor Closed-Loop Protocol](../img/stimuli/sensory-motor-closed-loop.png)
+
+The figure above illustrates the three key aspects of the sensory-motor closed-loop protocol:
+
+1. **Open-Loop Condition**: Shows how standard oddball stimuli and animal running behavior are independent in traditional paradigms.
+
+2. **Closed-Loop Condition**: Demonstrates how the animal's running behavior directly determines the stimulus type:
+   - Running triggers orientation deviant stimuli
+   - Non-running periods trigger standard stimuli
+
+3. **Predictive Relationships**: Illustrates the three critical conditions for studying predictive processing:
+   - Expected: Running followed by orientation deviant (predicted relationship maintained)
+   - Violation: Non-running followed by orientation deviant (unexpected stimulus)
+   - Mismatch: Running followed by standard stimulus (expected stimulus omitted)
+
+The sensory-motor closed-loop creates a predictable relationship that can be violated to study prediction error signals.
+
 ## Script Location
 
 The stimulus script is located at:
@@ -83,13 +102,6 @@ The oddball generator uses frame permutation for randomization and implements a 
 3. The mouse can then control the gratings by running on the wheel
 4. In the oddball variant, brief sensorimotor mismatches will occur automatically
 5. The experiment can be terminated with the End key
-
-## Expected Neural Responses
-This paradigm is designed to elicit neural activity patterns related to:
-1. Visuomotor integration
-2. Self-generated vs. externally generated sensory feedback
-3. Predictive coding in sensorimotor loops
-4. In the oddball variant: prediction error signals when sensorimotor expectations are violated
 
 ## Related Documents
 

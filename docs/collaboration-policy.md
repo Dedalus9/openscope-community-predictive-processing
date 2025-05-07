@@ -27,14 +27,14 @@ All ongoing projects should be listed in the [Project Tracking document](project
 
 Data are the foundation of our collaboration. To drive scientific progress and ensure reproducibility, we commit to:
 
-### 1.1 Immediate Public Release
+Creci### 1.1 Immediate Public Release
 
 All datasets are released without embargo via the Allen Institute or the DANDI/NWB archives.
 
 ### 1.2 Dataset Authorship Rights
 
 - **Co‑authorship option:** Dataset creators may opt in as co-authors on any manuscript using their data.
-- **First publication claim:** Dataset creators are entitled to authorship on the first two papers that analyzes or validates their dataset. Our intent is to encourage data sharing. 
+- **First publication claim:** Dataset creators are entitled to authorship on the first two papers that analyzes or validates their dataset, including any publication from the data creator. Our intent is to encourage data sharing. 
 - **Opt‑in process:** Whenever a dataset is proposed for manuscript use, its creators will be invited to opt in as authors.
 
 ---
@@ -79,7 +79,7 @@ All participants are encouraged to update this document regularly.
 
 - **Lead Author:** A designated lead coordinates writing and revisions.
 - **Ordering:** The lead author proposes an order reflecting contributions. For large teams (>20 contributors), alphabetical listing is encouraged.
-- **Author Contributions Statement:** All papers include a CRediT-style contributions section detailing each author's role.
+- **Author Contributions Statement:** All papers include a [CRediT-style contributions section](https://credit.niso.org) detailing each author's role.
 
 ---
 

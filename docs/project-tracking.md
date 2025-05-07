@@ -45,7 +45,7 @@ We use a [GitHub Kanban board](https://github.com/orgs/AllenNeuralDynamics/proje
 *Design and implement stimuli for investigating predictive processing mechanisms across multiple experimental paradigms.*
 
 **👥 Contributors:**  
-@jeromelecoq @rcpeene
+@jeromelecoq @rcpeene @Sarruedi
 
 **📝 Description:**  
 This project focuses on developing and implementing four key experimental paradigms to investigate different aspects of predictive processing:
@@ -61,6 +61,7 @@ Each stimulus paradigm is implemented in Bonsai and includes appropriate control
 - ✅ Standard oddball and sensorimotor oddball stimuli implemented in Bonsai
 - ✅ Initial SLAP2 recordings completed with mouse #794237 and #787727
 - 🔄 Ongoing refinement of temporal mismatch stimuli
+- Temporal sequence not started
 
 ### Project 2: Data Curation and Sharing
 
@@ -77,11 +78,12 @@ This includes standardizing data in NWB format, uploading datasets to the Allen 
 Key data types include:
 - Two-photon calcium imaging data from pan-excitatory and pan-inhibitory lines
 - Neuropixels recordings with SST-optotagging
-- Voltage imaging recordings of pyramidal cell somata and dendrites
+- Recordings of pyramidal cell somata and dendrites using SLAP2
 
 **Progress:**
 - 🔄 Initial data curation pipeline established
 - 🔄 Working on metadata standardization for SLAP2 experiments
+- 🔄 One experiment shared on DANDI
 
 ---
 

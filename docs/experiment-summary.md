@@ -11,7 +11,7 @@ The project utilizes three complementary neural recording platforms, each offeri
 | Date | Mouse ID | Indicator | Protocol | Session Notes |
 |------|----------|-----------|----------|--------------|
 | 2025-03-20 | N/A (Test) | N/A | Test Run | [Session Details](experiments/allen_institute_NA_2025-03-20.md) |
-| 2025-03-27 | 787727 | ASAP8 | Integration Test | [Session Details](experiments/allen_institute_787727_2025-03-27.md) |
+| 2025-03-27 | 787727 | ASAP | Integration Test | [Session Details](experiments/allen_institute_787727_2025-03-27.md) |
 | 2025-04-03 | 794237 | iGluSnFR4 | Glutamate Imaging | [Session Details](experiments/allen_institute_794237_2025-04-03.md) |
 
 

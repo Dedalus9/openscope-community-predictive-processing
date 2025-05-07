@@ -6,9 +6,32 @@ All Bonsai workflows should go into the [`code/stimulus-control/src`](https://gi
 
 ## Deployment
 
-To deploy the Bonsai code, run [`code/stimulus-control/bonsai/setup.cmd`](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/blob/main/code/stimulus-control/bonsai/setup.cmd).  
-This small script will download and regenerate the current Bonsai environment ([see tutorial for further details](https://bonsai-rx.org/docs/articles/environments.html)).  
-Each time you change a project dependency via the `Package Manager`, the `Bonsai.Config` file will be updated, and you can choose to commit these changes.
+### Initial Setup (Important!)
+
+1. To deploy the Bonsai code, run [`code/stimulus-control/bonsai/setup.cmd`](https://github.com/AllenNeuralDynamics/openscope-community-predictive-processing/blob/main/code/stimulus-control/bonsai/setup.cmd).  
+   This small script will download and regenerate the current Bonsai environment ([see tutorial for further details](https://bonsai-rx.org/docs/articles/environments.html)).
+
+2. **CRITICAL: Only use the Bonsai.exe that is downloaded by the setup script.** This ensures that you're using the correct version with all required packages.
+   - The script will create a local Bonsai installation in the `code/stimulus-control/bonsai` folder
+   - Launch Bonsai by double-clicking the `Bonsai.exe` within this folder, not from any other installation on your system
+
+3. The setup script will automatically install all required packages specified in the `Bonsai.config` file. Do not manually install additional packages unless absolutely necessary.
+
+### Avoiding Common Issues
+
+- **Version conflicts**: Using multiple versions of Bonsai on the same system can lead to package conflicts. Always use the version downloaded by the setup script.
+
+### Troubleshooting
+
+If you encounter issues:
+1. Close all instances of Bonsai
+2. Delete the file in `code/stimulus-control/bonsai` that are not present on the GitHub repository.
+3. Run the setup.cmd script again to get a fresh installation
+4. Open your workflow using the newly downloaded Bonsai.exe
+
+### Updating Dependencies
+
+Each time you change a project dependency via the `Package Manager`, the `Bonsai.Config` file will be updated, and you can choose to commit these changes. However, take care when adding new packages as this might create dependencies that others will need to install.
 
 ---
 

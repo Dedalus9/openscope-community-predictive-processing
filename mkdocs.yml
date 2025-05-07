@@ -15,7 +15,9 @@ nav:
     - Bonsai for Python Programmers: stimuli/bonsai_for_python_programmers.md
     - List of scripts: stimuli/list_scripts.md
     - Standard Oddball: stimuli/standard-oddball.md
+    - Standard Oddball Jitter Random: stimuli/standard-oddball-jitter-random.md
     - Sensory-Motor Closed-Loop: stimuli/sensory-motor-closed-loop.md
+    - Sequence Mismatch: stimuli/sequence-mismatch.md
   - Hardware:
     - Hardware Overview: hardware-overview.md
     - Behavioral: hardware/behavior_training.md
@@ -26,9 +28,12 @@ nav:
     - Experiment Template: template-files/mouse_experiment_template.md
     - Meeting Template: template-files/meeting_template.md
   - Experiments:
-    - allen_institute_787727_2025-03-27: experiments/allen_institute_787727_2025-03-27.md
-    - allen_institute_794237_2025-04-03: experiments/allen_institute_794237_2025-04-03.md
-    - allen_institute_NA_2025-03-20: experiments/allen_institute_NA_2025-03-20.md
+    - SLAP2:
+      - allen_institute_787727_2025-03-27: experiments/allen_institute_787727_2025-03-27.md
+      - allen_institute_794237_2025-04-03: experiments/allen_institute_794237_2025-04-03.md
+      - allen_institute_NA_2025-03-20: experiments/allen_institute_NA_2025-03-20.md
+  - Analysis:
+    - SLAP2 pilot data analysis: pilotanalysis.md
 - Project Management:
   - Team: people.md
   - How to Contribute: how_to_contribute.md
