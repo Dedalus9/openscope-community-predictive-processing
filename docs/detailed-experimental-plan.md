@@ -100,12 +100,12 @@ These oddball stimuli will be presented in three different paradigms, each desig
 - Same oddball types as Session 1
 - Tests predictions based on self-generated sensory consequences
 
-#### Session 3 - Complex Sequence Learning**
+#### Session 3 - Complex Sequence Learning
 - Animals habituated to specific sequences of 4 stimuli
 - Oddball stimuli introduced in third position of sequence
 - Controls for context-dependent prediction
 
-#### Session 4 - Temporal Prediction**
+#### Session 4 - Temporal Prediction
 - Focus on timing predictability rather than stimulus identity
 - Shorter/longer duration stimuli serve as temporal oddballs
 
@@ -148,22 +148,20 @@ To evaluate the relative contributions of different mechanisms, we will use thre
     - Test whether top-down predictions and bottom-up inputs are integrated in specific dendritic compartments
     - Examine how inhibitory interneurons shape prediction error signals
 
-### Brain Regions
-
-#### Mice
+### Brain Regions in Mice
 
 - Primary visual cortex (V1)
 - Secondary visual areas (LM, AL)
 - Motor cortex (M1, M2)
 - Prefrontal regions
 
-#### Primates (Collaborative Studies)
+### Brain Regions in Primate
 
 - V1, V2, V4
 - MT/MST
 - Prefrontal regions
 
-### Experimental Timeline (Mice)
+### Experimental Timeline in Mice
 
 Each mouse will undergo:
 - Cranial window implantation and recovery
