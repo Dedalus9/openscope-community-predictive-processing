@@ -1,5 +1,7 @@
 import os
 import yaml
+import glob
+from collections import defaultdict
 
 # Path to the mkdocs.yml file
 MKDOCS_YML_PATH = "mkdocs.yml"
@@ -15,6 +17,33 @@ def get_markdown_files(directory):
     return sorted(
         [os.path.join(directory, f) for f in os.listdir(directory) if f.endswith(".md")]
     )
+
+def get_hierarchical_markdown_files(directory):
+    """
+    Get a hierarchical structure of markdown files from a directory and its subdirectories.
+    Returns a dictionary with lab as key and another dictionary as value with platform as key and list of files as value.
+    """
+    if not os.path.exists(directory):
+        return {}
+    
+    hierarchy = defaultdict(lambda: defaultdict(list))
+    
+    # Use glob to find all .md files in the directory and its subdirectories
+    for filepath in sorted(glob.glob(f"{directory}/**/*.md", recursive=True)):
+        rel_path = os.path.relpath(filepath, "docs")
+        
+        # Skip files directly in the experiments directory (old format)
+        if os.path.dirname(rel_path) == "experiments":
+            continue
+            
+        # Extract lab and platform from the path
+        parts = rel_path.split(os.sep)
+        if len(parts) >= 3:  # experiments/lab_name/platform/file.md
+            lab = parts[1]
+            platform = parts[2]
+            hierarchy[lab][platform].append(filepath)
+    
+    return hierarchy
 
 def format_nav_entry(filepath):
     """Format the nav entry to include the filename as the display name."""
@@ -54,13 +83,23 @@ def update_mkdocs():
         project_management = [item for item in project_management if not (isinstance(item, dict) and "Meetings" in item)]
         mkdocs_config["nav"][project_management_index]["Project Management"] = project_management
     
-    # Add updated Experiments section to Project Resources
-    experiments_files = get_markdown_files(EXPERIMENTS_DIR)
-    if experiments_files:
-        experiments_entries = [format_nav_entry(f) for f in experiments_files]        
+    # Add updated hierarchical Experiments section to Project Resources
+    experiments_hierarchy = get_hierarchical_markdown_files(EXPERIMENTS_DIR)
+    if experiments_hierarchy:
+        experiments_nav = []
+        
+        for lab, platforms in experiments_hierarchy.items():
+            lab_nav = []
+            
+            for platform, files in platforms.items():
+                platform_entries = [format_nav_entry(f) for f in files]
+                lab_nav.append({platform: platform_entries})
+            
+            experiments_nav.append({lab: lab_nav})
+        
         if project_resources_index is not None:
             mkdocs_config["nav"][project_resources_index]["Project Resources"].append(
-                {"Experiments": experiments_entries}
+                {"Experiments": experiments_nav}
             )
     
     # Add updated Meetings section to Project Management
