@@ -22,17 +22,6 @@ Our review of the literature has identified several key computational primitives
 3. **Excitatory/inhibitory (E/I) balance**: Different inhibitory interneuron subtypes provide a framework for complex predictions and error signaling
 4. **Hierarchical processing**: Multi-level processing across brain areas enables sophisticated, multi-modal predictions
 
-### Evidence for Distinct Mechanisms
-
-Current evidence suggests that mechanisms of predictive processing differ across paradigms:
-
-- In visual oddball paradigms, prediction errors are predominantly found in layer 2/3 pyramidal neurons
-- In auditory sensorimotor paradigms, mismatch responses occur in both layer 5 and layer 2/3
-- In somatosensory oddball paradigms, prediction errors have been identified primarily in layer 4 and layer 6
-- Layer-specific responses differ across species, with shallower hierarchical organization in mice compared to primates
-
-These divergent findings highlight the need for a systematic investigation using comparable methods across prediction paradigms.
-
 ## Key Research Questions and Hypotheses
 
 ### Primary Research Questions
