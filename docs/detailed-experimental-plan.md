@@ -9,6 +9,7 @@ This document provides a comprehensive experimental plan for investigating neura
 Predictive processing theories propose that the brain continuously builds and updates internal models of the world, using these models to predict incoming sensory signals. When predictions differ from actual inputs, the resulting prediction errors drive learning and perceptual updating. However, significant questions remain about how these processes are implemented in neural circuits.
 
 Recent research has revealed that the brain may employ various mechanisms for predictive processing, which can differ depending on:
+
 - The sensory modality (visual, auditory, somatosensory)
 - The type of prediction being made (spatial, temporal, sensorimotor)
 - The complexity and timescale of the prediction
