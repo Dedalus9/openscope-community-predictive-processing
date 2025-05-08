@@ -69,7 +69,7 @@ Our experiments will feature sequences of drifting gratings with five types of o
 
 5. **Sensorimotor oddballs**: Unexpected sensory feedback during motor activity
     - Standard: Visual flow coupled to running speed
-    - Deviant: Flow faster/slower than expected based on running speed
+    - Deviant: Flow different than expected based on running speed
     - Implemented during active running periods
 
 ### Session contexts
