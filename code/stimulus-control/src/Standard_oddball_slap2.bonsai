@@ -107,7 +107,7 @@
         <Angle>0</Angle>
         <ColorR>0</ColorR>
         <ColorG>0</ColorG>
-        <ColorB>1</ColorB>
+        <ColorB>0</ColorB>
         <ColorA>1</ColorA>
       </Expression>
       <Expression xsi:type="SubscribeSubject">
@@ -193,18 +193,16 @@
       <Expression xsi:type="ExternalizedMapping">
         <Property Name="PortName" />
       </Expression>
-      <Expression xsi:type="Disable">
-        <Builder xsi:type="Combinator">
-          <Combinator xsi:type="harp:Device">
-            <harp:OperationMode>Active</harp:OperationMode>
-            <harp:OperationLed>On</harp:OperationLed>
-            <harp:DumpRegisters>true</harp:DumpRegisters>
-            <harp:VisualIndicators>On</harp:VisualIndicators>
-            <harp:Heartbeat>Enabled</harp:Heartbeat>
-            <harp:IgnoreErrors>false</harp:IgnoreErrors>
-            <harp:PortName>COM7</harp:PortName>
-          </Combinator>
-        </Builder>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="harp:Device">
+          <harp:OperationMode>Active</harp:OperationMode>
+          <harp:OperationLed>On</harp:OperationLed>
+          <harp:DumpRegisters>true</harp:DumpRegisters>
+          <harp:VisualIndicators>On</harp:VisualIndicators>
+          <harp:Heartbeat>Enabled</harp:Heartbeat>
+          <harp:IgnoreErrors>false</harp:IgnoreErrors>
+          <harp:PortName>COM3</harp:PortName>
+        </Combinator>
       </Expression>
       <Expression xsi:type="rx:PublishSubject">
         <Name>BehaviorEvents</Name>
@@ -1389,7 +1387,7 @@ double.Parse(it[2]) as Y)</scr:Expression>
         <Append>false</Append>
         <Overwrite>true</Overwrite>
         <Suffix>None</Suffix>
-        <FileName>C:/BonsaiDataPredictiveProcessing/769904/769904_20250424T002219/orientations_logger.csv</FileName>
+        <FileName>C:/BonsaiDataPredictiveProcessing/769904/769904_20250507T165651/orientations_logger.csv</FileName>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="BonVision:Logging.LogEvent.bonsai">
         <Format>Frame</Format>
@@ -1427,7 +1425,7 @@ double.Parse(it[2]) as Y)</scr:Expression>
         <Text><![CDATA[]]></Text>
       </Expression>
       <Expression xsi:type="io:CsvWriter">
-        <io:FileName>C:/BonsaiDataPredictiveProcessing/769904/769904_20250424T002219/orientations_orientations.csv</io:FileName>
+        <io:FileName>C:/BonsaiDataPredictiveProcessing/769904/769904_20250507T165651/orientations_orientations.csv</io:FileName>
         <io:Append>true</io:Append>
         <io:Overwrite>false</io:Overwrite>
         <io:Suffix>FileCount</io:Suffix>
@@ -1456,18 +1454,18 @@ double.Parse(it[2]) as Y)</scr:Expression>
         <Name>StartGratings</Name>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\behavior_camera.bonsai">
-        <Index>0</Index>
         <Format>{0}/face_video.avi</Format>
+        <Index>0</Index>
         <EventName>FaceCamera</EventName>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\behavior_camera.bonsai">
-        <Index>1</Index>
         <Format>{0}/body_video.avi</Format>
+        <Index>1</Index>
         <EventName>BodyCamera</EventName>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\behavior_camera.bonsai">
-        <Index>2</Index>
         <Format>{0}/eye_video.avi</Format>
+        <Index>2</Index>
         <EventName>EyeCamera</EventName>
       </Expression>
     </Nodes>
