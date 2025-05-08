@@ -49,7 +49,6 @@ This paradigm examines how the brain responds to violations of expectations in s
   - Standard stimuli: Repeated presentation of gratings with the same orientation/spatial frequency
   - Deviant stimuli: Unexpected changes in grating orientation (45° or 90°), halted motion (0 Hz), or blank screens
   - Ratio: 120:1 (standard:deviant)
-- **Duration**: 60 minutes (includes 10-minute habituation)
 
 ### Sensorimotor Mismatch Paradigm
 
@@ -60,7 +59,6 @@ This paradigm tests how neural responses change when self-generated motor action
     - Standard: Visual flow synchronized with running speed
     - Deviant: Visual flow speeds up, slows down, or decouples from running
     - Control: Passive viewing of matched visual flow patterns
-- **Duration**: 60 minutes (includes 10-minute habituation)
 
 ### Sequence Mismatch Paradigm
 
@@ -71,7 +69,6 @@ This paradigm examines how the brain detects violations in learned sequences of 
     - Sequences repeat once per second for 37 minutes
     - Deviant stimuli introduced in the third position of the sequence
     - Controls for context-dependent prediction
-- **Duration**: 60 minutes (includes 20-minute habituation)
 
 ### Temporal Mismatch Paradigm
 
@@ -82,16 +79,6 @@ This paradigm investigates how the brain responds to unexpected timing changes i
     - Standard: 250ms stimulus duration, 500ms ISI
     - Deviant: 150ms or 350ms stimulus duration
     - Focus on timing predictability rather than stimulus identity
-- **Duration**: 60 minutes (includes 10-minute habituation per block)
-
-### Omission Paradigm
-
-This paradigm examines neural responses when an expected stimulus is completely omitted.
-
-- **Procedure**: Regular presentation of stimuli with occasional omissions (5% probability)
-- **Analysis focus**: Neural activity during the time window when the stimulus would have occurred
-- **Control**: Random stimulus presentations without established expectations
-- **Duration**: 60 minutes (includes 10-minute habituation)
 
 ## Recording Techniques
 
