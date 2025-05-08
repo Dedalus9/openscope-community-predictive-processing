@@ -61,26 +61,21 @@ To systematically investigate different aspects of predictive processing, we've 
 
 #### Stimulus Types
 
-All experiments will feature sequences of drifting gratings with five types of oddball events:
+Our experiments will feature sequences of drifting gratings with five types of oddball events:
 
 1. **Orientation Oddballs**: Unexpected changes in grating orientation
     - Standard: 0° orientation drifting gratings
     - Deviant: 90° or 45° orientation drifting gratings
-    - Ratio: 120:1 (standard:deviant)
 
-2. **Motion Oddballs**: Unexpected changes in drift direction or speed
+2. **Motion Oddballs**: Unexpected changes in drift speed
     - Standard: Consistent motion parameters
-    - Deviant: Reversed or halted motion
-    - Ratio: 120:1 (standard:deviant)
+    - Deviant: halted motion
 
 3. **Omission Oddballs**: Complete absence of expected stimulus
-    - 5% probability of stimulus omission
-    - Never occurs during a stimulus change or preceding a change
 
 4. **Temporal Oddballs**: Unexpected timing of stimulus presentation
     - Standard: 250ms stimulus duration, 500ms ISI
     - Deviant: 150ms or 350ms stimulus duration
-    - Blocks alternate between fixed and jittered timing
 
 5. **Sensorimotor Oddballs**: Unexpected sensory feedback during motor activity
     - Standard: Visual flow coupled to running speed
@@ -91,66 +86,32 @@ All experiments will feature sequences of drifting gratings with five types of o
 
 These oddball stimuli will be presented in three different paradigms, each designed to engage different prediction mechanisms as described in our review paper "Neural mechanisms of predictive processing: a collaborative community experiment through the OpenScope program":
 
-#### Paradigm 1 – Sequential Mismatch (Standard Oddball Sequence)
+#### Session 1 – Standard Oddball Sequence)
 
 - Animals presented with series of drifting gratings (same orientation)
 - Occasional oddball stimuli (orientation changes, omissions)
 - Passive viewing condition
-- Duration: 60 minutes (includes 10-minute habituation)
-- 8 repetitions of each oddball type
-- Tests predictions based on sequential patterns
 
-#### Paradigm 2 – Sensorimotor Mismatch (Sensorimotor Coupling)
+#### Session 2 – Sensorimotor Mismatch (Sensorimotor Coupling)
 
 - Animals run on wheel with visual flow coupled to movement
 - Closed-loop visuo-motor coupling (running controls visual flow)
 - Occasional mismatches between running and visual flow
 - Same oddball types as Session 1
-- Duration: 60 minutes (includes 10-minute habituation)
 - Tests predictions based on self-generated sensory consequences
 
-#### Paradigm 3 – Omission Mismatch
-
-- Focus on the absence of expected stimuli
-- Trials with regular stimulus presentation (establish expectation)
-- 5% probability of stimulus omission
-- Duration: 60 minutes (includes 10-minute habituation)
-- Tests predictions based on temporal expectations
-
-#### Additional Session Types
-
-In addition to the three core paradigms, we will conduct specialized sessions to further investigate temporal aspects of prediction:
-
-**Complex Sequence Learning**
+#### Session 3 - Complex Sequence Learning**
 - Animals habituated to specific sequences of 4 stimuli
-- Sequences repeat once per second for 37 minutes
 - Oddball stimuli introduced in third position of sequence
 - Controls for context-dependent prediction
-- Duration: 60 minutes (includes 20-minute habituation)
 
-**Temporal Prediction**
+#### Session 4 - Temporal Prediction**
 - Focus on timing predictability rather than stimulus identity
-- Alternating blocks of fixed vs. jittered timing
 - Shorter/longer duration stimuli serve as temporal oddballs
-- Duration: 60 minutes (includes 10-minute habituation per block)
 
 ### Recording Approaches
 
 To evaluate the relative contributions of different mechanisms, we will use three complementary recording approaches:
-
-#### SLAP2 (Scanned Line Angular Projection) Two-Photon Imaging
-
-- Ultra-fast subcellular imaging (220 Hz)
-- Targeted recording of dendrites and somata simultaneously
-- Cell-type specific targeting through transgenic mouse lines:
-    - Slc17a7-IRES2-Cre for excitatory neurons
-    - Sst-IRES-Cre for somatostatin inhibitory neurons
-    - Vip-IRES-Cre for VIP inhibitory neurons
-- Allows direct investigation of apical dendrite contributions
-- Specific objectives:
-    - Determine whether prediction errors are computed at the level of single neurons
-    - Test whether top-down predictions and bottom-up inputs are integrated in specific dendritic compartments
-    - Examine how inhibitory interneurons shape prediction error signals
 
 #### Neuropixels Recordings
 
@@ -163,8 +124,9 @@ To evaluate the relative contributions of different mechanisms, we will use thre
     - Compare response latencies across areas to determine signal flow direction
     - Evaluate layer-specific responses across different prediction paradigms
     - Investigate oscillatory synchronization during prediction and error states
+    - Examine inter-area coordination during prediction and error signaling
 
-#### Mesoscope Imaging
+#### Mesoscope Two-photon Imaging
 
 - Dual-beam technology for multi-plane imaging
 - Simultaneous recording from 4 depths across 2 areas
@@ -172,42 +134,44 @@ To evaluate the relative contributions of different mechanisms, we will use thre
 - Tracking same neural populations across sessions
 - Coverage of multiple visual areas (V1 and higher areas)
 - Specific objectives:
-    - Examine inter-area coordination during prediction and error signaling
+    - Evaluate excitatory and inhibitory response diversity across different prediction paradigms
     - Determine whether common neural ensembles participate in different prediction paradigms
     - Track changes in prediction signals over multiple sessions
 
-### Experimental Subjects and Brain Regions
+#### SLAP2 (Scanned Line Angular Projection) Two-Photon Imaging
+
+- Ultra-fast subcellular imaging (220 Hz)
+- Targeted recording of dendrites and somata simultaneously
+- Allows direct investigation of apical dendrite contributions
+- Specific objectives:
+    - Determine whether prediction errors are computed at the level of single neurons
+    - Test whether top-down predictions and bottom-up inputs are integrated in specific dendritic compartments
+    - Examine how inhibitory interneurons shape prediction error signals
+
+### Brain Regions
 
 #### Mice
 
-- Number: 82 mice across all recording methods
-- Mouse lines:
-    - Excitatory neurons: Slc17a7-IRES2-Cre × Ai93 or Ai148
-    - Inhibitory neurons: Sst-IRES-Cre × Ai93, Vip-IRES-Cre × Ai148
-- Brain regions:
-    - Primary visual cortex (V1)
-    - Secondary visual areas (LM, AL)
-    - Motor cortex (M1, M2)
-    - Prefrontal regions
+- Primary visual cortex (V1)
+- Secondary visual areas (LM, AL)
+- Motor cortex (M1, M2)
+- Prefrontal regions
 
 #### Primates (Collaborative Studies)
 
-- Non-human primates (macaques)
-- Comparable visual oddball and prediction paradigms
-- Brain regions:
-    - V1, V2, V4
-    - MT/MST
-    - Prefrontal regions
+- V1, V2, V4
+- MT/MST
+- Prefrontal regions
 
-### Experimental Timeline
+### Experimental Timeline (Mice)
 
 Each mouse will undergo:
-- Habituation and task training (2-3 weeks)
 - Cranial window implantation and recovery
 - Intrinsic signal imaging for area identification
+- Habituation and task training (2-3 weeks)
 - Multiple recording sessions (one session type per day)
-- SLAP2/Mesoscope: 8-10 sessions per mouse
-- Neuropixels: 4-6 sessions per mouse
+- Mesoscope: 8-10 sessions per mouse
+- Neuropixels: 4 sessions per mouse
 
 ## Analysis Plan
 
