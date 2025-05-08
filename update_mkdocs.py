@@ -1,6 +1,7 @@
 import os
 import yaml
 import glob
+import importlib.util
 from collections import defaultdict
 
 # Path to the mkdocs.yml file
@@ -9,6 +10,9 @@ MKDOCS_YML_PATH = "mkdocs.yml"
 # Directories to scan for markdown files
 EXPERIMENTS_DIR = "docs/experiments"
 MEETINGS_DIR = "docs/meetings"
+
+# Path to sync script
+SYNC_SCRIPT_PATH = "code/utils/sync_experiment_summary.py"
 
 def get_markdown_files(directory):
     """Get a sorted list of markdown files in a directory."""
@@ -50,6 +54,18 @@ def format_nav_entry(filepath):
     filename = os.path.basename(filepath)
     name = os.path.splitext(filename)[0]  # Remove the .md extension
     return {name: os.path.relpath(filepath, "docs")}
+
+def sync_experiment_summary():
+    """Synchronize the experiment summary page with individual experiment files."""
+    print("Syncing experiment summary with individual experiment files...")
+    
+    # Import and execute the sync_experiment_summary script
+    spec = importlib.util.spec_from_file_location("sync_module", SYNC_SCRIPT_PATH)
+    sync_module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(sync_module)
+    
+    # Call the main function from the imported script
+    sync_module.main()
 
 def update_mkdocs():
     """Update the mkdocs.yml file to include all markdown files dynamically."""
@@ -114,6 +130,9 @@ def update_mkdocs():
     # Save the updated mkdocs.yml
     with open(MKDOCS_YML_PATH, "w") as f:
         yaml.dump(mkdocs_config, f, default_flow_style=False, sort_keys=False)
+    
+    # Sync experiment summary with individual experiment files
+    sync_experiment_summary()
 
 if __name__ == "__main__":
     update_mkdocs()

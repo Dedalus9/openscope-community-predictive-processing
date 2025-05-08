@@ -16,3 +16,6 @@ site/
 site_local/
 .DS_Store
 tmp/
+__pycache__/
+*.py[cod]
+*$py.class
