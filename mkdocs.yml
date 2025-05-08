@@ -1,7 +1,6 @@
 site_name: OpenScope Community Predictive Processing
 site_url: https://allenneuraldynamics.github.io/openscope-community-predictive-processing/
 use_directory_urls: true
-
 nav:
 - Home: index.md
 - Project Plan:
@@ -11,6 +10,7 @@ nav:
 - Project Resources:
   - Experiment Summary: experiment-summary.md
   - Stimuli:
+    - Introduction to Bonsai: stimuli/bonsai_introduction.md
     - Bonsai Instructions: stimuli/bonsai_instructions.md
     - Bonsai for Python Programmers: stimuli/bonsai_for_python_programmers.md
     - List of scripts: stimuli/list_scripts.md
@@ -27,22 +27,23 @@ nav:
   - Templates:
     - Experiment Template: template-files/mouse_experiment_template.md
     - Meeting Template: template-files/meeting_template.md
-  - Experiments:
-    - SLAP2:
-      - allen_institute_787727_2025-03-27: experiments/allen_institute_787727_2025-03-27.md
-      - allen_institute_794237_2025-04-03: experiments/allen_institute_794237_2025-04-03.md
-      - allen_institute_NA_2025-03-20: experiments/allen_institute_NA_2025-03-20.md
   - Analysis:
     - SLAP2 pilot data analysis: pilotanalysis.md
+  - Experiments:
+    - allen_institute_787727_2025-03-27: experiments/allen_institute_787727_2025-03-27.md
+    - allen_institute_794237_2025-04-03: experiments/allen_institute_794237_2025-04-03.md
+    - allen_institute_794237_2025-04-24: experiments/allen_institute_794237_2025-04-24.md
+    - allen_institute_NA_2025-03-20: experiments/allen_institute_NA_2025-03-20.md
 - Project Management:
   - Team: people.md
   - How to Contribute: how_to_contribute.md
   - Collaboration Policy: collaboration-policy.md
   - Project Tracking: project-tracking.md
   - Meetings:
-    - '2024-04-21': meetings/2024-04-21.md
+    - '2025-04-21': meetings/2025-04-21.md
+    - '2025-05-06': meetings/2025-05-06.md
+    - '2025-05-13': meetings/2025-05-13.md
 - FAQ: faq.md
-
 theme:
   name: readthedocs
 docs_dir: docs
@@ -56,10 +57,5 @@ extra_javascript:
 - js/github-profiles.js
 - js/analytics.js
 - https://www.googletagmanager.com/gtag/js?id=G-DT93KEXV5Q
-
-# Config to ensure all files are included
 strict: true
 dev_addr: 127.0.0.1:8000
-
-# Include all files in the build
-use_directory_urls: true
