@@ -32,7 +32,7 @@ To install Bonsai, visit the [official installation guide](https://bonsai-rx.org
 
 - [Official Bonsai Documentation](https://bonsai-rx.org/docs/articles/installation.html) - Comprehensive guide to installation, concepts, and functionality
 - [Language Guide](https://bonsai-rx.org/docs/articles/observables.html) - Essential concepts of the reactive programming model
-- [Examples Tutorials](hhttps://bonsai-rx.org/docs/tutorials/acquisition.html) - Examples of Bonsai workflows for various applications
+- [Examples Tutorials](https://bonsai-rx.org/docs/tutorials/acquisition.html) - Examples of Bonsai workflows for various applications
 - The [NeuroGears Visual Reactive Programming course](https://neurogears.org/vrp-2022/) provides excellent structured learning materials.
 
 ## For Python Programmers
