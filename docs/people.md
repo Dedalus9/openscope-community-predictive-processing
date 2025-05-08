@@ -12,7 +12,7 @@ Full team information including GitHub handles:
 | Nicholas Audette | nicholas.audette@uconn.edu | |
 | Ryszard Auksztulewicz | ryszard.auksztulewicz@maastrichtuniversity.nl | |
 | Krzysztof Basiński | k.basinski@gumed.edu.pl | |
-| André M. Bastos | andre.bastos@vanderbilt.edu | |
+| André M. Bastos | andre.bastos@vanderbilt.edu | @ABastos |
 | Michael Berry | berry@princeton.edu | |
 | Andres Canales-Johnson | afc37@cam.ac.uk | |
 | Hannah Choi | hannahch@gatech.edu | |
@@ -32,7 +32,7 @@ Full team information including GitHub handles:
 | Alexander Ladd | aladd38@uw.edu | |
 | Hugo Ladret | hugo.ladret@fmi.ch | |
 | Jérôme A. Lecoq | jeromel@alleninstitute.org | @jeromelecoq |
-| Alexander Maier | alex.maier@vanderbilt.edu | |
+| Alexander Maier | alex.maier@vanderbilt.edu | @maierav |
 | Patrick McCarthy | patrick.mccarthy@dtc.ox.ac.uk | |
 | Jie Mei | jie.mei@it-u.at | |
 | Jorge Mejias | j.f.mejias@uva.nl | |
@@ -45,7 +45,7 @@ Full team information including GitHub handles:
 | Mihai A. Petrovici | mihai.petrovici@unibe.ch | |
 | Viola Priesemann | viola.priesemann@ds.mpg.de | |
 | Lucas Rudelt | lucas.rudelt@ds.mpg.de | |
-| Sarah Ruediger | s.ruediger@ucl.ac.uk | |
+| Sarah Ruediger | s.ruediger@ucl.ac.uk | @Sarruedi |
 | Simone Russo | srusso30@gatech.edu | |
 | Alessandro Salatiello | salatiello.alessandro@gmail.com | |
 | Walter Senn | walter.senn@unibe.ch | |
