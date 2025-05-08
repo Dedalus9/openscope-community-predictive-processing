@@ -26,42 +26,14 @@ To install Bonsai, visit the [official installation guide](https://bonsai-rx.org
 
 1. Download the latest Bonsai installer from the [official website](https://bonsai-rx.org/)
 2. Run the installer to set up Bonsai and its dependencies
-3. For project-specific installations, refer to our [Bonsai Instructions](bonsai_instructions.md)
+3. For the predictive processing community project-specific installations, refer to our [Bonsai Instructions](bonsai_instructions.md)
 
 ### Documentation and Learning Resources
 
 - [Official Bonsai Documentation](https://bonsai-rx.org/docs/articles/installation.html) - Comprehensive guide to installation, concepts, and functionality
-- [Language Guide](https://bonsai-rx.org/docs/articles/language-guide.html) - Essential concepts of the reactive programming model
-- [Examples Gallery](https://bonsai-rx.org/gallery/) - Examples of Bonsai workflows for various applications
-
-### Tutorials and Courses
-
-The [NeuroGears Visual Reactive Programming course](https://neurogears.org/vrp-2022/) provides excellent structured learning materials. We strongly recommend going through these course materials in the following order:
-
-#### Day 1 - Introduction to Bonsai
-- Introduction to visual reactive programming concepts
-- How to measure and control various inputs and outputs
-- Real-time tracking techniques
-
-#### Day 2 - Real-time closed-loop experiments
-- Data synchronization and measuring closed-loop latency
-- Creating conditional effects and continuous feedback
-- Real-time markerless pose tracking
-
-#### Day 3 - Operant behavior tasks
-- Creating dynamic observable sequences
-- Modeling trial sequences and state transitions
-- Building reaction time and Go/No-Go tasks
-
-#### Day 4 - Interactive visual environments
-- Creating and controlling visual environments with BonVision
-- Building closed-loop virtual reality experiments
-- Logging stimulus and response outcomes
-
-#### Day 5 - Advanced topics
-- Extending Bonsai with scripting
-- Reproducible deployment and versioning of experiments
-- Interfacing with Python and MATLAB
+- [Language Guide](https://bonsai-rx.org/docs/articles/observables.html) - Essential concepts of the reactive programming model
+- [Examples Tutorials](hhttps://bonsai-rx.org/docs/tutorials/acquisition.html) - Examples of Bonsai workflows for various applications
+- The [NeuroGears Visual Reactive Programming course](https://neurogears.org/vrp-2022/) provides excellent structured learning materials.
 
 ## For Python Programmers
 
