@@ -164,6 +164,7 @@ To evaluate the relative contributions of different mechanisms, we will use thre
 ### Experimental Timeline in Mice
 
 Each mouse will undergo:
+
 - Cranial window implantation and recovery
 - Intrinsic signal imaging for area identification
 - Habituation and task training (2-3 weeks)
