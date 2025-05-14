@@ -8,14 +8,14 @@ Full team information including GitHub handles:
 
 | Name | Email | GitHub |
 |------|-------|--------|
-| Ido Aizenbud | ido.aizenbud@mail.huji.ac.il | |
+| Ido Aizenbud | ido.aizenbud@mail.huji.ac.il | @ido4848 |
 | Nicholas Audette | nicholas.audette@uconn.edu | |
 | Ryszard Auksztulewicz | ryszard.auksztulewicz@maastrichtuniversity.nl | |
 | Krzysztof Basiński | k.basinski@gumed.edu.pl | |
 | André M. Bastos | andre.bastos@vanderbilt.edu | @ABastos |
 | Michael Berry | berry@princeton.edu | |
 | Andres Canales-Johnson | afc37@cam.ac.uk | |
-| Hannah Choi | hannahch@gatech.edu | |
+| Hannah Choi | hannahch@gatech.edu | @myhannahchoi |
 | Claudia Clopath | c.clopath@imperial.ac.uk | |
 | Uri Cohen | uc231@cam.ac.uk | |
 | Rui Ponte Costa | rui.costa@dpag.ox.ac.uk | |
@@ -41,7 +41,7 @@ Full team information including GitHub handles:
 | Farzaneh Najafi | fnajafi3@gatech.edu | |
 | Kevin Nejad | kevin.kermaninejad@dpag.ox.ac.uk | |
 | Hamed Nejat | hamed.nejat@vanderbilt.edu | |
-| Karim Oweiss | koweiss@ufl.edu | |
+| Karim Oweiss | koweiss@ufl.edu | @koweiss |
 | Mihai A. Petrovici | mihai.petrovici@unibe.ch | |
 | Viola Priesemann | viola.priesemann@ds.mpg.de | |
 | Lucas Rudelt | lucas.rudelt@ds.mpg.de | |
